@@ -2,6 +2,7 @@ package ru.usetech.pft.velobike;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import ru.usetech.pft.velobike.appManager.ApplicationManager;
 
 public class Testbase {
 

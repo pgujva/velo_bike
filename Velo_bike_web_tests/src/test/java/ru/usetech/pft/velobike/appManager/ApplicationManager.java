@@ -1,4 +1,4 @@
-package ru.usetech.pft.velobike;
+package ru.usetech.pft.velobike.appManager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -8,25 +8,19 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
   ChromeDriver wd;
-
+  private  NavigationHelper navigationHelper;
+  private SessionHelper sessionHelper;
   public void init() {
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     wd.manage().window().fullscreen();
     wd.get("https://velobike.ru/");
-    login("4001776", "3875");
+    navigationHelper = new NavigationHelper(wd);
+    sessionHelper = new SessionHelper(wd);
+    sessionHelper.login("4001776", "3875");
   }
 
-  private void login(String userLog, String pin) {
-    wd.findElement(By.xpath("//a[contains(text(),'Войти')]")).click();
-    wd.findElement(By.id("id_login")).click();
-    wd.findElement(By.id("id_login")).clear();
-    wd.findElement(By.id("id_login")).sendKeys(userLog);
-    wd.findElement(By.id("id_pin")).click();
-    wd.findElement(By.id("id_pin")).clear();
-    wd.findElement(By.id("id_pin")).sendKeys(pin);
-    wd.findElement(By.cssSelector("input.btn-red.h_mb32[value=Войти]")).click();
-  }
+
 
   public void stop() {
     wd.quit();
@@ -53,7 +47,8 @@ public class ApplicationManager {
       return false;
     }
   }
-  public void goToPersonalAccount() {
-    wd.findElement(By.cssSelector("div.logged-user__photo")).click();
+
+  public NavigationHelper getNavigationHelper() {
+    return navigationHelper;
   }
 }
