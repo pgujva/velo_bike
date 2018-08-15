@@ -10,6 +10,7 @@ public class ApplicationManager {
   ChromeDriver wd;
   private  NavigationHelper navigationHelper;
   private SessionHelper sessionHelper;
+
   public void init() {
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -19,8 +20,6 @@ public class ApplicationManager {
     sessionHelper = new SessionHelper(wd);
     sessionHelper.login("4001776", "3875");
   }
-
-
 
   public void stop() {
     wd.quit();
