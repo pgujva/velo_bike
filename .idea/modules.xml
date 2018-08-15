@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Velo_bike_web_tests.iml" filepath="$PROJECT_DIR$/.idea/modules/Velo_bike_web_tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Velo_bike_web_tests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Velo_bike_web_tests_main.iml" group="Velo_bike_web_tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Velo_bike_web_tests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Velo_bike_web_tests_test.iml" group="Velo_bike_web_tests" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Velobike.iml" filepath="$PROJECT_DIR$/.idea/modules/Velobike.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Velobike_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Velobike_main.iml" group="Velobike" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Velobike_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Velobike_test.iml" group="Velobike" />

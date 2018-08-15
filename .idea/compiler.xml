@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="Velo_bike_web_tests_main" target="1.8" />
+      <module name="Velo_bike_web_tests_test" target="1.8" />
       <module name="Velobike_main" target="1.8" />
       <module name="Velobike_test" target="1.8" />
     </bytecodeTargetLevel>
