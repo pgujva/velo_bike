@@ -1,8 +1,12 @@
 package ru.usetech.pft.velobike.Tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserNavigationTests extends Testbase {
 
@@ -15,7 +19,7 @@ public class UserNavigationTests extends Testbase {
             "https://velobike.ru/account/");
     Assert.assertEquals(a, true);
 
-    app.getNavigationHelper().goToModifyAccountPage();
+    app.getNavigationHelper().getMenuList();
 
   }
 
