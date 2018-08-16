@@ -1,4 +1,4 @@
-package ru.usetech.pft.velobike;
+package ru.usetech.pft.velobike.Tests;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -9,11 +9,12 @@ public class UserNavigationTests extends Testbase {
   @Test
   public void testsUserNavigation() throws Exception {
 
-    app.getNavigationHelper().goToPersonalAccount();
+    app.getNavigationHelper().goToPersonalAccountPage();
     boolean a = app.isThereARightPage(By.tagName("h1"), "Личный кабинет", By.cssSelector("span.lk-intro__welcome-name"), "Тест!", "https://velobike.ru/account/");
     Assert.assertEquals(a, true);
 
-  }
+    app.getNavigationHelper().goToModifyAccountPage();
 
+  }
 
 }

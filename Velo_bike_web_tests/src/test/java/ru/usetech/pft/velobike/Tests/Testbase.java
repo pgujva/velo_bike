@@ -1,4 +1,4 @@
-package ru.usetech.pft.velobike;
+package ru.usetech.pft.velobike.Tests;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

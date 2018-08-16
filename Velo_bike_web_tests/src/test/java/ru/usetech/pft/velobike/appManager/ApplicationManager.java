@@ -10,14 +10,15 @@ public class ApplicationManager {
   ChromeDriver wd;
   private  NavigationHelper navigationHelper;
   private SessionHelper sessionHelper;
-
+  private EnterToSystemHelper enterToSystemHelper;
   public void init() {
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-    wd.manage().window().fullscreen();
+    //wd.manage().window().fullscreen();
     wd.get("https://velobike.ru/");
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
+    enterToSystemHelper = new EnterToSystemHelper(wd);
     sessionHelper.login("4001776", "3875");
   }
 
