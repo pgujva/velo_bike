@@ -31,7 +31,7 @@ public class SessionHelper {
         wd.findElement(By.cssSelector("input.btn-red.h_mb32[value=Войти]")).click();
     }
 
-    public void loginInsideMenu(String userLog, String pin) {
+    public void loginInSideMenu(String userLog, String pin) {
         wd.findElement(By.cssSelector("a.side-opener")).click();
         wait.until(visibilityOf(wd.findElement(By.cssSelector("a.login-link.fancybox.h_float-left"))));
         wd.findElement(By.cssSelector("a.login-link.fancybox.h_float-left")).click();
@@ -43,5 +43,9 @@ public class SessionHelper {
         wd.findElement(By.id("id_pin")).sendKeys(pin);
         wd.findElement(By.cssSelector("input.btn-red.h_mb32[value=Войти]")).click();
 
+    }
+
+    public void logoutFromSystem() {
+        wd.findElement(By.cssSelector("a.user-quit.hidden-xs")).click();
     }
 }

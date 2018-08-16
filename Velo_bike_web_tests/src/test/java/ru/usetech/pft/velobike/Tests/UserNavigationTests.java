@@ -10,7 +10,9 @@ public class UserNavigationTests extends Testbase {
   public void testsUserNavigation() throws Exception {
 
     app.getNavigationHelper().goToPersonalAccountPage();
-    boolean a = app.isThereARightPage(By.tagName("h1"), "Личный кабинет", By.cssSelector("span.lk-intro__welcome-name"), "Тест!", "https://velobike.ru/account/");
+    boolean a = app.getHelperBase().isThereARightPage(By.tagName("h1"), "Личный кабинет",
+            By.cssSelector("span.lk-intro__welcome-name"), "Тест!",
+            "https://velobike.ru/account/");
     Assert.assertEquals(a, true);
 
     app.getNavigationHelper().goToModifyAccountPage();
