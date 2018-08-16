@@ -2,7 +2,9 @@ package ru.usetech.pft.velobike.appManager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,19 +13,22 @@ public class ApplicationManager {
   private  NavigationHelper navigationHelper;
   private SessionHelper sessionHelper;
   private EnterToSystemHelper enterToSystemHelper;
+  private WebDriverWait wait;
+
   public void init() {
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-    //wd.manage().window().fullscreen();
+    wait = new WebDriverWait(wd, 10);
+   //wd.manage().window().fullscreen();
     wd.get("https://velobike.ru/");
-    navigationHelper = new NavigationHelper(wd);
-    sessionHelper = new SessionHelper(wd);
-    enterToSystemHelper = new EnterToSystemHelper(wd);
-    sessionHelper.login("4001776", "3875");
+    navigationHelper = new NavigationHelper(wd,wait);
+    sessionHelper = new SessionHelper(wd,wait);
+    enterToSystemHelper = new EnterToSystemHelper(wd,wait);
+
   }
 
   public void stop() {
-    wd.quit();
+  wd.quit();
   }
 
   public boolean isThereARightPage(By locator, String expText, By locator_2, String expText2, String expURL) {
@@ -50,5 +55,13 @@ public class ApplicationManager {
 
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
+  }
+
+  public EnterToSystemHelper getEnterToSystemHelper() {
+    return enterToSystemHelper;
+  }
+
+  public SessionHelper getSessionHelper() {
+    return sessionHelper;
   }
 }
