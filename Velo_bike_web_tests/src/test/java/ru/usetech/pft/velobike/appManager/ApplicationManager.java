@@ -13,6 +13,7 @@ public class ApplicationManager {
   private  NavigationHelper navigationHelper;
   private SessionHelper sessionHelper;
   private EnterToSystemHelper enterToSystemHelper;
+  private HelperBase helperBase;
   private WebDriverWait wait;
 
   public void init() {
@@ -21,6 +22,7 @@ public class ApplicationManager {
     wait = new WebDriverWait(wd, 10);
    //wd.manage().window().fullscreen();
     wd.get("https://velobike.ru/");
+    helperBase = new HelperBase(wd,wait);
     navigationHelper = new NavigationHelper(wd,wait);
     sessionHelper = new SessionHelper(wd,wait);
     enterToSystemHelper = new EnterToSystemHelper(wd,wait);
@@ -31,27 +33,7 @@ public class ApplicationManager {
   wd.quit();
   }
 
-  public boolean isThereARightPage(By locator, String expText, By locator_2, String expText2, String expURL) {
-    if(
-    wd.findElement(locator).getText().equals(expText) &&
-    wd.findElement(locator_2).getText().equals(expText2) &&
-    wd.getCurrentUrl().equals(expURL)) {
-      return true;
-    } else return false;
-  }
 
-  public boolean isThereContact() {
-    return isElementPresent(By.name("entry"));
-  }
-
-  public boolean isElementPresent(By locator) {
-    try {
-      wd.findElement(locator);
-      return true;
-    } catch (NoSuchElementException ex) {
-      return false;
-    }
-  }
 
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
@@ -63,5 +45,9 @@ public class ApplicationManager {
 
   public SessionHelper getSessionHelper() {
     return sessionHelper;
+  }
+
+  public HelperBase getHelperBase() {
+    return helperBase;
   }
 }

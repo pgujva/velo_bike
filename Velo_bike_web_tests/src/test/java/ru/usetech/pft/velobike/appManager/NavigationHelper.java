@@ -9,7 +9,7 @@ public class NavigationHelper {
   private WebDriverWait wait;
 
   public NavigationHelper(ChromeDriver wd, WebDriverWait wait) {
-    this.wd=wd;
+    this.wd = wd;
     this.wait = wait;
   }
 
@@ -21,7 +21,4 @@ public class NavigationHelper {
 
   }
 
-  public void goToRegPageFromMenu() {
-    wd.findElement(By.cssSelector("a.side-opener")).click();
-  }
 }
