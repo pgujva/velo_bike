@@ -19,7 +19,7 @@ public class UserNavigationTests extends Testbase {
             "https://velobike.ru/account/");
     Assert.assertEquals(a, true);
 
-    app.getNavigationHelper().getMenuList();
+    //app.getNavigationHelper().getMenuList();
 
   }
 

@@ -5,6 +5,11 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfAllElements;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
+
 public class HelperBase {
     private ChromeDriver wd;
     private WebDriverWait wait;
@@ -39,7 +44,12 @@ public class HelperBase {
     }
 
     public String getPageName() {
-       String name = wd.findElement(By.tagName("h1")).getText();
-       return name;
+        String pagename = wd.findElement(By.tagName("h1")).getText();
+        return pagename;
+    }
+    public void waitVisibilityOfElement(By locator) {
+        wait.until(visibilityOfAllElements();
+        wd.manage().timeouts().setScriptTimeout(50, TimeUnit.SECONDS);
+
     }
 }

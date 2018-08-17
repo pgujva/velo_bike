@@ -14,6 +14,7 @@ public class ApplicationManager {
   private SessionHelper sessionHelper;
   private EnterToSystemHelper enterToSystemHelper;
   private HelperBase helperBase;
+  private SideMenuHelper sideMenuHelper;
   private WebDriverWait wait;
 
   public void init() {
@@ -26,11 +27,11 @@ public class ApplicationManager {
     navigationHelper = new NavigationHelper(wd,wait);
     sessionHelper = new SessionHelper(wd,wait);
     enterToSystemHelper = new EnterToSystemHelper(wd,wait);
-
+    sideMenuHelper = new SideMenuHelper(wd,wait);
   }
 
   public void stop() {
-  //wd.quit();
+ // wd.quit();
   }
 
 
@@ -49,5 +50,9 @@ public class ApplicationManager {
 
   public HelperBase getHelperBase() {
     return helperBase;
+  }
+
+  public SideMenuHelper getSideMenuHelper() {
+    return sideMenuHelper;
   }
 }
