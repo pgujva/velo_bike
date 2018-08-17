@@ -2,9 +2,11 @@ package ru.usetech.pft.velobike.appManager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfAllElements;
@@ -47,8 +49,8 @@ public class HelperBase {
         String pagename = wd.findElement(By.tagName("h1")).getText();
         return pagename;
     }
-    public void waitVisibilityOfElement(By locator) {
-        wait.until(visibilityOfAllElements();
+    public void waitVisibilityOfElement(List<WebElement> menuElements) {
+        wait.until(visibilityOfAllElements(menuElements));
         wd.manage().timeouts().setScriptTimeout(50, TimeUnit.SECONDS);
 
     }
