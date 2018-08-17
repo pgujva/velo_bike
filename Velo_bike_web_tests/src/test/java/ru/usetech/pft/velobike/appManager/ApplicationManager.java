@@ -19,8 +19,8 @@ public class ApplicationManager {
 
   public void init() {
     wd = new ChromeDriver();
-    wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    wait = new WebDriverWait(wd, 10);
+    wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    wait = new WebDriverWait(wd, 20);
    //wd.manage().window().fullscreen();
     wd.get("https://velobike.ru/");
     helperBase = new HelperBase(wd,wait);
@@ -31,7 +31,7 @@ public class ApplicationManager {
   }
 
   public void stop() {
-  wd.quit();
+ wd.quit();
   }
 
 

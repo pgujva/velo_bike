@@ -23,13 +23,13 @@ public class HelperBase {
     }
 
     public boolean isThereARightPage(By locator, String expText, By locator_2, String expText2, String expURL) {
-        if(
-                wd.findElement(locator).getText().equals(expText) &&
+        if (
+                 wd.findElement(locator).getText().equals(expText) &&
                         wd.findElement(locator_2).getText().equals(expText2) &&
-                        wd.getCurrentUrl().equals(expURL)) {
-            return true;
-        } else return false;
-
+                        wd.getCurrentUrl().equals(expURL)
+                )
+        {return true;
+        }else return false;
     }
 
     public boolean isThereContact() {
@@ -49,9 +49,14 @@ public class HelperBase {
         String pagename = wd.findElement(By.tagName("h1")).getText();
         return pagename;
     }
+
     public void waitVisibilityOfElement(List<WebElement> menuElements) {
         wait.until(visibilityOfAllElements(menuElements));
         wd.manage().timeouts().setScriptTimeout(50, TimeUnit.SECONDS);
 
+    }
+
+    public void waitElementLoad() {
+        wait.until(visibilityOfElementLocated(By.tagName("h1")));
     }
 }

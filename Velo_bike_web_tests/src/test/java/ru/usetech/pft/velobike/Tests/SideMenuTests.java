@@ -17,11 +17,19 @@ public class SideMenuTests extends Testbase {
         app.getSessionHelper().loginInSideMenu("4001776", "3875");
         app.getNavigationHelper().goToPersonalAccountPage();
         app.getNavigationHelper().goToSideMenu();
-
-        List<WebElement> menuElements = app.getSideMenuHelper().getMenuList();
         List<String> menuNames = app.getSideMenuHelper().getMenuNames();
+        List<String> pageNames = new ArrayList<String>();
 
+        for (int i = 0; i < menuNames.size(); i++) {
+            List<WebElement> newMenuElements = app.getSideMenuHelper().getMenuList();
+            app.getHelperBase().waitVisibilityOfElement(newMenuElements);
+            newMenuElements.get(i).click();
+            pageNames.add(app.getHelperBase().getPageName());
+            app.getNavigationHelper().goToSideMenu();
 
+        }
+
+        Assert.assertEquals(menuNames,pageNames);
     }
 }
 
