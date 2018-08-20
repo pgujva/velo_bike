@@ -20,9 +20,10 @@ public class TEST extends Testbase {
                 List<WebElement> newMenuElements = app.getSideMenuHelper().getMenuList();
                 app.getHelperBase().waitVisibilityOfElement(newMenuElements);
                 newMenuElements.get(i).click();
-
+                pageLinks.add(app.getHelperBase().getPageLink());
+                System.out.println(pageLinks.get(i));
             } else {
-
+                pageLinks.add(app.getHelperBase().getPageLink());
                 app.getHelperBase().returnBack();
             }
 
