@@ -1,8 +1,9 @@
-package ru.usetech.pft.velobike.Tests;
+package ru.usetech.pft.velobike.Tests.LoginLogoutTests;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.usetech.pft.velobike.Tests.Testbase;
 
 public class LoginToSystemFromHederTest extends Testbase {
 

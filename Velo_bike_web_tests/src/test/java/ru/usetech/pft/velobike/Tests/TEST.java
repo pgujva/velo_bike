@@ -17,13 +17,9 @@ public class TEST extends Testbase {
         app.getNavigationHelper().goToPersonalAccountPage();
         app.getNavigationHelper().goToSideMenu();
         List<WebElement> menuList = app.getSideMenuHelper().getMenuList();
-        app.getHelperBase().waitVisibilityOfElement(menuList);
-        menuList.get(0).click();
-        app.getHelperBase().waitElementLoad();
-        boolean a = app.getHelperBase().isThereARightPage(By.tagName("h1"), "КАК ПОЛЬЗОВАТЬСЯ ПРОКАТОМ",
-                By.tagName("h2"),"ВОЗЬМИТЕ ВЕЛОСИПЕД",null);
-        Assert.assertEquals(a, true);
-       // app.getNavigationHelper().goToSideMenu();
+        int d = menuList.size();
+        System.out.println(d);
+        System.out.println(menuList.get(0).getAttribute("href"));
 
     }
 }
