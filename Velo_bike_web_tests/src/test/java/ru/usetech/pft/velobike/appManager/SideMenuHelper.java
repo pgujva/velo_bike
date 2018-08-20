@@ -72,6 +72,20 @@ public class SideMenuHelper extends ApplicationManager{
 
         return menuLinks;
     }
+
+    public List<String> getStaticMenuNames() {
+        List<String> menuNames = Arrays.asList(
+              "Как пользоваться прокатом",
+                "Стоимость",
+                "Карта станций",
+                "Контакты и помощь",
+                "Вопросы и ответы",
+                "Электропрокат",
+                "Новости",
+                "О велобайке"
+        );
+                return menuNames;
+    }
 }
 
 

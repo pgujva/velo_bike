@@ -16,7 +16,9 @@ public class GoToSideMenuTest extends Testbase {
         List<String> menuNamesFromPage = app.getSideMenuHelper().getMenuNamesFromPage();
         List<String> menuLinksFromPage = app.getSideMenuHelper().getMenuLinksFromPage();
         List<String> staticMenuLinks = app.getSideMenuHelper().getStaticMenuLinks();
+        List<String> staticMenuNames = app.getSideMenuHelper().getStaticMenuNames();
         Assert.assertEquals(staticMenuLinks, menuLinksFromPage);
+        Assert.assertEquals(staticMenuNames, menuNamesFromPage);
 
     }
 }
