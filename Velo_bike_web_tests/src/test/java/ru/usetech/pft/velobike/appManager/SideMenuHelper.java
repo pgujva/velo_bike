@@ -21,7 +21,7 @@ public class SideMenuHelper extends ApplicationManager{
     }
 
     public List<WebElement> getMenuList() {
-        List<WebElement> menuElements = wd.findElements(By.cssSelector("a.nav__link"));
+        List<WebElement> menuElements = wd.findElements(By.cssSelector("div.side-nav__holder a[href*='/']"));
         return menuElements;
     }
 

@@ -1,6 +1,7 @@
 package ru.usetech.pft.velobike.appManager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static org.openqa.selenium.Keys.ALT;
+import static org.openqa.selenium.Keys.ARROW_LEFT;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfAllElements;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
@@ -32,8 +35,8 @@ public class HelperBase {
         }else return false;
     }
 
-    public boolean isThereContact() {
-        return isElementPresent(By.name("entry"));
+    public boolean isThereAElement() {
+        return isElementPresent(By.className("side-opener"));
     }
 
     public boolean isElementPresent(By locator) {
@@ -58,5 +61,14 @@ public class HelperBase {
 
     public void waitElementLoad() {
         wait.until(visibilityOfElementLocated(By.tagName("h1")));
+    }
+
+    public String getPageLink() {
+        String pagename = wd.getCurrentUrl();
+        return pagename;
+    }
+
+    public void returnBack() {
+        wd.navigate().back();
     }
 }

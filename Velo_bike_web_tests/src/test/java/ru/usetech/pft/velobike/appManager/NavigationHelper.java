@@ -28,12 +28,10 @@ public class NavigationHelper {
     }
 
 
-
-
     public void goToSideMenu() {
 
         wait.until(elementToBeClickable(By.className("side-opener")));
-       // wait.until(elementSelectionStateToBe(By.className("side-opener"),true));
+        // wait.until(elementSelectionStateToBe(By.className("side-opener"),true));
         wd.findElement(By.cssSelector("a.side-opener")).click();
 
     }
@@ -41,5 +39,18 @@ public class NavigationHelper {
     public void visibleElement(By locator) {
         wait.until(invisibilityOfElementLocated(locator));
         wait.until(invisibilityOfElementLocated(locator));
+    }
+
+    public void goBackToFirstWindow() {
+        wd.switchTo().defaultContent();
+    }
+
+    public String getCurrentWindowHandle() {
+        String handle= wd.getWindowHandle();
+        return handle;
+    }
+
+    public void switchToFirstWindow(String handle) {
+        wd.switchTo().window(handle);
     }
 }
