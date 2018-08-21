@@ -65,7 +65,7 @@ public class SideMenuHelper extends ApplicationManager{
                 "https://electro.velobike.ru/",
                 "https://velobike.ru/news/",
                 "https://velobike.ru/about/",
-                "http://vk.com/velobikeru",
+                "https://vk.com/velobikeru",
                 "https://www.facebook.com/velobike.ru",
                 "https://www.instagram.com/velobike.ru/",
                 "https://t.me/velobikeru_bot");
