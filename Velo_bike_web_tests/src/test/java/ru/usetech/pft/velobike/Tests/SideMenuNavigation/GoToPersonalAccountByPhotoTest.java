@@ -1,13 +1,9 @@
-package ru.usetech.pft.velobike.Tests.SideMenuNavigationTests;
+package ru.usetech.pft.velobike.Tests.SideMenuNavigation;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Tests.Testbase;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class GoToPersonalAccountByPhotoTest extends Testbase {
 

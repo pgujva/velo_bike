@@ -1,4 +1,4 @@
-package ru.usetech.pft.velobike.Tests.SideMenuNavigationTests;
+package ru.usetech.pft.velobike.Tests.SideMenuNavigation;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

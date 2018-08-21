@@ -63,7 +63,7 @@ public class HelperBase {
         wait.until(visibilityOfElementLocated(By.tagName("h1")));
     }
 
-    public String getPageLink() {
+    public String getCurrentPageURL() {
         String pagename = wd.getCurrentUrl();
         return pagename;
     }

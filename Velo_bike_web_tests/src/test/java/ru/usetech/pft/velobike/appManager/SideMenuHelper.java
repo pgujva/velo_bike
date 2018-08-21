@@ -9,8 +9,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static javax.swing.text.html.CSS.getAttribute;
-
 public class SideMenuHelper extends ApplicationManager{
     private ChromeDriver wd;
     private WebDriverWait wait;
@@ -85,6 +83,15 @@ public class SideMenuHelper extends ApplicationManager{
                 "О велобайке"
         );
                 return menuNames;
+    }
+
+    public void changePages(List<String> pageLinks, int i) {
+        getNavigationHelper().goToSideMenu();
+        List<WebElement> newMenuElements = getSideMenuHelper().getMenuList();
+        getHelperBase().waitVisibilityOfElement(newMenuElements);
+        newMenuElements.get(i).click();
+        pageLinks.add(getHelperBase().getCurrentPageURL());
+        getHelperBase().returnBack();
     }
 }
 

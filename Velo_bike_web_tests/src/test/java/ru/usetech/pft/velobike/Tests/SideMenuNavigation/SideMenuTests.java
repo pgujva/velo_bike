@@ -1,16 +1,18 @@
-package ru.usetech.pft.velobike.Tests;
+package ru.usetech.pft.velobike.Tests.SideMenuNavigation;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.usetech.pft.velobike.Tests.Testbase;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TEST extends Testbase {
+public class SideMenuTests extends Testbase {
+
 
     @Test()
-    public void testTest() {
+    public void TestsSideMenu() {
         app.getSessionHelper().loginInSideMenu("4001776", "3875");
         app.getNavigationHelper().goToPersonalAccountPage();
         List<String> pageLinks = new ArrayList<String>();
@@ -25,12 +27,7 @@ public class TEST extends Testbase {
         Assert.assertEquals(app.getSideMenuHelper().getStaticMenuLinks(), pageLinks);
 
     }
-
 }
-
-
-
-
 
 
 
