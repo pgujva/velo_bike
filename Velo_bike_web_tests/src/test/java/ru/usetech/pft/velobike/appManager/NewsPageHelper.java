@@ -4,11 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.usetech.pft.velobike.Model.NewsPageData;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static javax.swing.text.html.CSS.getAttribute;
 
 public class NewsPageHelper {
     private ChromeDriver wd;
@@ -55,5 +54,19 @@ public class NewsPageHelper {
        String currentPageTitle = wd.findElement(By.tagName("h3")).getAttribute("textContent");
        return currentPageTitle;
 
+    }
+
+    public NewsPageData createNewsObject() {
+          NewsPageData newsPageData;
+
+        List<WebElement> newsList = getNewsList();
+        List<String> newsTitles = new ArrayList<String>();
+
+        String title = newsList.get(0).getAttribute("textContent");
+        String url = newsList.get(0).getAttribute("href");
+
+            newsPageData = new NewsPageData(title, );
+
+        return newsPageData;
     }
 }
