@@ -8,8 +8,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
-public class SideMenuHelper extends ApplicationManager{
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfAllElements;
+
+public class SideMenuHelper extends ApplicationManager {
     private ChromeDriver wd;
     private WebDriverWait wait;
 
@@ -19,12 +23,15 @@ public class SideMenuHelper extends ApplicationManager{
     }
 
     public List<WebElement> getMenuList() {
-        List<WebElement> menuElements = wd.findElements(By.cssSelector("div.side-nav__holder a[href*='/']"));
+        wait.until(visibilityOfAllElements(wd.findElements(By.cssSelector("a.href"))));
+        wd.manage().timeouts().setScriptTimeout(50, TimeUnit.SECONDS);
+        List<WebElement> menuElements = wd.findElements(By.cssSelector("li.nav__link"));
         return menuElements;
     }
 
     public List<String> getMenuNamesFromPage() {
-        List<WebElement> menuElements = getMenuList();
+       // wd.manage().timeouts().setScriptTimeout(50, TimeUnit.SECONDS);
+        List<WebElement> menuElements = wd.findElements(By.cssSelector("nav.nav a[href*='/']"));
         List<String> menuNames = new ArrayList<String>();
 
         for (WebElement name : menuElements) {
@@ -34,11 +41,6 @@ public class SideMenuHelper extends ApplicationManager{
         }
         return menuNames;
 
-    }
-
-    public List<WebElement> getNewMenuList() {
-        List<WebElement> menuElements = wd.findElements(By.cssSelector("a.href"));
-        return menuElements;
     }
 
 
@@ -63,7 +65,7 @@ public class SideMenuHelper extends ApplicationManager{
                 "https://electro.velobike.ru/",
                 "https://velobike.ru/news/",
                 "https://velobike.ru/about/",
-                "https://vk.com/velobikeru",
+                "http://vk.com/velobikeru",
                 "https://www.facebook.com/velobike.ru",
                 "https://www.instagram.com/velobike.ru/",
                 "https://t.me/velobikeru_bot");
@@ -73,7 +75,7 @@ public class SideMenuHelper extends ApplicationManager{
 
     public List<String> getStaticMenuNames() {
         List<String> menuNames = Arrays.asList(
-              "Как пользоваться прокатом",
+                "Как пользоваться прокатом",
                 "Стоимость",
                 "Карта станций",
                 "Контакты и помощь",
@@ -82,7 +84,7 @@ public class SideMenuHelper extends ApplicationManager{
                 "Новости",
                 "О велобайке"
         );
-                return menuNames;
+        return menuNames;
     }
 
     public void changePages(List<String> pageLinks, int i) {

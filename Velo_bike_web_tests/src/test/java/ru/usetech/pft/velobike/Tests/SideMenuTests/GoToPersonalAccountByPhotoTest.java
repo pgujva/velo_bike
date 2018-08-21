@@ -1,4 +1,4 @@
-package ru.usetech.pft.velobike.Tests.SideMenuNavigation;
+package ru.usetech.pft.velobike.Tests.SideMenuTests;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;

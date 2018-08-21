@@ -1,4 +1,4 @@
-package ru.usetech.pft.velobike.Tests.SideMenuNavigation;
+package ru.usetech.pft.velobike.Tests.SideMenuTests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -21,7 +21,7 @@ public class SideMenuNavigationTests extends Testbase {
         String pageUrl = app.getHelperBase().getCurrentPageURL();
         String pageName = app.getHelperBase().getPageName();
         Assert.assertEquals(pageUrl, "https://velobike.ru/rules/", "неверный URL");
-        Assert.assertEquals(pageName, "Как пользоваться прокатом","неверный заголовок страницы");
+        Assert.assertEquals(pageName, "Как пользоваться прокатом", "неверный заголовок страницы");
     }
 
 
@@ -32,7 +32,7 @@ public class SideMenuNavigationTests extends Testbase {
         String pageUrl = app.getHelperBase().getCurrentPageURL();
         String pageName = app.getHelperBase().getPageName();
         Assert.assertEquals(pageUrl, "https://velobike.ru/prices/", "неверный URL");
-        Assert.assertEquals(pageName, "Сколько это стоит","неверный заголовок страницы");
+        Assert.assertEquals(pageName, "Сколько это стоит", "неверный заголовок страницы");
     }
 
     @Test
@@ -42,7 +42,7 @@ public class SideMenuNavigationTests extends Testbase {
         String pageUrl = app.getHelperBase().getCurrentPageURL();
         String pageName = app.getHelperBase().getPageName();
         Assert.assertEquals(pageUrl, "https://velobike.ru/parkings/", "неверный URL");
-        Assert.assertEquals(pageName, "Карта станций\nвелопроката","неверный заголовок страницы");
+        Assert.assertEquals(pageName, "Карта станций\nвелопроката", "неверный заголовок страницы");
     }
 
     @Test
@@ -52,7 +52,7 @@ public class SideMenuNavigationTests extends Testbase {
         String pageUrl = app.getHelperBase().getCurrentPageURL();
         String pageName = app.getHelperBase().getPageName();
         Assert.assertEquals(pageUrl, "https://velobike.ru/contacts/", "неверный URL");
-        Assert.assertEquals(pageName, "Контакты и помощь","неверный заголовок страницы");
+        Assert.assertEquals(pageName, "Контакты и помощь", "неверный заголовок страницы");
     }
 
 
@@ -63,7 +63,7 @@ public class SideMenuNavigationTests extends Testbase {
         String pageUrl = app.getHelperBase().getCurrentPageURL();
         String pageName = app.getHelperBase().getPageName();
         Assert.assertEquals(pageUrl, "https://velobike.ru/qa/", "неверный URL");
-        Assert.assertEquals(pageName, "Вопросы и ответы","неверный заголовок страницы");
+        Assert.assertEquals(pageName, "Вопросы и ответы", "неверный заголовок страницы");
     }
 
     @Test
@@ -73,8 +73,9 @@ public class SideMenuNavigationTests extends Testbase {
         String pageUrl = app.getHelperBase().getCurrentPageURL();
         String pageName = app.getHelperBase().getPageName();
         Assert.assertEquals(pageUrl, "https://electro.velobike.ru/", "неверный URL");
-        Assert.assertEquals(pageName, "Велопрокат\nБудущего","неверный заголовок страницы");
+        Assert.assertEquals(pageName, "Велопрокат\nБудущего", "неверный заголовок страницы");
     }
+
     @Test
     public void TestNewsPage() {
         app.getNavigationHelper().goToSideMenu();
@@ -82,7 +83,7 @@ public class SideMenuNavigationTests extends Testbase {
         String pageUrl = app.getHelperBase().getCurrentPageURL();
         String pageName = app.getHelperBase().getPageName();
         Assert.assertEquals(pageUrl, "https://velobike.ru/news/", "неверный URL");
-        Assert.assertEquals(pageName, "Новости","неверный заголовок страницы");
+        Assert.assertEquals(pageName, "Новости", "неверный заголовок страницы");
     }
 
 
@@ -93,7 +94,7 @@ public class SideMenuNavigationTests extends Testbase {
         String pageUrl = app.getHelperBase().getCurrentPageURL();
         String pageName = app.getHelperBase().getPageName();
         Assert.assertEquals(pageUrl, "https://velobike.ru/about/", "неверный URL");
-        Assert.assertEquals(pageName, "О велобайке","неверный заголовок страницы");
+        Assert.assertEquals(pageName, "О велобайке", "неверный заголовок страницы");
     }
 
 
