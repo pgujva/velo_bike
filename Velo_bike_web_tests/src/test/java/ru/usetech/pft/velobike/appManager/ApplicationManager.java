@@ -9,56 +9,55 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
-  ChromeDriver wd;
-  private  NavigationHelper navigationHelper;
-  private SessionHelper sessionHelper;
-  private EnterToSystemHelper enterToSystemHelper;
-  private HelperBase helperBase;
-  private SideMenuHelper sideMenuHelper;
-  private NewsPageHelper newsPageHelper;
-  private WebDriverWait wait;
+    ChromeDriver wd;
+    private NavigationHelper navigationHelper;
+    private SessionHelper sessionHelper;
+    private EnterToSystemHelper enterToSystemHelper;
+    private HelperBase helperBase;
+    private SideMenuHelper sideMenuHelper;
+    private NewsPageHelper newsPageHelper;
+    private WebDriverWait wait;
 
-  public void init() {
-    wd = new ChromeDriver();
-    wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-    wait = new WebDriverWait(wd, 20);
-   //wd.manage().window().fullscreen();
-    wd.get("https://velobike.ru/");
-    helperBase = new HelperBase(wd,wait);
-    navigationHelper = new NavigationHelper(wd,wait);
-    sessionHelper = new SessionHelper(wd,wait);
-    enterToSystemHelper = new EnterToSystemHelper(wd,wait);
-    sideMenuHelper = new SideMenuHelper(wd,wait);
-    newsPageHelper = new NewsPageHelper(wd,wait);
-  }
+    public void init() {
+        wd = new ChromeDriver();
+        wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        wait = new WebDriverWait(wd, 20);
+        //wd.manage().window().fullscreen();
+        wd.get("https://velobike.ru/");
+        helperBase = new HelperBase(wd, wait);
+        navigationHelper = new NavigationHelper(wd, wait);
+        sessionHelper = new SessionHelper(wd, wait);
+        enterToSystemHelper = new EnterToSystemHelper(wd, wait);
+        sideMenuHelper = new SideMenuHelper(wd, wait);
+        newsPageHelper = new NewsPageHelper(wd, wait);
+    }
 
-  public void stop() {
- //wd.quit();
-  }
+    public void stop() {
+        wd.quit();
+    }
 
 
+    public NavigationHelper getNavigationHelper() {
+        return navigationHelper;
+    }
 
-  public NavigationHelper getNavigationHelper() {
-    return navigationHelper;
-  }
+    public EnterToSystemHelper getEnterToSystemHelper() {
+        return enterToSystemHelper;
+    }
 
-  public EnterToSystemHelper getEnterToSystemHelper() {
-    return enterToSystemHelper;
-  }
+    public SessionHelper getSessionHelper() {
+        return sessionHelper;
+    }
 
-  public SessionHelper getSessionHelper() {
-    return sessionHelper;
-  }
+    public HelperBase getHelperBase() {
+        return helperBase;
+    }
 
-  public HelperBase getHelperBase() {
-    return helperBase;
-  }
+    public SideMenuHelper getSideMenuHelper() {
+        return sideMenuHelper;
+    }
 
-  public SideMenuHelper getSideMenuHelper() {
-    return sideMenuHelper;
-  }
-
-  public  NewsPageHelper getNewsPageHelper() {
-      return newsPageHelper;
-  }
+    public NewsPageHelper getNewsPageHelper() {
+        return newsPageHelper;
+    }
 }

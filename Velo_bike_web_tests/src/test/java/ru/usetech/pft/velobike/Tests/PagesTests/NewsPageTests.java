@@ -30,7 +30,7 @@ public class NewsPageTests extends Testbase {
         @Test
         public void TestNewsObject() {
 
-        NewsPageData actualNews = app.getNewsPageHelper().createNewsObject();
+        //NewsPageData actualNews = app.getNewsPageHelper().createNewsObject();
 
 
 

@@ -56,17 +56,34 @@ public class NewsPageHelper {
 
     }
 
-    public NewsPageData createNewsObject() {
-          NewsPageData newsPageData;
-
+    public NewsPageData actualNewsObject() {
+        List<WebElement> Datalist = wd.findElements(By.cssSelector("span.news-list__date"));
+        List<WebElement> textList = wd.findElements(By.cssSelector("div.news-list__text-box"));
         List<WebElement> newsList = getNewsList();
-        List<String> newsTitles = new ArrayList<String>();
-
-        String title = newsList.get(0).getAttribute("textContent");
+        String title= newsList.get(0).getText();
+        String date = Datalist.get(0).getText();
         String url = newsList.get(0).getAttribute("href");
+        String text = textList.get(0).findElement(By.cssSelector("p.MsoNormal")).getAttribute("textContent");
+        System.out.println(date);
+        System.out.println(title);
+        System.out.println(url);
+        System.out.println(text);
+        NewsPageData newsPageData = new NewsPageData(title,date,text,url);
+        return newsPageData;
+    }
 
-            newsPageData = new NewsPageData(title, );
-
+    public NewsPageData expectedNewsObject () {
+        List<WebElement> textList = wd.findElements(By.cssSelector("div.news-content"));
+        List<WebElement> Datalist = wd.findElements(By.cssSelector("span.news-list__date"));
+        String date = Datalist.get(0).getText();
+        String title = wd.findElementByTagName("h3").getText();
+        String url = wd.getCurrentUrl();
+        String text = textList.get(0).findElement(By.cssSelector("p.MsoNormal")).getAttribute("textContent");
+        System.out.println(date);
+        System.out.println(title);
+        System.out.println(url);
+        System.out.println(text);
+        NewsPageData newsPageData = new NewsPageData(title, date, text, url);
         return newsPageData;
     }
 }
