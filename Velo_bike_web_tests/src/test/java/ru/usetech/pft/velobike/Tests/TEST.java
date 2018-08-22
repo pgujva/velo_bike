@@ -1,13 +1,10 @@
 package ru.usetech.pft.velobike.Tests;
 
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Model.NewsPageData;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class TEST extends Testbase {
 
@@ -19,7 +16,7 @@ public class TEST extends Testbase {
     }
 
 
-        @Test
+        @Test(enabled = false)
         public void TestGoToHowToUseRentalPage() {
             app.getNavigationHelper().goToSideMenu();
             app.getNavigationHelper().goNewsPage();
@@ -33,6 +30,22 @@ public class TEST extends Testbase {
             Assert.assertEquals(actualNews,expectedNews);
 
         }
+
+    @Test
+    public void TestRepost() {
+        app.getNavigationHelper().goToSideMenu();
+        app.getNavigationHelper().goNewsPage();
+        int index = 0;
+        app.getNewsPageHelper().goToOneNewsPage(index);
+
+        app.getNewsPageHelper().initVKrepost();
+        app.getHelperBase().switchToNewWindow();
+        String pagename = app.getHelperBase().getVKpageName();
+        String newWindowUrl = app.getHelperBase().getCurrentPageURL();
+        System.out.println(pagename);
+        Assert.assertEquals(pagename,"https://vk.com/");
+
+    }
     }
 
 

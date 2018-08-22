@@ -9,6 +9,9 @@ import ru.usetech.pft.velobike.Model.NewsPageData;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfAllElements;
+
 public class NewsPageHelper {
     private ChromeDriver wd;
     private WebDriverWait wait;
@@ -64,10 +67,6 @@ public class NewsPageHelper {
         String date = Datalist.get(index).getText();
         String url = newsList.get(index).getAttribute("href");
         String text = textList.get(index).findElement(By.cssSelector("p.MsoNormal")).getAttribute("textContent");
-        System.out.println(date);
-        System.out.println(title);
-        System.out.println(url);
-        System.out.println(text);
         NewsPageData newsPageData = new NewsPageData(title,date,text,url);
         return newsPageData;
     }
@@ -79,11 +78,17 @@ public class NewsPageHelper {
         String title = wd.findElementByTagName("h3").getText();
         String url = wd.getCurrentUrl();
         String text = textList.get(index).findElement(By.cssSelector("p.MsoNormal")).getAttribute("textContent");
-        System.out.println(date);
-        System.out.println(title);
-        System.out.println(url);
-        System.out.println(text);
         NewsPageData newsPageData = new NewsPageData(title, date, text, url);
         return newsPageData;
+    }
+
+    public void initVKrepost() {
+        wait.until(elementToBeClickable(By.cssSelector("li.ya-share2__item.ya-share2__item_service_vkontakte > a.ya-share2__link > span.ya-share2__badge > span.ya-share2__icon")));
+        wd.findElement(By.cssSelector("li.ya-share2__item.ya-share2__item_service_vkontakte > a.ya-share2__link > span.ya-share2__badge > span.ya-share2__icon")).click();
+    }
+
+    public void initFacebookRepost() {
+        wait.until(elementToBeClickable(By.cssSelector("li.ya-share2__item.ya-share2__item_service_facebook > a.ya-share2__link > span.ya-share2__badge > span.ya-share2__icon")));
+        wd.findElement(By.cssSelector("li.ya-share2__item.ya-share2__item_service_facebook > a.ya-share2__link > span.ya-share2__badge > span.ya-share2__icon")).click();
     }
 }

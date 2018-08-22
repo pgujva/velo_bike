@@ -1,17 +1,15 @@
 package ru.usetech.pft.velobike.appManager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import static org.openqa.selenium.Keys.ALT;
-import static org.openqa.selenium.Keys.ARROW_LEFT;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfAllElements;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
@@ -27,12 +25,12 @@ public class HelperBase {
 
     public boolean isThereARightPage(By locator, String expText, By locator_2, String expText2, String expURL) {
         if (
-                 wd.findElement(locator).getText().equals(expText) &&
+                wd.findElement(locator).getText().equals(expText) &&
                         wd.findElement(locator_2).getText().equals(expText2) &&
                         wd.getCurrentUrl().equals(expURL)
-                )
-        {return true;
-        }else return false;
+                ) {
+            return true;
+        } else return false;
     }
 
     public boolean isThereAElement() {
@@ -48,8 +46,8 @@ public class HelperBase {
         }
     }
 
-    public String getPageName() {
-        String pagename = wd.findElement(By.tagName("h1")).getText();
+    public String getPageName(By locator) {
+        String pagename = wd.findElement(locator).getText();
         return pagename;
     }
 
@@ -70,5 +68,50 @@ public class HelperBase {
 
     public void returnBack() {
         wd.navigate().back();
+    }
+
+    public String getCurrentWindowHandle() {
+        String handle = wd.getWindowHandle();
+        return handle;
+    }
+
+    public void switchWindow(String handle) {
+        wd.switchTo().window(handle);
+    }
+
+    public String getCurrentWindowHandles() {
+        String window = HelperBase.getLastElement(wd.getWindowHandles());
+
+        return window;
+    }
+
+    public void switchToNewWindow() {
+
+        String window = HelperBase.getLastElement(wd.getWindowHandles());
+      wd.switchTo().window(window );
+    }
+    public static <T> T getLastElement(final Iterable<T> elements) {
+        final Iterator<T> itr = elements.iterator();
+        T lastElement = itr.next();
+
+        while(itr.hasNext()) {
+            lastElement=itr.next();
+        }
+
+        return lastElement;
+    }
+
+    public String getVKpageName() {
+        String pageName = wd.findElement(By.cssSelector("a.oauth_logo.fl_l")).getAttribute("href");
+        return pageName;
+    }
+
+    public void closeWindow() {
+        wd.close();
+    }
+
+    public String getFacebookpageName() {
+        String pageName = wd.findElement(By.tagName("h2")).getAttribute("textContent");
+        return  pageName;
     }
 }

@@ -7,20 +7,17 @@ import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Model.NewsPageData;
 import ru.usetech.pft.velobike.Tests.Testbase;
 
-import java.util.List;
-
 public class NewsPageTests extends Testbase {
 
     @BeforeClass
     public void ensurePreconditions() {
-
         app.getSessionHelper().loginInSideMenu("4001776", "3875");
         app.getNavigationHelper().goToPersonalAccountPage();
         app.getNavigationHelper().goToSideMenu();
     }
 
     @Test
-    public void TestIsNewsOnPage() {
+    public void Test1IsNewsOnPage() {
         //проверка, что новости есть на странице
         app.getNavigationHelper().goNewsPage();
         boolean news = app.getHelperBase().isElementPresent(By.className("news-list__item"));
@@ -29,8 +26,8 @@ public class NewsPageTests extends Testbase {
     }
 
     @Test
-    public void TestNewsObject() {
-        //проверка, ссылка открывает искомую новость на просморт
+    public void Test2NewsObject() {
+        //проверка, ссылка открывает искомую новость на просмотр
         int index = 0;
         NewsPageData actualNews = app.getNewsPageHelper().actualNewsObject(index);
 
@@ -41,6 +38,32 @@ public class NewsPageTests extends Testbase {
         Assert.assertEquals(actualNews, expectedNews, "на просмотр открыта не верная новость");
 
     }
+
+
+    @Test
+    public void Test3GoToVKPage() {
+        String mainWindow = app.getHelperBase().getCurrentWindowHandle();
+        app.getNewsPageHelper().initVKrepost();
+        app.getHelperBase().switchToNewWindow();
+        String pagename = app.getHelperBase().getVKpageName();
+        app.getHelperBase().closeWindow();
+        app.getHelperBase().switchWindow(mainWindow);
+
+        Assert.assertEquals(pagename,"https://vk.com/");
+    }
+
+    @Test
+    public void Test4GoToFacebookPage() {
+        String mainWindow = app.getHelperBase().getCurrentWindowHandle();
+        app.getNewsPageHelper().initFacebookRepost();
+        app.getHelperBase().switchToNewWindow();
+        String pagename = app.getHelperBase().getFacebookpageName();
+        app.getHelperBase().closeWindow();
+        app.getHelperBase().switchWindow(mainWindow);
+
+        Assert.assertEquals(pagename,"Facebook");
+    }
+
 }
 
 
