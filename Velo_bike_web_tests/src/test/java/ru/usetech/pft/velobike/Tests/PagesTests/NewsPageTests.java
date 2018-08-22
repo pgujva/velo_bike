@@ -21,33 +21,26 @@ public class NewsPageTests extends Testbase {
 
     @Test
     public void TestIsNewsOnPage() {
+        //проверка, что новости есть на странице
         app.getNavigationHelper().goNewsPage();
         boolean news = app.getHelperBase().isElementPresent(By.className("news-list__item"));
 
         Assert.assertEquals(true, news, "нет новостей на странице");
     }
 
-        @Test
-        public void TestNewsObject() {
+    @Test
+    public void TestNewsObject() {
+        //проверка, ссылка открывает искомую новость на просморт
+        int index = 0;
+        NewsPageData actualNews = app.getNewsPageHelper().actualNewsObject(index);
 
-        //NewsPageData actualNews = app.getNewsPageHelper().createNewsObject();
+        app.getNewsPageHelper().goToOneNewsPage(index);
 
+        NewsPageData expectedNews = app.getNewsPageHelper().expectedNewsObject(index);
 
+        Assert.assertEquals(actualNews, expectedNews, "на просмотр открыта не верная новость");
 
-            List<String> newsLinks = app.getNewsPageHelper().getNewsLinks();
-            List<String> newsTitles = app.getNewsPageHelper().getNewsTitles();
-
-
-            int index = 0;
-            String newsLink = newsLinks.get(index);
-            String newsTitle = newsTitles.get(index);
-            app.getNewsPageHelper().goToOneNewsPage(index);
-            String currentNewsUrl = app.getHelperBase().getCurrentPageURL();
-            String currentNewsTitle = app.getNewsPageHelper().getCurrentPageNewsTitle();
-
-            Assert.assertEquals(newsLink, currentNewsUrl, "не верная ссылка на новость ");
-            Assert.assertEquals(newsTitle, currentNewsTitle, "не верная заголовок новости ");
-        }
     }
+}
 
 

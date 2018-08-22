@@ -56,14 +56,14 @@ public class NewsPageHelper {
 
     }
 
-    public NewsPageData actualNewsObject() {
+    public NewsPageData actualNewsObject(int index) {
         List<WebElement> Datalist = wd.findElements(By.cssSelector("span.news-list__date"));
         List<WebElement> textList = wd.findElements(By.cssSelector("div.news-list__text-box"));
         List<WebElement> newsList = getNewsList();
-        String title= newsList.get(0).getText();
-        String date = Datalist.get(0).getText();
-        String url = newsList.get(0).getAttribute("href");
-        String text = textList.get(0).findElement(By.cssSelector("p.MsoNormal")).getAttribute("textContent");
+        String title= newsList.get(index).getText();
+        String date = Datalist.get(index).getText();
+        String url = newsList.get(index).getAttribute("href");
+        String text = textList.get(index).findElement(By.cssSelector("p.MsoNormal")).getAttribute("textContent");
         System.out.println(date);
         System.out.println(title);
         System.out.println(url);
@@ -72,13 +72,13 @@ public class NewsPageHelper {
         return newsPageData;
     }
 
-    public NewsPageData expectedNewsObject () {
+    public NewsPageData expectedNewsObject (int index) {
         List<WebElement> textList = wd.findElements(By.cssSelector("div.news-content"));
         List<WebElement> Datalist = wd.findElements(By.cssSelector("span.news-list__date"));
-        String date = Datalist.get(0).getText();
+        String date = Datalist.get(index).getText();
         String title = wd.findElementByTagName("h3").getText();
         String url = wd.getCurrentUrl();
-        String text = textList.get(0).findElement(By.cssSelector("p.MsoNormal")).getAttribute("textContent");
+        String text = textList.get(index).findElement(By.cssSelector("p.MsoNormal")).getAttribute("textContent");
         System.out.println(date);
         System.out.println(title);
         System.out.println(url);

@@ -24,11 +24,12 @@ public class TEST extends Testbase {
             app.getNavigationHelper().goToSideMenu();
             app.getNavigationHelper().goNewsPage();
             int index = 0;
-            NewsPageData actualNews = app.getNewsPageHelper().actualNewsObject();
+            NewsPageData actualNews = app.getNewsPageHelper().actualNewsObject(index);
 
             app.getNewsPageHelper().goToOneNewsPage(index);
 
-            NewsPageData expectedNews =app.getNewsPageHelper().expectedNewsObject();
+            NewsPageData expectedNews =app.getNewsPageHelper().expectedNewsObject(index);
+
             Assert.assertEquals(actualNews,expectedNews);
 
         }
