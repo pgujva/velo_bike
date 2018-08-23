@@ -19,7 +19,7 @@ public class PricePageTests extends Testbase {
     @Test
     public void Test1() {
         app.getNavigationHelper().goPricePage();
-       //проверка, что все элементы с календарями есть на странице
+       //берем текущие объекты типа Цена и складываем в список
         List<PricePageData> actual = app.getPricePageHelper().getPriceList();
     }
 }

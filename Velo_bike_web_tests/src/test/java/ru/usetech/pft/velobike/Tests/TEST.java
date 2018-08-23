@@ -9,6 +9,7 @@ import ru.usetech.pft.velobike.Model.NewsPageData;
 import ru.usetech.pft.velobike.Model.PricePageData;
 
 import java.util.List;
+import java.util.Set;
 
 public class TEST extends Testbase {
 
@@ -57,8 +58,18 @@ public class TEST extends Testbase {
       app.getNavigationHelper().goPricePage();
      // app.getHelperBase().scrollPage();
 
-    //проверка, что все элементы с календарями есть на странице
-  List<PricePageData> actual = app.getPricePageHelper().getPriceList();
+   //проверка, что все элементы с календарями есть на странице
+ Set<PricePageData> actual = app.getPricePageHelper().getPriceList();
+ List<PricePageData> expected = app.getPricePageHelper().getStaticPriceList();
+ int a = actual.size();
+    // System.out.println("размер первого списка" + a);
+       app.getHelperBase().scrollPage();
+        List<PricePageData> actualg = app.getPricePageHelper().getPriceList();
+        int b = actualg.size();
+        System.out.println("размер второго списка" + b);
+        System.out.println(actualg.size());
+
+        Assert.assertEquals(actualg,expected);
     }
 
 }
