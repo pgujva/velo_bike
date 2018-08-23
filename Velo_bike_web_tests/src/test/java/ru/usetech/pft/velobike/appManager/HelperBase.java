@@ -115,7 +115,7 @@ public class HelperBase {
 
     public void scrollPage() {
         JavascriptExecutor jsx = (JavascriptExecutor)wd;
-        jsx.executeScript("window.scrollBy(0,1500)", "");
+        jsx.executeScript("window.scrollBy(0,1700)", "");
     }
 
     public void change() {

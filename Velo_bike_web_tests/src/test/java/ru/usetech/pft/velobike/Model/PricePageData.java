@@ -51,16 +51,6 @@ public class PricePageData {
     }
 
     @Override
-    public String toString() {
-        return "PricePageData{" +
-                "title='" + title + '\'' +
-                ", text='" + text + '\'' +
-                ", price='" + price + '\'' +
-                ", image='" + image + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -80,6 +70,17 @@ public class PricePageData {
         result = 31 * result + (price != null ? price.hashCode() : 0);
         result = 31 * result + (image != null ? image.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "PricePageData{" +
+                "title='" + title + '\'' +
+                ", text='" + text + '\'' +
+
+                ", price='" + price + '\'' +
+                ", image='" + image + '\'' +
+                '}';
     }
 
     public PricePageData(String title, String text, String price, String image , WebElement url) {

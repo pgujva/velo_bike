@@ -57,27 +57,13 @@ public class TEST extends Testbase {
     public void TestPricePage() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goPricePage();
-
         List<PricePageData> actual = app.getPricePageHelper().getPriceList();
         List<PricePageData> expected = app.getPricePageHelper().getStaticPriceList();
-        expected.sort(Comparator.comparing(PricePageData::getPrice));
-        int a = actual.size();
-        System.out.println("размер первого списка" + a);
-      //  app.getHelperBase().change();
-        //app.getHelperBase().scrollPage();
+
+        app.getHelperBase().scrollPage();
 
         List<PricePageData> actualg = app.getPricePageHelper().getPriceList();
 
-        actualg.sort(Comparator.comparing(PricePageData::getPrice));
-        for (int i = 0; i < actualg.size(); i++) {
-            System.out.println("первый" + actualg.get(i).getPrice());
-            System.out.println("второй" + expected.get(i).getPrice());
-        }
-
-
-        int b = actualg.size();
-        System.out.println("размер второго списка" + b);
-        System.out.println(actualg.size());
 
         Assert.assertEquals(expected, actualg);
     }

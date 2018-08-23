@@ -1,5 +1,6 @@
 package ru.usetech.pft.velobike.Tests.PagesTests;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Model.PricePageData;
@@ -17,9 +18,17 @@ public class PricePageTests extends Testbase {
     }
 
     @Test
-    public void Test1() {
+    public void Test1IsRightPricesOnPage() {
         app.getNavigationHelper().goPricePage();
-       //берем текущие объекты типа Цена и складываем в список
-        List<PricePageData> actual = app.getPricePageHelper().getPriceList();
+        //берем элементы с первой половины страницы
+        List<PricePageData> actual1 = app.getPricePageHelper().getPriceList();
+        List<PricePageData> expected = app.getPricePageHelper().getStaticPriceList();
+
+        app.getHelperBase().scrollPage();
+        //добаляем элемент со второй половины страницы
+        List<PricePageData> actual2 = app.getPricePageHelper().getPriceList();
+
+
+        Assert.assertEquals(expected, actual2);
     }
 }
