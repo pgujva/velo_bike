@@ -53,7 +53,7 @@ public class TEST extends Testbase {
 
     }
 
-    @Test
+    @Test(enabled = false)
     public void TestPricePage() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goPricePage();
@@ -68,6 +68,23 @@ public class TEST extends Testbase {
         Assert.assertEquals(expected, actualg);
     }
 
+
+    @Test
+    public void TestPricePagde() {
+        app.getNavigationHelper().goToSideMenu();
+        app.getNavigationHelper().goPricePage();
+        List<PricePageData> actual = app.getPricePageHelper().getPriceList();
+        actual.get(4).getUrl().click();
+        List<PricePageData> actual = app.getPricePageHelper().getDesList();
+        //List<PricePageData> expected = app.getPricePageHelper().getStaticPriceList();
+
+      //  app.getHelperBase().scrollPage();
+
+      //  List<PricePageData> actualg = app.getPricePageHelper().getPriceList();
+
+
+       // Assert.assertEquals(expected, actualg);
+    }
 }
 
 

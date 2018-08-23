@@ -23,12 +23,14 @@ public class PricePageTests extends Testbase {
         //берем элементы с первой половины страницы
         List<PricePageData> actual1 = app.getPricePageHelper().getPriceList();
         List<PricePageData> expected = app.getPricePageHelper().getStaticPriceList();
-
         app.getHelperBase().scrollPage();
         //добаляем элемент со второй половины страницы
         List<PricePageData> actual2 = app.getPricePageHelper().getPriceList();
-
-
         Assert.assertEquals(expected, actual2);
+    }
+
+    @Test
+    public void Test2IsRightDescription() {
+      //  app.getNewsPageHelper().getStaticDescription
     }
 }
