@@ -1,9 +1,6 @@
 package ru.usetech.pft.velobike.appManager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -119,5 +116,10 @@ public class HelperBase {
     public void scrollPage() {
         JavascriptExecutor jsx = (JavascriptExecutor)wd;
         jsx.executeScript("window.scrollBy(0,1500)", "");
+    }
+
+    public void change() {
+        wd.manage().window().fullscreen();
+        wd.manage().window().setSize(new Dimension(1000, 1000));
     }
 }

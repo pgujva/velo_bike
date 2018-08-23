@@ -1,6 +1,5 @@
 package ru.usetech.pft.velobike.appManager;
 
-import org.hibernate.mapping.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -20,7 +19,7 @@ public class PricePageHelper {
         this.wait = wait;
     }
 
-    public Set<PricePageData> getPriceList() {
+    public List<PricePageData> getPriceList() {
         List<PricePageData> prices = new ArrayList<PricePageData>();
         List<WebElement> webprices = wd.findElements(By.className("price-content__column"));
         for (WebElement webpri : webprices) {

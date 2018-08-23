@@ -8,8 +8,9 @@ import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Model.NewsPageData;
 import ru.usetech.pft.velobike.Model.PricePageData;
 
+import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class TEST extends Testbase {
 
@@ -21,20 +22,20 @@ public class TEST extends Testbase {
     }
 
 
-        @Test(enabled = false)
-        public void TestGoToHowToUseRentalPage() {
-            app.getNavigationHelper().goToSideMenu();
-            app.getNavigationHelper().goNewsPage();
-            int index = 0;
-            NewsPageData actualNews = app.getNewsPageHelper().actualNewsObject(index);
+    @Test(enabled = false)
+    public void TestGoToHowToUseRentalPage() {
+        app.getNavigationHelper().goToSideMenu();
+        app.getNavigationHelper().goNewsPage();
+        int index = 0;
+        NewsPageData actualNews = app.getNewsPageHelper().actualNewsObject(index);
 
-            app.getNewsPageHelper().goToOneNewsPage(index);
+        app.getNewsPageHelper().goToOneNewsPage(index);
 
-            NewsPageData expectedNews =app.getNewsPageHelper().expectedNewsObject(index);
+        NewsPageData expectedNews = app.getNewsPageHelper().expectedNewsObject(index);
 
-            Assert.assertEquals(actualNews,expectedNews);
+        Assert.assertEquals(actualNews, expectedNews);
 
-        }
+    }
 
     @Test(enabled = false)
     public void TestRepost() {
@@ -48,28 +49,37 @@ public class TEST extends Testbase {
         String pagename = app.getHelperBase().getVKpageName();
         String newWindowUrl = app.getHelperBase().getCurrentPageURL();
         System.out.println(pagename);
-        Assert.assertEquals(pagename,"https://vk.com/");
+        Assert.assertEquals(pagename, "https://vk.com/");
 
     }
 
     @Test
-    public void TestPricePage (){
+    public void TestPricePage() {
         app.getNavigationHelper().goToSideMenu();
-      app.getNavigationHelper().goPricePage();
-     // app.getHelperBase().scrollPage();
+        app.getNavigationHelper().goPricePage();
 
-   //проверка, что все элементы с календарями есть на странице
- Set<PricePageData> actual = app.getPricePageHelper().getPriceList();
- List<PricePageData> expected = app.getPricePageHelper().getStaticPriceList();
- int a = actual.size();
-    // System.out.println("размер первого списка" + a);
-       app.getHelperBase().scrollPage();
+        List<PricePageData> actual = app.getPricePageHelper().getPriceList();
+        List<PricePageData> expected = app.getPricePageHelper().getStaticPriceList();
+        expected.sort(Comparator.comparing(PricePageData::getPrice));
+        int a = actual.size();
+        System.out.println("размер первого списка" + a);
+      //  app.getHelperBase().change();
+        //app.getHelperBase().scrollPage();
+
         List<PricePageData> actualg = app.getPricePageHelper().getPriceList();
+
+        actualg.sort(Comparator.comparing(PricePageData::getPrice));
+        for (int i = 0; i < actualg.size(); i++) {
+            System.out.println("первый" + actualg.get(i).getPrice());
+            System.out.println("второй" + expected.get(i).getPrice());
+        }
+
+
         int b = actualg.size();
         System.out.println("размер второго списка" + b);
         System.out.println(actualg.size());
 
-        Assert.assertEquals(actualg,expected);
+        Assert.assertEquals(expected, actualg);
     }
 
 }
