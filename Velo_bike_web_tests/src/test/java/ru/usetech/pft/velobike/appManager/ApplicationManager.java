@@ -16,6 +16,7 @@ public class ApplicationManager {
     private HelperBase helperBase;
     private SideMenuHelper sideMenuHelper;
     private NewsPageHelper newsPageHelper;
+    private PricePageHelper pricePageHelper;
     private WebDriverWait wait;
 
     public void init() {
@@ -30,10 +31,11 @@ public class ApplicationManager {
         enterToSystemHelper = new EnterToSystemHelper(wd, wait);
         sideMenuHelper = new SideMenuHelper(wd, wait);
         newsPageHelper = new NewsPageHelper(wd, wait);
+        pricePageHelper = new PricePageHelper(wd,wait);
     }
 
     public void stop() {
-      wd.quit();
+     // wd.quit();
     }
 
 
@@ -59,6 +61,10 @@ public class ApplicationManager {
 
     public NewsPageHelper getNewsPageHelper() {
         return newsPageHelper;
+    }
+
+    public PricePageHelper getPricePageHelper() {
+        return pricePageHelper;
     }
 
 

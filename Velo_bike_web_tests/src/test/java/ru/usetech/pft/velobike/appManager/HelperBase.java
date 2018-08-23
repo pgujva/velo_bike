@@ -1,6 +1,7 @@
 package ru.usetech.pft.velobike.appManager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -113,5 +114,10 @@ public class HelperBase {
     public String getFacebookpageName() {
         String pageName = wd.findElement(By.tagName("h2")).getAttribute("textContent");
         return  pageName;
+    }
+
+    public void scrollPage() {
+        JavascriptExecutor jsx = (JavascriptExecutor)wd;
+        jsx.executeScript("window.scrollBy(0,450)", "");
     }
 }

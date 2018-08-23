@@ -1,10 +1,14 @@
 package ru.usetech.pft.velobike.Tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Model.NewsPageData;
+import ru.usetech.pft.velobike.Model.PricePageData;
+
+import java.util.List;
 
 public class TEST extends Testbase {
 
@@ -31,7 +35,7 @@ public class TEST extends Testbase {
 
         }
 
-    @Test
+    @Test(enabled = false)
     public void TestRepost() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goNewsPage();
@@ -46,7 +50,18 @@ public class TEST extends Testbase {
         Assert.assertEquals(pagename,"https://vk.com/");
 
     }
+
+    @Test
+    public void TestPricePage (){
+        app.getNavigationHelper().goToSideMenu();
+      app.getNavigationHelper().goPricePage();
+     // app.getHelperBase().scrollPage();
+
+    //проверка, что все элементы с календарями есть на странице
+  List<PricePageData> actual = app.getPricePageHelper().getPriceList();
     }
+
+}
 
 
 
