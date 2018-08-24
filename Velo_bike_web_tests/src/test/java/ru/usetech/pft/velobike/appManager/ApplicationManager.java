@@ -39,6 +39,9 @@ public class ApplicationManager {
    wd.quit();
     }
 
+    public HttpSession newSession() {
+        return new HttpSession(this);
+    }
 
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
