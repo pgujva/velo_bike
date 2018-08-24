@@ -116,4 +116,12 @@ public class NavigationHelper {
         wait.until(elementToBeClickable(By.cssSelector("a[href='https://t.me/velobikeru_bot']")));
         wd.findElement(By.cssSelector("a[href='https://t.me/velobikeru_bot']")).click();
     }
+
+    public void goToPriceFromgoElectroVelobikePage() {
+        wd.findElement(By.cssSelector("span.price-table__time-note a")).click();
+    }
+
+    public void goToQaPageFromgoElectroVelobikePage() {
+        wd.findElement(By.cssSelector("a.btn-blue")).click();
+    }
 }
