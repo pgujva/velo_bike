@@ -32,6 +32,7 @@ public class ApplicationManager {
         sideMenuHelper = new SideMenuHelper(wd, wait);
         newsPageHelper = new NewsPageHelper(wd, wait);
         pricePageHelper = new PricePageHelper(wd,wait);
+        sessionHelper.loginInSideMenu("4001776", "3875");
     }
 
     public void stop() {

@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Model.PricePageData;
 import ru.usetech.pft.velobike.Tests.Testbase;
@@ -12,21 +13,19 @@ import java.util.List;
 
 public class ElectroVelobikePageTests extends Testbase {
 
-    @BeforeClass
+    @BeforeMethod
     public void ensurePreconditions() {
-        app.getSessionHelper().loginInSideMenu("4001776", "3875");
         app.getNavigationHelper().goToPersonalAccountPage();
         app.getNavigationHelper().goToSideMenu();
+        app.getNavigationHelper().goElectroVelobikePage();
     }
 
 
     @Test
     public void Test1() {
         //проверка перехода по ссылке «стоимость доступа»
-       app.getNavigationHelper().goElectroVelobikePage();
        app.getNavigationHelper().goToPriceFromgoElectroVelobikePage();
        String pricesUrl = app.getHelperBase().getCurrentPageURL();
-       app.getNavigationHelper().goToPreviousPage();
        Assert.assertEquals(pricesUrl,"https://velobike.ru/prices/");
 
     }
