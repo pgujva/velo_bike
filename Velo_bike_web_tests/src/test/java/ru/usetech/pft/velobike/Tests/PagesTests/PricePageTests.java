@@ -1,5 +1,6 @@
 package ru.usetech.pft.velobike.Tests.PagesTests;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -17,20 +18,48 @@ public class PricePageTests extends Testbase {
         app.getNavigationHelper().goToSideMenu();
     }
 
-    @Test
+    @Test(enabled = false)
     public void Test1IsRightPricesOnPage() {
         app.getNavigationHelper().goPricePage();
         //берем элементы с первой половины страницы
         List<PricePageData> actual1 = app.getPricePageHelper().getPriceList();
         List<PricePageData> expected = app.getPricePageHelper().getStaticPriceList();
         app.getHelperBase().scrollPage();
-        //добаляем элемент со второй половины страницы
+        //добаляем элементы со второй половины страницы
         List<PricePageData> actual2 = app.getPricePageHelper().getPriceList();
-        Assert.assertEquals(expected, actual2);
+       // System.out.println(actual2.size());
+        Assert.assertEquals(expected,actual2);
     }
 
-    @Test
-    public void Test2IsRightDescription() {
-      //  app.getNewsPageHelper().getStaticDescription
+    @Test(enabled = false)
+    public void Test2IsElementshecked() {
+      //  app.getNavigationHelper().goToSideMenu();
+        app.getNavigationHelper().goPricePage();
+        app.getPricePageHelper().getPriceList();
+        String text = app.getHelperBase().findElement(By.cssSelector("span.price-table__time-note.h_mb25"), "innerText");
+        //проверка, что выделен первый элемент
+        String firstElementChecked = app.getPricePageHelper().isElementChecked();
+        Assert.assertEquals(firstElementChecked,"price-content__column price-content__column_active", "при входе на страницу не выбран первый элемент");
+
+        app.getHelperBase().scrollPage();
+        //проверка, что выделен пятый элемент
+        String fifthElementChecked = app.getPricePageHelper().isElementChecked();
+        Assert.assertEquals(fifthElementChecked,"price-content__column price-content__column_active", "при входе на страницу не выбран пятый элемент");
     }
+
+    @Test(enabled = true)
+    public void Test3IsElementshecked() {
+        app.getNavigationHelper().goPricePage();
+        String text = app.getHelperBase().findElement(By.cssSelector("span.price-table__time-note.h_mb25"), "innerText");
+        List<PricePageData> prices = app.getPricePageHelper().getPriceList();
+        prices.get(4).getUrl().click();
+        String text2 = app.getHelperBase().findElement(By.cssSelector("span.price-table__time-note.h_mb25"), "innerText");
+        Boolean b = text.equals(text2);
+        Boolean c = false;
+
+      Assert.assertEquals(b, c);
+
+    }
+
+
 }

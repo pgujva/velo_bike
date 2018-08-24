@@ -115,11 +115,16 @@ public class HelperBase {
 
     public void scrollPage() {
         JavascriptExecutor jsx = (JavascriptExecutor)wd;
-        jsx.executeScript("window.scrollBy(0,1700)", "");
+        jsx.executeScript("window.scrollBy(0,1300)", "");
     }
 
     public void change() {
         wd.manage().window().fullscreen();
         wd.manage().window().setSize(new Dimension(1000, 1000));
+    }
+
+    public String findElement(By locator, String attribute) {
+        String element = wd.findElement(locator).getAttribute(attribute);
+         return element;
     }
 }

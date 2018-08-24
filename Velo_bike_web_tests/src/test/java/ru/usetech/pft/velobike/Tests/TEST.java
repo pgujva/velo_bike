@@ -1,15 +1,11 @@
 package ru.usetech.pft.velobike.Tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Model.NewsPageData;
 import ru.usetech.pft.velobike.Model.PricePageData;
 
-import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class TEST extends Testbase {
@@ -73,17 +69,14 @@ public class TEST extends Testbase {
     public void TestPricePagde() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goPricePage();
-        List<PricePageData> actual = app.getPricePageHelper().getPriceList();
-        actual.get(4).getUrl().click();
-        List<PricePageData> actual = app.getPricePageHelper().getDesList();
-        //List<PricePageData> expected = app.getPricePageHelper().getStaticPriceList();
+        //проверка, что выделен первый элемент
+        String firstElementChecked = app.getPricePageHelper().isElementChecked();
+        Assert.assertEquals(firstElementChecked,"price-content__column price-content__column_active", "при входе на страницу не выбран первый элемент");
 
-      //  app.getHelperBase().scrollPage();
-
-      //  List<PricePageData> actualg = app.getPricePageHelper().getPriceList();
-
-
-       // Assert.assertEquals(expected, actualg);
+        app.getHelperBase().scrollPage();
+        //проверка, что выделен пятый элемент
+        String fifthElementChecked = app.getPricePageHelper().isElementChecked();
+        Assert.assertEquals(fifthElementChecked,"price-content__column price-content__column_active", "при входе на страницу не выбран пятый элемент");
     }
 }
 

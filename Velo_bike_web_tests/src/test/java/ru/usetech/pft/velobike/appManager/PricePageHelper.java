@@ -31,16 +31,13 @@ public class PricePageHelper {
             WebElement url = webpri.findElement(By.tagName("img"));
             PricePageData pricePageData = new PricePageData(title, text, price, img, url);
             prices.add(pricePageData);
-            System.out.println(title);
-            System.out.println(text);
-            System.out.println(price);
-            System.out.println(img);
         }
         return prices;
     }
 
     public List<PricePageData> getStaticPriceList() {
         List<PricePageData> prices = new ArrayList<PricePageData>();
+
         PricePageData pricePageData0 = new PricePageData("На Сутки",
                 "Доступ на 24 часа. Включены все поездки до 30 мин. Стоимость поездок более 30 мин. списывается с банковской карты.",
                 "150\u20BD", "https://velobike.ru/media/content/ratedescription/icon/46/8e/468ee97b-db6b-47db-9f90-b3f41a37518a.png", null);
@@ -60,10 +57,6 @@ public class PricePageHelper {
                 "Доступ до 31/10/2018. Включены все поездки до 45 мин. Стоимость поездок более 45 мин. Списывается с банковской карты.",
                 "1190\u20BD", "https://velobike.ru/media/content/ratedescription/icon/c3/b1/c3b18242-c487-4911-9b71-1facefd0229a.png", null);
         prices.add(3, pricePageData3);
-
-
-        ;
-
 
         PricePageData pricePageData4 = new PricePageData("На Сутки",
                 "",
@@ -88,5 +81,10 @@ public class PricePageHelper {
         return prices;
     }
 
+    public String isElementChecked() {
+        String attribute = wd.findElement(By.cssSelector("#prices-insurance div.price-content__cols >div:nth-child(1)")).getAttribute("className");
+
+        return attribute;
+    }
 }
 
