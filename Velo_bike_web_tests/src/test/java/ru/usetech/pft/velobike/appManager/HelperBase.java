@@ -132,4 +132,8 @@ public class HelperBase {
         JavascriptExecutor jsx = (JavascriptExecutor)wd;
         jsx.executeScript("window.scrollBy(0,2000)", "");
     }
+
+    public void waitDownload() throws InterruptedException {
+        wd.wait(5000);
     }
+}

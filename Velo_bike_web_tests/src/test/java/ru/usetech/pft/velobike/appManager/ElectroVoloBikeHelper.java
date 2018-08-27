@@ -25,7 +25,8 @@ public class ElectroVoloBikeHelper {
         JsonObject innerObj = (JsonObject) lang.get(234);
         String id = innerObj.get("Id").getAsString();
         String freeElectricPlaces = innerObj.get("FreeElectricPlaces").getAsString();
-        String freeOrdinaryPlaces = innerObj.get("FreeOrdinaryPlaces").getAsString();
+        String freeOrdinaryPlaces = totalElectricPlaces - freeElectricPlaces;
+        String totalElectricPlaces = innerObj.get("TotalElectricPlaces").getAsString();
         StationsData station = new  StationsData(id,freeElectricPlaces,freeOrdinaryPlaces);
         return station;
     }
@@ -46,7 +47,8 @@ public class ElectroVoloBikeHelper {
     public StationsData CreateStationData() {
         String id = "0" + wd.findElementById("241").getAttribute("id");
         String freeElectricPlaces =
-            wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(1) span.map-popup__number")).getText();
+            wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(1) span.map-popup__number")).getAttribute("innerText");
+
                 String freeOrdinaryPlaces =
                 wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(2) span.map-popup__number")).getText();
         StationsData stationsData = new StationsData(id,freeElectricPlaces,freeOrdinaryPlaces);

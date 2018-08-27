@@ -52,15 +52,16 @@ public class ElectroVelobikePageTests extends Testbase {
     }
 
     @Test
-    public void Test3() throws IOException {
+    public void Test3() throws IOException, InterruptedException {
         //отправляем http запрос и из ответа создаем объект типа station
         HttpSession session = app.newSession();
         String respons = session.resp();
         StationsData expectedStation =  app.getElectroVoloBikeHelper().CreateStationDataFromResponse(respons);
-        app.getHelperBase().scrollPage1();
+       // app.getHelperBase().scrollPage1();
         app.getElectroVoloBikeHelper().initSearch();
-       app.getHelperBase().scrollPage();
+     //  app.getHelperBase().scrollPage();
        app.getElectroVoloBikeHelper().clickOnStationIcon();
+      // app.getHelperBase().waitDownload();
        StationsData actualStation = app.getElectroVoloBikeHelper().CreateStationData();
         Assert.assertEquals(actualStation,expectedStation);
 
