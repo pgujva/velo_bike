@@ -57,10 +57,11 @@ public class ElectroVelobikePageTests extends Testbase {
         HttpSession session = app.newSession();
         String respons = session.resp();
         StationsData expectedStation =  app.getElectroVoloBikeHelper().CreateStationDataFromResponse(respons);
-
+        app.getHelperBase().scrollPage1();
         app.getElectroVoloBikeHelper().initSearch();
-        app.getElectroVoloBikeHelper().clickOnStationIcon();
-        StationsData actualStation = app.getElectroVoloBikeHelper().CreateStationData();
+       app.getHelperBase().scrollPage();
+       app.getElectroVoloBikeHelper().clickOnStationIcon();
+       StationsData actualStation = app.getElectroVoloBikeHelper().CreateStationData();
         Assert.assertEquals(actualStation,expectedStation);
 
     }

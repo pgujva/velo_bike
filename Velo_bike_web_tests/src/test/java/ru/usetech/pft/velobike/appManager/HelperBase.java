@@ -127,4 +127,9 @@ public class HelperBase {
         String element = wd.findElement(locator).getAttribute(attribute);
          return element;
     }
-}
+
+    public void scrollPage1() {
+        JavascriptExecutor jsx = (JavascriptExecutor)wd;
+        jsx.executeScript("window.scrollBy(0,2000)", "");
+    }
+    }

@@ -23,7 +23,7 @@ public class ElectroVoloBikeHelper {
         JsonObject jsonObject = (JsonObject) jsonParser.parse(respons);
         JsonArray lang = (JsonArray) jsonObject.get("Items");
         JsonObject innerObj = (JsonObject) lang.get(234);
-        String id = innerObj.get("FreeElectricPlaces").getAsString();
+        String id = innerObj.get("Id").getAsString();
         String freeElectricPlaces = innerObj.get("FreeElectricPlaces").getAsString();
         String freeOrdinaryPlaces = innerObj.get("FreeOrdinaryPlaces").getAsString();
         StationsData station = new  StationsData(id,freeElectricPlaces,freeOrdinaryPlaces);
@@ -44,10 +44,10 @@ public class ElectroVoloBikeHelper {
     }
 
     public StationsData CreateStationData() {
-        String id = wd.findElementById("241").getAttribute("id");
+        String id = "0" + wd.findElementById("241").getAttribute("id");
         String freeElectricPlaces =
-               wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(1) span.map-popup__number")).getText();
-        String freeOrdinaryPlaces =
+            wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(1) span.map-popup__number")).getText();
+                String freeOrdinaryPlaces =
                 wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(2) span.map-popup__number")).getText();
         StationsData stationsData = new StationsData(id,freeElectricPlaces,freeOrdinaryPlaces);
         return stationsData;

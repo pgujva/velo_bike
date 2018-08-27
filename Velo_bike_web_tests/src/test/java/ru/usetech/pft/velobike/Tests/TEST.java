@@ -1,11 +1,15 @@
 package ru.usetech.pft.velobike.Tests;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Model.NewsPageData;
 import ru.usetech.pft.velobike.Model.PricePageData;
+import ru.usetech.pft.velobike.Model.StationsData;
 import ru.usetech.pft.velobike.appManager.HttpSession;
 
 import java.io.IOException;
@@ -15,9 +19,9 @@ public class TEST extends Testbase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-
-        app.getSessionHelper().loginInSideMenu("4001776", "3875");
-     //  app.getNavigationHelper().goToPersonalAccountPage();
+        app.getNavigationHelper().goToPersonalAccountPage();
+        app.getNavigationHelper().goToSideMenu();
+        app.getNavigationHelper().goElectroVelobikePage();
     }
 
 
@@ -70,12 +74,20 @@ public class TEST extends Testbase {
 
     @Test
     public void TestPricePagde () throws IOException {
-        app.getNavigationHelper().goToPersonalAccountPage();
-        app.getNavigationHelper().goToSideMenu();
-        app.getNavigationHelper().goElectroVelobikePage();
-       // HttpSession session = app.newSession();
-       // String respons = session.resp();
-       // System.out.println(respons);
+
+        HttpSession session = app.newSession();
+        String respons = session.resp();
+        JsonParser jsonParser = new JsonParser();
+        JsonObject jsonObject = (JsonObject) jsonParser.parse(respons);
+        JsonArray lang = (JsonArray) jsonObject.get("Item");
+        JsonObject innerObj = (JsonObject) lang.get(234);
+        String id = innerObj.get("FreeElectricPlaces").getAsString();
+        String freeElectricPlaces = innerObj.get("FreeElectricPlaces").getAsString();
+        String freeOrdinaryPlaces = innerObj.get("FreeOrdinaryPlaces").getAsString();
+        StationsData station = new  StationsData(id,freeElectricPlaces,freeOrdinaryPlaces);
+        System.out.println(id);
+        System.out.println(freeElectricPlaces);
+        System.out.println(freeOrdinaryPlaces);
 
     }
 }
