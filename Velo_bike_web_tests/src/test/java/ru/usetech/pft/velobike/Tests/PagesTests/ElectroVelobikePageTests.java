@@ -60,11 +60,13 @@ public class ElectroVelobikePageTests extends Testbase {
         JsonParser jsonParser = new JsonParser();
         JsonObject jsonObject = (JsonObject) jsonParser.parse(respons);
         JsonArray lang= (JsonArray) jsonObject.get("Items");
-        JsonElement d = lang.get(1);
-        JsonObject innerObj = (JsonObject) lang.get(0);
-        innerObj.get("Id");
-        System.out.println(lang.get(1));
+      //  JsonElement d = lang.get(234);
+        JsonObject innerObj = (JsonObject) lang.get(234);
+       // innerObj.get("Id");
+        System.out.println(lang.get(234));
         System.out.println( innerObj.get("Id"));
+        System.out.println( innerObj.get("FreeElectricPlaces"));
+        System.out.println(innerObj.get("FreeOrdinaryPlaces"));
 
     }
 }
