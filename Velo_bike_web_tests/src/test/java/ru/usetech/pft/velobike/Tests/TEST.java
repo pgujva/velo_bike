@@ -2,19 +2,22 @@ package ru.usetech.pft.velobike.Tests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Model.NewsPageData;
 import ru.usetech.pft.velobike.Model.PricePageData;
+import ru.usetech.pft.velobike.appManager.HttpSession;
 
+import java.io.IOException;
 import java.util.List;
 
 public class TEST extends Testbase {
 
-    @BeforeClass
+    @BeforeMethod
     public void ensurePreconditions() {
 
         app.getSessionHelper().loginInSideMenu("4001776", "3875");
-        app.getNavigationHelper().goToPersonalAccountPage();
+     //  app.getNavigationHelper().goToPersonalAccountPage();
     }
 
 
@@ -66,17 +69,14 @@ public class TEST extends Testbase {
 
 
     @Test
-    public void TestPricePagde() {
+    public void TestPricePagde () throws IOException {
+        app.getNavigationHelper().goToPersonalAccountPage();
         app.getNavigationHelper().goToSideMenu();
-        app.getNavigationHelper().goPricePage();
-        //проверка, что выделен первый элемент
-        String firstElementChecked = app.getPricePageHelper().isElementChecked();
-        Assert.assertEquals(firstElementChecked,"price-content__column price-content__column_active", "при входе на страницу не выбран первый элемент");
+        app.getNavigationHelper().goElectroVelobikePage();
+       // HttpSession session = app.newSession();
+       // String respons = session.resp();
+       // System.out.println(respons);
 
-        app.getHelperBase().scrollPage();
-        //проверка, что выделен пятый элемент
-        String fifthElementChecked = app.getPricePageHelper().isElementChecked();
-        Assert.assertEquals(fifthElementChecked,"price-content__column price-content__column_active", "при входе на страницу не выбран пятый элемент");
     }
 }
 

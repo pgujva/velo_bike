@@ -43,6 +43,9 @@ public class ApplicationManager {
         return new HttpSession(this);
     }
 
+
+
+
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
     }
