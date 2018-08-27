@@ -13,11 +13,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Model.PricePageData;
+import ru.usetech.pft.velobike.Model.StationsData;
 import ru.usetech.pft.velobike.Tests.Testbase;
+import ru.usetech.pft.velobike.appManager.ElectroVoloBikeHelper;
 import ru.usetech.pft.velobike.appManager.HttpSession;
-
-
-
 
 
 import java.io.IOException;
@@ -33,40 +32,38 @@ public class ElectroVelobikePageTests extends Testbase {
     }
 
 
-    @Test (enabled = false)
+    @Test(enabled = false)
     public void Test1() {
         //проверка перехода по ссылке «стоимость доступа»
-       app.getNavigationHelper().goToPriceFromgoElectroVelobikePage();
-       String pricesUrl = app.getHelperBase().getCurrentPageURL();
-       Assert.assertEquals(pricesUrl,"https://velobike.ru/prices/");
+        app.getNavigationHelper().goToPriceFromgoElectroVelobikePage();
+        String pricesUrl = app.getHelperBase().getCurrentPageURL();
+        Assert.assertEquals(pricesUrl, "https://velobike.ru/prices/");
 
     }
 
-    @Test (enabled = false)
+    @Test(enabled = false)
     public void Test2() {
         //проверка перехода по ссылке «вопросы и ответы»
         app.getNavigationHelper().goToQaPageFromgoElectroVelobikePage();
         String qaUrl = app.getHelperBase().getCurrentPageURL();
-        Assert.assertEquals(qaUrl,"https://velobike.ru/qa/#electro");
+        Assert.assertEquals(qaUrl, "https://velobike.ru/qa/#electro");
         //проверка наличие элемента "Электропрокат"
-        Assert.assertEquals(app.getHelperBase().isElementPresent(By.id("electro")),true);
+        Assert.assertEquals(app.getHelperBase().isElementPresent(By.id("electro")), true);
     }
 
     @Test
-    public void Test3() throws IOException{
+    public void Test3() throws IOException {
+        //отправляем http запрос и из ответа создаем объект типа station
         HttpSession session = app.newSession();
-       String respons = session.resp();
-       // System.out.println(respons);
-        JsonParser jsonParser = new JsonParser();
-        JsonObject jsonObject = (JsonObject) jsonParser.parse(respons);
-        JsonArray lang= (JsonArray) jsonObject.get("Items");
-      //  JsonElement d = lang.get(234);
-        JsonObject innerObj = (JsonObject) lang.get(234);
-       // innerObj.get("Id");
-        System.out.println(lang.get(234));
-        System.out.println( innerObj.get("Id"));
-        System.out.println( innerObj.get("FreeElectricPlaces"));
-        System.out.println(innerObj.get("FreeOrdinaryPlaces"));
+        String respons = session.resp();
+        StationsData expectedStation =  app.getElectroVoloBikeHelper().CreateStationDataFromResponse(respons);
+
+        app.getElectroVoloBikeHelper().initSearch();
+        app.getElectroVoloBikeHelper().clickOnStationIcon();
+        StationsData actualStation = app.getElectroVoloBikeHelper().CreateStationData();
+        Assert.assertEquals(actualStation,expectedStation);
 
     }
+
+
 }
