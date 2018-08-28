@@ -33,10 +33,10 @@ public class ElectroVoloBikeHelper {
     return station;
   }
 
-  public void initSearch() {
+  public void initSearch(String stationNumber) {
     wd.findElement(By.id("search-input")).click();
     wd.findElement(By.id("search-input")).clear();
-    wd.findElement(By.id("search-input")).sendKeys("241");
+    wd.findElement(By.id("search-input")).sendKeys(stationNumber);
     wd.findElement(By.className("route-map__search__submit")).click();
 
 
@@ -46,8 +46,8 @@ public class ElectroVoloBikeHelper {
     wd.findElement(By.cssSelector("div[title]")).click();
   }
 
-  public StationsData CreateStationData() {
-    int id = Integer.parseInt("0" + wd.findElementById("241").getAttribute("id"));
+  public StationsData CreateStationData(String stationNumber) {
+    int id = Integer.parseInt("0" + wd.findElementById(stationNumber).getAttribute("id"));
     int freeElectricPlaces = Integer.parseInt(
             wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(1) span.map-popup__number")).getAttribute("innerText"));
 

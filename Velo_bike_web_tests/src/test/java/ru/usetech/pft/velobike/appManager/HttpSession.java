@@ -2,13 +2,11 @@ package ru.usetech.pft.velobike.appManager;
 
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.client.LaxRedirectStrategy;
 import org.apache.http.util.EntityUtils;
 
-import java.io.Closeable;
 import java.io.IOException;
 
 public class HttpSession {
@@ -20,8 +18,8 @@ public class HttpSession {
         httpclient = HttpClients.custom().setRedirectStrategy(new LaxRedirectStrategy()).build();
     }
 
-    public String resp() throws IOException {
-        HttpGet get = new HttpGet("https://electro.velobike.ru/ajax/parkings/?_=1535358830923");
+    public String resp(String url) throws IOException {
+        HttpGet get = new HttpGet(url);
         CloseableHttpResponse response = httpclient.execute(get);
         String body = geTextFrom(response);
         return body;
