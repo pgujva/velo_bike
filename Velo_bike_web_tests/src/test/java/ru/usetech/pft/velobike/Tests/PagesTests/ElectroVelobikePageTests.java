@@ -32,7 +32,7 @@ public class ElectroVelobikePageTests extends Testbase {
   }
 
 
-  @Test(enabled = false)
+  @Test
   public void Test1() {
     //проверка перехода по ссылке «стоимость доступа»
     app.getNavigationHelper().goToPriceFromgoElectroVelobikePage();
@@ -41,7 +41,7 @@ public class ElectroVelobikePageTests extends Testbase {
 
   }
 
-  @Test(enabled = false)
+  @Test
   public void Test2() {
     //проверка перехода по ссылке «вопросы и ответы»
     app.getNavigationHelper().goToQaPageFromgoElectroVelobikePage();
