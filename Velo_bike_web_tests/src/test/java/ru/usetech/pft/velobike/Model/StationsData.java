@@ -1,11 +1,11 @@
 package ru.usetech.pft.velobike.Model;
 
 public class StationsData {
-    private String id;
-    private String freeElectricPlaces;
-    private String freeOrdinaryPlaces;
+    private int id;
+    private int freeElectricPlaces;
+    private int freeOrdinaryPlaces;
 
-    public StationsData(String id, String freeElectricPlaces, String freeOrdinaryPlaces) {
+    public StationsData(int id, int freeElectricPlaces, int freeOrdinaryPlaces) {
         this.id = id;
         this.freeElectricPlaces = freeElectricPlaces;
         this.freeOrdinaryPlaces = freeOrdinaryPlaces;
@@ -18,50 +18,49 @@ public class StationsData {
 
         StationsData that = (StationsData) o;
 
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (freeElectricPlaces != null ? !freeElectricPlaces.equals(that.freeElectricPlaces) : that.freeElectricPlaces != null)
-            return false;
-        return freeOrdinaryPlaces != null ? freeOrdinaryPlaces.equals(that.freeOrdinaryPlaces) : that.freeOrdinaryPlaces == null;
+        if (id != that.id) return false;
+        if (freeElectricPlaces != that.freeElectricPlaces) return false;
+        return freeOrdinaryPlaces == that.freeOrdinaryPlaces;
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (freeElectricPlaces != null ? freeElectricPlaces.hashCode() : 0);
-        result = 31 * result + (freeOrdinaryPlaces != null ? freeOrdinaryPlaces.hashCode() : 0);
+        int result = id;
+        result = 31 * result + freeElectricPlaces;
+        result = 31 * result + freeOrdinaryPlaces;
         return result;
     }
 
     @Override
     public String toString() {
         return "StationsData{" +
-                "id='" + id + '\'' +
-                ", freeElectricPlaces='" + freeElectricPlaces + '\'' +
-                ", freeOrdinaryPlaces='" + freeOrdinaryPlaces + '\'' +
+                "id=" + id +
+                ", freeElectricPlaces=" + freeElectricPlaces +
+                ", freeOrdinaryPlaces=" + freeOrdinaryPlaces +
                 '}';
     }
 
-    public String getId() {
+    public int  getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int  id) {
         this.id = id;
     }
 
-    public String getFreeElectricPlaces() {
+    public int  getFreeElectricPlaces() {
         return freeElectricPlaces;
     }
 
-    public void setFreeElectricPlaces(String freeElectricPlaces) {
+    public void setFreeElectricPlaces(int  freeElectricPlaces) {
         this.freeElectricPlaces = freeElectricPlaces;
     }
 
-    public String getFreeOrdinaryPlaces() {
+    public int  getFreeOrdinaryPlaces() {
         return freeOrdinaryPlaces;
     }
 
-    public void setFreeOrdinaryPlaces(String freeOrdinaryPlaces) {
+    public void setFreeOrdinaryPlaces(int  freeOrdinaryPlaces) {
         this.freeOrdinaryPlaces = freeOrdinaryPlaces;
     }
 }

@@ -75,19 +75,7 @@ public class TEST extends Testbase {
     @Test
     public void TestPricePagde () throws IOException {
 
-        HttpSession session = app.newSession();
-        String respons = session.resp();
-        JsonParser jsonParser = new JsonParser();
-        JsonObject jsonObject = (JsonObject) jsonParser.parse(respons);
-        JsonArray lang = (JsonArray) jsonObject.get("Item");
-        JsonObject innerObj = (JsonObject) lang.get(234);
-        String id = innerObj.get("FreeElectricPlaces").getAsString();
-        String freeElectricPlaces = innerObj.get("FreeElectricPlaces").getAsString();
-        String freeOrdinaryPlaces = innerObj.get("FreeOrdinaryPlaces").getAsString();
-        StationsData station = new  StationsData(id,freeElectricPlaces,freeOrdinaryPlaces);
-        System.out.println(id);
-        System.out.println(freeElectricPlaces);
-        System.out.println(freeOrdinaryPlaces);
+
 
     }
 }

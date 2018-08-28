@@ -10,48 +10,50 @@ import ru.usetech.pft.velobike.Model.StationsData;
 
 public class ElectroVoloBikeHelper {
 
-    private ChromeDriver wd;
-    private WebDriverWait wait;
+  private ChromeDriver wd;
+  private WebDriverWait wait;
 
-    public ElectroVoloBikeHelper(ChromeDriver wd, WebDriverWait wait) {
-        this.wd = wd;
-        this.wait = wait;
-    }
+  public ElectroVoloBikeHelper(ChromeDriver wd, WebDriverWait wait) {
+    this.wd = wd;
+    this.wait = wait;
+  }
 
-    public StationsData CreateStationDataFromResponse(String respons) {
-        JsonParser jsonParser = new JsonParser();
-        JsonObject jsonObject = (JsonObject) jsonParser.parse(respons);
-        JsonArray lang = (JsonArray) jsonObject.get("Items");
-        JsonObject innerObj = (JsonObject) lang.get(234);
-        String id = innerObj.get("Id").getAsString();
-        String freeElectricPlaces = innerObj.get("FreeElectricPlaces").getAsString();
-        String freeOrdinaryPlaces = totalElectricPlaces - freeElectricPlaces;
-        String totalElectricPlaces = innerObj.get("TotalElectricPlaces").getAsString();
-        StationsData station = new  StationsData(id,freeElectricPlaces,freeOrdinaryPlaces);
-        return station;
-    }
+  public StationsData CreateStationDataFromResponse(String respons) {
+    JsonParser jsonParser = new JsonParser();
+    JsonObject jsonObject = (JsonObject) jsonParser.parse(respons);
+    JsonArray lang = (JsonArray) jsonObject.get("Items");
+    JsonObject innerObj = (JsonObject) lang.get(234);
 
-    public void initSearch() {
-        wd.findElement(By.id("search-input")).click();
-        wd.findElement(By.id("search-input")).clear();
-        wd.findElement(By.id("search-input")).sendKeys("241");
-        wd.findElement(By.className("route-map__search__submit")).click();
+    int id = innerObj.get("Id").getAsInt();
+    int freeElectricPlaces = innerObj.get("FreeElectricPlaces").getAsInt();
+    int totalElectricPlaces = innerObj.get("TotalElectricPlaces").getAsInt();
+    int freeOrdinaryPlaces = totalElectricPlaces - freeElectricPlaces;
+
+    StationsData station = new StationsData(id, freeElectricPlaces, freeOrdinaryPlaces);
+    return station;
+  }
+
+  public void initSearch() {
+    wd.findElement(By.id("search-input")).click();
+    wd.findElement(By.id("search-input")).clear();
+    wd.findElement(By.id("search-input")).sendKeys("241");
+    wd.findElement(By.className("route-map__search__submit")).click();
 
 
-    }
+  }
 
-    public void clickOnStationIcon() {
-        wd.findElement(By.cssSelector("div[title]")).click();
-    }
+  public void clickOnStationIcon() {
+    wd.findElement(By.cssSelector("div[title]")).click();
+  }
 
-    public StationsData CreateStationData() {
-        String id = "0" + wd.findElementById("241").getAttribute("id");
-        String freeElectricPlaces =
-            wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(1) span.map-popup__number")).getAttribute("innerText");
+  public StationsData CreateStationData() {
+    int id = Integer.parseInt("0" + wd.findElementById("241").getAttribute("id"));
+    int freeElectricPlaces = Integer.parseInt(
+            wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(1) span.map-popup__number")).getAttribute("innerText"));
 
-                String freeOrdinaryPlaces =
-                wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(2) span.map-popup__number")).getText();
-        StationsData stationsData = new StationsData(id,freeElectricPlaces,freeOrdinaryPlaces);
-        return stationsData;
-    }
+    int freeOrdinaryPlaces = Integer.parseInt(
+            wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(2) span.map-popup__number")).getText());
+    StationsData stationsData = new StationsData(id, freeElectricPlaces, freeOrdinaryPlaces);
+    return stationsData;
+  }
 }
