@@ -23,26 +23,27 @@ public class ParkingsPageTests extends Testbase {
     //отправляем http запрос и из ответа создаем объект типа station
     HttpSession session = app.newSession();
     String respons = session.resp("https://electro.velobike.ru/ajax/parkings/?_=1535358830923");
-    StationsData expectedStation = app.getElectroVoloBikeHelper().CreateStationDataFromResponse(respons);
+    StationsData expectedStation = app.getMapHelper().CreateStationDataFromResponse(respons);
     String stationNumber = "241";
-    app.getElectroVoloBikeHelper().initSearch(stationNumber, By.className("address-search__submit"));
-    app.getElectroVoloBikeHelper().clickOnStationIcon(By.xpath("//*[@id=\"map\"]/div/div/div[1]/div[1]/div[1]"));
+    app.getMapHelper().initSearchOnMainPage(stationNumber);
+    app.getMapHelper().clickOnStationIconOnMainPage();
     //создаем объект типа station на странице
-    StationsData actualStation = app.getElectroVoloBikeHelper().CreateStationData(stationNumber);
+    StationsData actualStation = app.getMapHelper().CreateStationData(stationNumber);
     Assert.assertEquals(actualStation, expectedStation);
   }
 
   @Test
-  public void Test2SearchStationAddress() throws IOException, InterruptedException {
+  public void Test2SearchStationByAddress() throws IOException, InterruptedException {
     //отправляем http запрос и из ответа создаем объект типа station
     HttpSession session = app.newSession();
     String respons = session.resp("https://electro.velobike.ru/ajax/parkings/?_=1535358830923");
-    StationsData expectedStation = app.getElectroVoloBikeHelper().CreateStationDataFromResponse(respons);
+    StationsData expectedStation = app.getMapHelper().CreateStationDataFromResponse(respons);
     String stationNumber = "241";
-    app.getElectroVoloBikeHelper().initSearch(stationNumber, By.className("address-search__submit"));
-    app.getElectroVoloBikeHelper().clickOnStationIcon(By.xpath("//*[@id=\"map\"]/div/div/div[1]/div[1]/div[1]"));
+    String address = "ст. м. Краснопресненская";
+    app.getMapHelper().initSearchOnMainPage(address);
+    app.getMapHelper().clickOnStationIconOnMainPage();
     //создаем объект типа station на странице
-    StationsData actualStation = app.getElectroVoloBikeHelper().CreateStationData(stationNumber);
+    StationsData actualStation = app.getMapHelper().CreateStationData(stationNumber);
     Assert.assertEquals(actualStation, expectedStation);
   }
 }
