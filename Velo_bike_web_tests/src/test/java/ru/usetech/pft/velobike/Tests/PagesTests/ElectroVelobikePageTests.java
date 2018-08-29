@@ -47,8 +47,8 @@ public class ElectroVelobikePageTests extends Testbase {
     String respons = session.resp("https://electro.velobike.ru/ajax/parkings/?_=1535358830923");
     StationsData expectedStation = app.getElectroVoloBikeHelper().CreateStationDataFromResponse(respons);
     String stationNumber = "241";
-    app.getElectroVoloBikeHelper().initSearch(stationNumber);
-    app.getElectroVoloBikeHelper().clickOnStationIcon();
+    app.getElectroVoloBikeHelper().initSearch(stationNumber, By.className("route-map__search__submit"));
+    app.getElectroVoloBikeHelper().clickOnStationIcon(By.cssSelector("div[title]"));
     //создаем объект типа station на странице
     StationsData actualStation = app.getElectroVoloBikeHelper().CreateStationData(stationNumber);
     Assert.assertEquals(actualStation, expectedStation);

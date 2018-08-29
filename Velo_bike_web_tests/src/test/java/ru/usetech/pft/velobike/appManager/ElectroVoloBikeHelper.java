@@ -28,32 +28,33 @@ public class ElectroVoloBikeHelper {
     int freeElectricPlaces = innerObj.get("FreeElectricPlaces").getAsInt();
     int totalElectricPlaces = innerObj.get("TotalElectricPlaces").getAsInt();
     int freeOrdinaryPlaces = totalElectricPlaces - freeElectricPlaces;
-
-    StationsData station = new StationsData(id, freeElectricPlaces, freeOrdinaryPlaces);
+    String address = innerObj.get("Address").getAsString();
+    StationsData station = new StationsData(id, freeElectricPlaces, freeOrdinaryPlaces, address);
     return station;
   }
 
-  public void initSearch(String stationNumber) {
+  public void initSearch(String stationNumber, By locator) {
     wd.findElement(By.id("search-input")).click();
     wd.findElement(By.id("search-input")).clear();
     wd.findElement(By.id("search-input")).sendKeys(stationNumber);
-    wd.findElement(By.className("route-map__search__submit")).click();
+    wd.findElement(locator).click();
 
 
   }
 
-  public void clickOnStationIcon() {
-    wd.findElement(By.cssSelector("div[title]")).click();
+  public void clickOnStationIcon(By locator) {
+    wd.findElement(locator).click();
+
   }
 
   public StationsData CreateStationData(String stationNumber) {
     int id = Integer.parseInt("0" + wd.findElementById(stationNumber).getAttribute("id"));
     int freeElectricPlaces = Integer.parseInt(
             wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(1) span.map-popup__number")).getAttribute("innerText"));
-
     int freeOrdinaryPlaces = Integer.parseInt(
             wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(2) span.map-popup__number")).getText());
-    StationsData stationsData = new StationsData(id, freeElectricPlaces, freeOrdinaryPlaces);
+    String address = wd.findElement(By.cssSelector("address.map-popup__address")).getText();
+    StationsData stationsData = new StationsData(id, freeElectricPlaces, freeOrdinaryPlaces, address);
     return stationsData;
   }
 }
