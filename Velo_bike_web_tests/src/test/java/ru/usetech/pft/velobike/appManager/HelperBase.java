@@ -49,10 +49,14 @@ public class HelperBase {
         return pagename;
     }
 
-    public void waitVisibilityOfElement(List<WebElement> menuElements) {
+    public void waitVisibilityOfElements(List<WebElement> menuElements) {
         wait.until(visibilityOfAllElements(menuElements));
         wd.manage().timeouts().setScriptTimeout(50, TimeUnit.SECONDS);
 
+    }
+
+    public void waitVisibilityOfElement1() {
+       wait.until(visibilityOfElementLocated(By.cssSelector("a[href='#']")));
     }
 
     public void waitElementLoad() {

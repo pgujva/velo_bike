@@ -4,11 +4,13 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import ru.usetech.pft.velobike.Model.PricePageData;
 import ru.usetech.pft.velobike.Model.StationsData;
 import ru.usetech.pft.velobike.Tests.Testbase;
 import ru.usetech.pft.velobike.appManager.HttpSession;
 
 import java.io.IOException;
+import java.util.List;
 
 public class MainPageTests extends Testbase {
 
@@ -47,12 +49,21 @@ public class MainPageTests extends Testbase {
     Assert.assertEquals(actualStation, expectedStation);
   }
 
-  @Test
+  @Test(enabled = false)
   public void Test3GoToParkingsPageTest() {
     app.getMainPageHelper().goToParkingsPage();
     String pageUrl = app.getHelperBase().getCurrentPageURL();
     String pageName = app.getHelperBase().getPageName(By.tagName("h1"));
     Assert.assertEquals(pageUrl, "https://velobike.ru/parkings/", "неверный URL");
     Assert.assertEquals(pageName, "Карта станций\nвелопроката", "неверный заголовок страницы");
+  }
+
+  @Test
+  public void Test4HowItCostTest() {
+    List<PricePageData> actual = app.getMainPageHelper().getPriceList();
+    System.out.println(actual.size());
+    app.getHelperBase().scrollPage();
+    actual.get(0).getUrl().click();
+
   }
 }

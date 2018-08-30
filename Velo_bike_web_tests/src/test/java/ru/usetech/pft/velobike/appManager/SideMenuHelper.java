@@ -90,7 +90,7 @@ public class SideMenuHelper extends ApplicationManager {
     public void changePages(List<String> pageLinks, int i) {
         getNavigationHelper().goToSideMenu();
         List<WebElement> newMenuElements = getSideMenuHelper().getMenuList();
-        getHelperBase().waitVisibilityOfElement(newMenuElements);
+        getHelperBase().waitVisibilityOfElements(newMenuElements);
         newMenuElements.get(i).click();
         pageLinks.add(getHelperBase().getCurrentPageURL());
         getHelperBase().returnBack();
