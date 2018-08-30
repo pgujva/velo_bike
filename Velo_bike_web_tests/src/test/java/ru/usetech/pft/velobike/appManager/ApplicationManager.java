@@ -19,6 +19,7 @@ public class ApplicationManager {
   private PricePageHelper pricePageHelper;
   private ElectroVoloBikeHelper electroVoloBikeHelper;
   private MapHelper mapHelper;
+  private MainPageHelper mainPageHelper;
   private WebDriverWait wait;
 
   public void init() {
@@ -35,6 +36,7 @@ public class ApplicationManager {
     newsPageHelper = new NewsPageHelper(wd, wait);
     pricePageHelper = new PricePageHelper(wd, wait);
     electroVoloBikeHelper = new ElectroVoloBikeHelper(wd, wait);
+    mainPageHelper = new MainPageHelper(wd,wait);
     mapHelper = new MapHelper(wd,wait);
     sessionHelper.loginInSideMenu("4001776", "3875");
   }
@@ -83,4 +85,9 @@ public class ApplicationManager {
   public MapHelper getMapHelper () {
     return mapHelper;
   }
+
+  public MainPageHelper getMainPageHelper () {
+    return mainPageHelper;
+  }
 }
+

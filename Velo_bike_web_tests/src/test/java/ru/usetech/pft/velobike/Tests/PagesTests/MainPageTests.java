@@ -10,7 +10,7 @@ import ru.usetech.pft.velobike.appManager.HttpSession;
 
 import java.io.IOException;
 
-public class ParkingsPageTests extends Testbase {
+public class MainPageTests extends Testbase {
 
   @BeforeMethod
   public void ensurePreconditions() {
@@ -18,7 +18,7 @@ public class ParkingsPageTests extends Testbase {
     app.getNavigationHelper().goMainPage();
   }
 
-  @Test
+  @Test(enabled = false)
   public void Test1SearchStationByNumber() throws IOException, InterruptedException {
     //отправляем http запрос и из ответа создаем объект типа station
     HttpSession session = app.newSession();
@@ -32,7 +32,7 @@ public class ParkingsPageTests extends Testbase {
     Assert.assertEquals(actualStation, expectedStation);
   }
 
-  @Test
+  @Test(enabled = false)
   public void Test2SearchStationByAddress() throws IOException, InterruptedException {
     //отправляем http запрос и из ответа создаем объект типа station
     HttpSession session = app.newSession();
@@ -45,5 +45,14 @@ public class ParkingsPageTests extends Testbase {
     //создаем объект типа station на странице
     StationsData actualStation = app.getMapHelper().CreateStationData(stationNumber);
     Assert.assertEquals(actualStation, expectedStation);
+  }
+
+  @Test
+  public void Test3GoToParkingsPageTest() {
+    app.getMainPageHelper().goToParkingsPage();
+    String pageUrl = app.getHelperBase().getCurrentPageURL();
+    String pageName = app.getHelperBase().getPageName(By.tagName("h1"));
+    Assert.assertEquals(pageUrl, "https://velobike.ru/parkings/", "неверный URL");
+    Assert.assertEquals(pageName, "Карта станций\nвелопроката", "неверный заголовок страницы");
   }
 }
