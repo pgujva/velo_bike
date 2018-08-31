@@ -31,7 +31,7 @@ public class MainPageTests extends Testbase {
     app.getMapHelper().clickOnStationIconOnMainPage();
     //создаем объект типа station на странице
     StationsData actualStation = app.getMapHelper().CreateStationData(stationNumber);
-    Assert.assertEquals(actualStation, expectedStation);
+    Assert.assertEquals(actualStation, expectedStation,"неверная станция при поиске по номеру");
   }
 
   @Test(enabled = false)
@@ -46,7 +46,7 @@ public class MainPageTests extends Testbase {
     app.getMapHelper().clickOnStationIconOnMainPage();
     //создаем объект типа station на странице
     StationsData actualStation = app.getMapHelper().CreateStationData(stationNumber);
-    Assert.assertEquals(actualStation, expectedStation);
+    Assert.assertEquals(actualStation, expectedStation,"неверная станция при поиске по названию");
   }
 
   @Test(enabled = false)
@@ -67,6 +67,5 @@ public class MainPageTests extends Testbase {
     Assert.assertEquals(actual,expected,"не верный прайс лист");
 
    // actual.get(0).getUrl().click();
-
   }
 }
