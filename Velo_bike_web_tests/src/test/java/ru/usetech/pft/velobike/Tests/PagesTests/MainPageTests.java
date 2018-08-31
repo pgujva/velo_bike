@@ -61,9 +61,12 @@ public class MainPageTests extends Testbase {
   @Test
   public void Test4HowItCostTest() {
     List<PricePageData> actual = app.getMainPageHelper().getPriceList();
-    System.out.println(actual.size());
-    app.getHelperBase().scrollPage();
-    actual.get(0).getUrl().click();
+    List<PricePageData> expected = app.getMainPageHelper().getStaticPriceList();
+    //app.getHelperBase().scrollPage();
+    //app.getHelperBase().moveToElement(actual.get(0).getUrl());
+    Assert.assertEquals(actual,expected,"не верный прайс лист");
+
+   // actual.get(0).getUrl().click();
 
   }
 }

@@ -3,7 +3,7 @@ package ru.usetech.pft.velobike.appManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.openqa.selenium.interactions.Actions;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -139,5 +139,12 @@ public class HelperBase {
 
     public void waitDownload() throws InterruptedException {
         wd.wait(5000);
+    }
+
+    public void moveToElement(WebElement element) {
+        Actions builder = new Actions(wd);
+        builder.moveToElement(element).perform();
+        builder.moveToElement(element).click().perform();
+      // builder.moveToElement(wd.findElement(By.id("captions-1"))).perform();
     }
 }
