@@ -20,7 +20,7 @@ public class MainPageTests extends Testbase {
     app.getNavigationHelper().goMainPage();
   }
 
-  @Test(enabled = true)
+  @Test(enabled = false)
   public void Test1SearchStationByNumber() throws IOException, InterruptedException {
     //отправляем http запрос и из ответа создаем объект типа station
     HttpSession session = app.newSession();
@@ -34,7 +34,7 @@ public class MainPageTests extends Testbase {
     Assert.assertEquals(actualStation, expectedStation,"неверная станция при поиске по номеру");
   }
 
-  @Test(enabled = true)
+  @Test(enabled = false)
   public void Test2SearchStationByAddress() throws IOException, InterruptedException {
     //отправляем http запрос и из ответа создаем объект типа station
     HttpSession session = app.newSession();
@@ -49,7 +49,7 @@ public class MainPageTests extends Testbase {
     Assert.assertEquals(actualStation, expectedStation,"неверная станция при поиске по названию");
   }
 
-  @Test(enabled = true)
+  @Test(enabled = false)
   public void Test3GoToParkingsPageTest() {
     app.getMainPageHelper().goToParkingsPage();
     String pageUrl = app.getHelperBase().getCurrentPageURL();
