@@ -33,6 +33,21 @@ public class MapHelper {
     return station;
   }
 
+  public StationsData CreateStationDataFromResponseWithoutElectro(String respons) {
+    JsonParser jsonParser = new JsonParser();
+    JsonObject jsonObject = (JsonObject) jsonParser.parse(respons);
+    JsonArray lang = (JsonArray) jsonObject.get("Items");
+    JsonObject innerObj = (JsonObject) lang.get(234);
+
+    int id = innerObj.get("Id").getAsInt();
+    int freeElectricPlaces = innerObj.get("FreeOrdinaryPlaces").getAsInt();
+    int totalElectricPlaces = innerObj.get("TotalOrdinaryPlaces").getAsInt();
+    int freeOrdinaryPlaces = totalElectricPlaces - freeElectricPlaces;
+    String address = innerObj.get("Address").getAsString();
+    StationsData station = new StationsData(id, freeElectricPlaces, freeOrdinaryPlaces, address);
+    return station;
+  }
+
   public void initSearchOnElectroPage(String text) {
     wd.findElement(By.id("search-input")).click();
     wd.findElement(By.id("search-input")).clear();

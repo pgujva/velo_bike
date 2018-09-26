@@ -24,8 +24,8 @@ public class MainPageTests extends Testbase {
   public void Test1SearchStationByNumber() throws IOException, InterruptedException {
     //отправляем http запрос и из ответа создаем объект типа station
     HttpSession session = app.newSession();
-    String respons = session.resp("https://electro.velobike.ru/ajax/parkings/?_=1535358830923");
-    StationsData expectedStation = app.getMapHelper().CreateStationDataFromResponse(respons);
+    String respons = session.resp("https://velobike.ru/ajax/parkings/?_=1537946591952");
+    StationsData expectedStation = app.getMapHelper().CreateStationDataFromResponseWithoutElectro(respons);
     String stationNumber = "241";
     app.getMapHelper().initSearchOnMainPage(stationNumber);
     app.getMapHelper().clickOnStationIconOnMainPage();
@@ -38,8 +38,8 @@ public class MainPageTests extends Testbase {
   public void Test2SearchStationByAddress() throws IOException, InterruptedException {
     //отправляем http запрос и из ответа создаем объект типа station
     HttpSession session = app.newSession();
-    String respons = session.resp("https://electro.velobike.ru/ajax/parkings/?_=1535358830923");
-    StationsData expectedStation = app.getMapHelper().CreateStationDataFromResponse(respons);
+    String respons = session.resp("https://velobike.ru/ajax/parkings/?_=1537946591952");
+    StationsData expectedStation = app.getMapHelper().CreateStationDataFromResponseWithoutElectro(respons);
     String stationNumber = "241";
     String address = "ст. м. Краснопресненская";
     app.getMapHelper().initSearchOnMainPage(address);
@@ -58,7 +58,7 @@ public class MainPageTests extends Testbase {
     Assert.assertEquals(pageName, "Карта станций\nвелопроката", "неверный заголовок страницы");
   }
 
-  @Test
+  @Test(enabled = true)
   public void Test4HowItCostTest() {
     List<PricePageData> actual = app.getMainPageHelper().getPriceList();
     List<PricePageData> expected = app.getMainPageHelper().getStaticPriceList();
