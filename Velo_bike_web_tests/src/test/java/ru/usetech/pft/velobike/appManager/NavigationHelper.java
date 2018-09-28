@@ -124,4 +124,8 @@ public class NavigationHelper {
     public void goToQaPageFromgoElectroVelobikePage() {
         wd.findElement(By.cssSelector("a.btn-blue")).click();
     }
+
+    public void goMainPage() {
+        wd.findElement(By.cssSelector("a[href='https://velobike.ru']")).click();
+    }
 }

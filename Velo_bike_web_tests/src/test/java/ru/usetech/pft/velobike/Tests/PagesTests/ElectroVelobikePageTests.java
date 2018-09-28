@@ -1,26 +1,15 @@
 package ru.usetech.pft.velobike.Tests.PagesTests;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import jdk.nashorn.internal.parser.JSONParser;
-import netscape.javascript.JSObject;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import ru.usetech.pft.velobike.Model.PricePageData;
 import ru.usetech.pft.velobike.Model.StationsData;
 import ru.usetech.pft.velobike.Tests.Testbase;
-import ru.usetech.pft.velobike.appManager.ElectroVoloBikeHelper;
 import ru.usetech.pft.velobike.appManager.HttpSession;
 
 
 import java.io.IOException;
-import java.util.List;
 
 public class ElectroVelobikePageTests extends Testbase {
 
@@ -32,7 +21,7 @@ public class ElectroVelobikePageTests extends Testbase {
   }
 
 
-  @Test(enabled = false)
+  @Test
   public void Test1() {
     //проверка перехода по ссылке «стоимость доступа»
     app.getNavigationHelper().goToPriceFromgoElectroVelobikePage();
@@ -41,7 +30,7 @@ public class ElectroVelobikePageTests extends Testbase {
 
   }
 
-  @Test(enabled = false)
+  @Test
   public void Test2() {
     //проверка перехода по ссылке «вопросы и ответы»
     app.getNavigationHelper().goToQaPageFromgoElectroVelobikePage();
@@ -55,11 +44,13 @@ public class ElectroVelobikePageTests extends Testbase {
   public void Test3() throws IOException, InterruptedException {
     //отправляем http запрос и из ответа создаем объект типа station
     HttpSession session = app.newSession();
-    String respons = session.resp();
-    StationsData expectedStation = app.getElectroVoloBikeHelper().CreateStationDataFromResponse(respons);
-    app.getElectroVoloBikeHelper().initSearch();
-    app.getElectroVoloBikeHelper().clickOnStationIcon();
-    StationsData actualStation = app.getElectroVoloBikeHelper().CreateStationData();
+    String respons = session.resp("https://electro.velobike.ru/ajax/parkings/?_=1535358830923");
+    StationsData expectedStation = app.getMapHelper().CreateStationDataFromResponse(respons);
+    String stationNumber = "241";
+    app.getMapHelper().initSearchOnElectroPage(stationNumber);
+    app.getMapHelper().clickOnStationIconInElectro();
+    //создаем объект типа station на странице
+    StationsData actualStation = app.getMapHelper().CreateStationData(stationNumber);
     Assert.assertEquals(actualStation, expectedStation);
 
   }

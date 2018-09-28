@@ -3,7 +3,7 @@ package ru.usetech.pft.velobike.appManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.openqa.selenium.interactions.Actions;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -49,10 +49,14 @@ public class HelperBase {
         return pagename;
     }
 
-    public void waitVisibilityOfElement(List<WebElement> menuElements) {
+    public void waitVisibilityOfElements(List<WebElement> menuElements) {
         wait.until(visibilityOfAllElements(menuElements));
         wd.manage().timeouts().setScriptTimeout(50, TimeUnit.SECONDS);
 
+    }
+
+    public void waitVisibilityOfElement1() {
+       wait.until(visibilityOfElementLocated(By.cssSelector("a[href='#']")));
     }
 
     public void waitElementLoad() {
@@ -135,5 +139,12 @@ public class HelperBase {
 
     public void waitDownload() throws InterruptedException {
         wd.wait(5000);
+    }
+
+    public void moveToElement(WebElement element) {
+        Actions builder = new Actions(wd);
+        builder.moveToElement(element).perform();
+        builder.moveToElement(element).click().perform();
+      // builder.moveToElement(wd.findElement(By.id("captions-1"))).perform();
     }
 }

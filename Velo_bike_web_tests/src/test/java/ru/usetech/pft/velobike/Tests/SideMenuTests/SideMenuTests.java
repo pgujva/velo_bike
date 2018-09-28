@@ -19,7 +19,7 @@ public class SideMenuTests extends Testbase {
         for (int i = 0; i < app.getSideMenuHelper().getStaticMenuLinks().size(); i++) {
             app.getNavigationHelper().goToSideMenu();
             List<WebElement> newMenuElements = app.getSideMenuHelper().getMenuList();
-            app.getHelperBase().waitVisibilityOfElement(newMenuElements);
+            app.getHelperBase().waitVisibilityOfElements(newMenuElements);
             newMenuElements.get(i).click();
             pageLinks.add(app.getHelperBase().getCurrentPageURL());
             app.getHelperBase().returnBack();
