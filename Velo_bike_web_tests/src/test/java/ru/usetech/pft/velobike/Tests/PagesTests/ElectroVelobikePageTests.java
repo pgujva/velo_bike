@@ -39,7 +39,7 @@ public class ElectroVelobikePageTests extends Testbase {
     Assert.assertEquals(app.getHelperBase().isElementPresent(By.id("electro")), true);
   }
 
-  @Test(enabled = false)
+  @Test(enabled = true)
   public void Test3() throws IOException, InterruptedException {
     //отправляем http запрос и из ответа создаем объект типа station
     HttpSession session = app.newSession();
