@@ -16,7 +16,7 @@ public class MainPageTests extends Testbase {
 
   @BeforeMethod
   public void ensurePreconditions() {
-    app.getNavigationHelper().goToPersonalAccountPage();
+    //app.getNavigationHelper().goToPersonalAccountPage();
     app.getNavigationHelper().goMainPage();
   }
 
@@ -49,7 +49,7 @@ public class MainPageTests extends Testbase {
     Assert.assertEquals(actualStation, expectedStation,"неверная станция при поиске по названию");
   }
 
-  @Test(enabled = false)
+  @Test(enabled = true)
   public void Test3GoToParkingsPageTest() {
     app.getMainPageHelper().goToParkingsPage();
     String pageUrl = app.getHelperBase().getCurrentPageURL();
@@ -58,7 +58,7 @@ public class MainPageTests extends Testbase {
     Assert.assertEquals(pageName, "Карта станций\nвелопроката", "неверный заголовок страницы");
   }
 
-  @Test(enabled = true)
+  @Test(enabled = false)
   public void Test4HowItCostTest() {
     List<PricePageData> actual = app.getMainPageHelper().getPriceList();
     List<PricePageData> expected = app.getMainPageHelper().getStaticPriceList();

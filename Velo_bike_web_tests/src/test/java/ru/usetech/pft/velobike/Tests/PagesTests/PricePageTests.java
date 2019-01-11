@@ -12,13 +12,13 @@ import java.util.List;
 
 public class PricePageTests extends Testbase {
 
-    @BeforeClass
+    @BeforeClass(enabled = false)
     public void ensurePreconditions() {
        // app.getNavigationHelper().goToPersonalAccountPage();
         app.getNavigationHelper().goToSideMenu();
     }
 
-    @Test
+    @Test(enabled = false)
     public void Test1IsRightPricesOnPage() {
         app.getNavigationHelper().goPricePage();
         //берем элементы с первой половины страницы
@@ -31,7 +31,7 @@ public class PricePageTests extends Testbase {
 
     }
 
-    @Test
+    @Test(enabled = false)
     public void Test2IsElementshecked() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goPricePage();
@@ -48,7 +48,7 @@ public class PricePageTests extends Testbase {
 
     }
 
-    @Test
+    @Test(enabled = false)
     public void Test3IsElementshecked() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goPricePage();

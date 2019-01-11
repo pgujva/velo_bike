@@ -15,7 +15,6 @@ public class ElectroVelobikePageTests extends Testbase {
 
   @BeforeMethod
   public void ensurePreconditions() {
-    app.getSessionHelper().loginInSideMenu("4001776", "3875");
     app.getNavigationHelper().goToSideMenu();
     app.getNavigationHelper().goElectroVelobikePage();
   }
@@ -40,7 +39,7 @@ public class ElectroVelobikePageTests extends Testbase {
     Assert.assertEquals(app.getHelperBase().isElementPresent(By.id("electro")), true);
   }
 
-  @Test
+  @Test(enabled = false)
   public void Test3() throws IOException, InterruptedException {
     //отправляем http запрос и из ответа создаем объект типа station
     HttpSession session = app.newSession();

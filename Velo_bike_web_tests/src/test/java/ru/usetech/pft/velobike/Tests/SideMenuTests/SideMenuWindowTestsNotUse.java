@@ -9,14 +9,14 @@ import java.util.List;
 
 public class SideMenuWindowTestsNotUse extends Testbase {
 
-    @BeforeClass
+    @BeforeClass(enabled = false)
     public void ensurePreconditions() {
 
         app.getSessionHelper().loginInSideMenu("4001776", "3875");
         app.getNavigationHelper().goToPersonalAccountPage();
     }
 
-    @Test
+    @Test(enabled = false)
     public void TestGoToSideMenu() {
         app.getNavigationHelper().goToSideMenu();
         List<String> menuNamesFromPage = app.getSideMenuHelper().getMenuNamesFromPage();
