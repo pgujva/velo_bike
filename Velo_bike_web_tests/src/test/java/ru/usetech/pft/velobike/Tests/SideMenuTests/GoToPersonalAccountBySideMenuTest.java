@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.usetech.pft.velobike.Tests.Testbase;
 
-public class GoToPersonalAccountByPhotoTest extends Testbase {
+public class GoToPersonalAccountBySideMenuTest extends Testbase {
 
     @Test
     public void TestGoToPersonalAccountByPhoto() throws Exception {
@@ -18,7 +18,7 @@ public class GoToPersonalAccountByPhotoTest extends Testbase {
 
         Assert.assertEquals(a, true);
 
-  
+
     }
 
 }

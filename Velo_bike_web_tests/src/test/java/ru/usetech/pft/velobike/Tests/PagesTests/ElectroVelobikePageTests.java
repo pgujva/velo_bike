@@ -15,7 +15,7 @@ public class ElectroVelobikePageTests extends Testbase {
 
   @BeforeMethod
   public void ensurePreconditions() {
-    app.getNavigationHelper().goToPersonalAccountPage();
+    app.getSessionHelper().loginInSideMenu("4001776", "3875");
     app.getNavigationHelper().goToSideMenu();
     app.getNavigationHelper().goElectroVelobikePage();
   }

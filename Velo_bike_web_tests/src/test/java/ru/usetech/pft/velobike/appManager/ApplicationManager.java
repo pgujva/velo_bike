@@ -39,7 +39,7 @@ public class ApplicationManager {
     electroVoloBikeHelper = new ElectroVoloBikeHelper(wd, wait);
     mainPageHelper = new MainPageHelper(wd,wait);
     mapHelper = new MapHelper(wd,wait);
-    sessionHelper.loginInSideMenu("4001776", "3875");
+    //sessionHelper.loginInSideMenu("4001776", "3875");
   }
 
   public void stop() {

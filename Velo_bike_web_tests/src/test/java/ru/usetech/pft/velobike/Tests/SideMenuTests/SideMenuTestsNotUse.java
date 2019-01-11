@@ -8,7 +8,7 @@ import ru.usetech.pft.velobike.Tests.Testbase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SideMenuTests extends Testbase {
+public class SideMenuTestsNotUse extends Testbase {
 
 
     @Test()

@@ -7,7 +7,7 @@ import ru.usetech.pft.velobike.Tests.Testbase;
 
 import java.util.List;
 
-public class SideMenuWindowTests extends Testbase {
+public class SideMenuWindowTestsNotUse extends Testbase {
 
     @BeforeClass
     public void ensurePreconditions() {
