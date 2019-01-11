@@ -7,19 +7,18 @@ import ru.usetech.pft.velobike.Tests.Testbase;
 
 public class GoToPersonalAccountByPhotoTest extends Testbase {
 
-  @Test
-  public void TestGoToPersonalAccountByPhoto() throws Exception {
-    app.getSessionHelper().loginInSideMenu("4001776","3875");
-   // app.getNavigationHelper().goToPersonalAccountPage();
-   // boolean a = app.getHelperBase().isThereARightPage(By.tagName("h1"), "Личный кабинет",
-      //      By.cssSelector("span.lk-intro__welcome-name"), "Тест!",
- //           "https://velobike.ru/account/");
-   // app.getNavigationHelper().goToSideMenu();
+    @Test
+    public void TestGoToPersonalAccountByPhoto() throws Exception {
 
-  //  Assert.assertEquals(a, true);
+        app.getNavigationHelper().goToPersonalAccountPage();
+        boolean a = app.getHelperBase().isThereARightPage(By.tagName("h1"), "Личный кабинет",
+                By.cssSelector("span.lk-intro__welcome-name"), "Тест!",
+                "https://velobike.ru/account/");
+        app.getNavigationHelper().goToSideMenu();
 
-    //app.getNavigationHelper().getMenuList();
+        Assert.assertEquals(a, true);
 
-  }
+  
+    }
 
 }

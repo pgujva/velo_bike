@@ -17,12 +17,12 @@ import java.util.List;
 
 public class TEST extends Testbase {
 
-    @BeforeMethod
-    public void ensurePreconditions() {
-        app.getNavigationHelper().goToPersonalAccountPage();
-        app.getNavigationHelper().goToSideMenu();
-        app.getNavigationHelper().goElectroVelobikePage();
-    }
+    @BeforeMethod(enabled = false)
+   // public void ensurePreconditions() {
+    //    app.getNavigationHelper().goToPersonalAccountPage();
+   //     app.getNavigationHelper().goToSideMenu();
+  //      app.getNavigationHelper().goElectroVelobikePage();
+  //  }
 
 
     @Test(enabled = false)
