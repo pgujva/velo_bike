@@ -1,10 +1,12 @@
 package ru.usetech.pft.velobike.Tests;
 
+import org.openqa.selenium.remote.BrowserType;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
 import ru.usetech.pft.velobike.appManager.ApplicationManager;
 
-@Listeners (MyTestListener.class)
+@Listeners(MyTestListener.class)
+
 public class Testbase {
 
     protected final ApplicationManager app = new ApplicationManager();

@@ -1,0 +1,35 @@
+{
+  "uid" : "b2bd40a2a07c6c38",
+  "name" : "TestTelegramPage",
+  "title" : "Test telegram page",
+  "time" : {
+    "start" : 1547490960157,
+    "stop" : 1547490985433,
+    "duration" : 25276
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "aaf4d83ed72a4d52",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}

@@ -1,0 +1,35 @@
+{
+  "uid" : "7cd6654d409e235d",
+  "name" : "TestVKontactePage",
+  "title" : "Test V kontacte page",
+  "time" : {
+    "start" : 1547476154475,
+    "stop" : 1547476160326,
+    "duration" : 5851
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "2f396ada40fff28",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}

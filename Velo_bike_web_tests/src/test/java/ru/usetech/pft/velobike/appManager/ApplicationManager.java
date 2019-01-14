@@ -2,13 +2,15 @@ package ru.usetech.pft.velobike.appManager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
-  ChromeDriver wd;
+ChromeDriver wd;
+
   private NavigationHelper navigationHelper;
   private SessionHelper sessionHelper;
   private EnterToSystemHelper enterToSystemHelper;
@@ -90,7 +92,7 @@ public class ApplicationManager {
   }
 
   public byte[] takeScreenshot() {
-      return ((TakesScreenshot)wd).getScreenshotAs(OutputType.BYTES);
+    return ((TakesScreenshot) wd).getScreenshotAs(OutputType.BYTES);
   }
 }
 

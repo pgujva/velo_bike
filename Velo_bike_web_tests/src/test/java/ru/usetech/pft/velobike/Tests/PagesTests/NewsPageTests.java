@@ -22,7 +22,7 @@ public class NewsPageTests extends Testbase {
         app.getNavigationHelper().goNewsPage();
         boolean news = app.getHelperBase().isElementPresent(By.className("news-list__item"));
 
-        Assert.assertEquals(true, news, "нет новостей на странице");
+        Assert.assertEquals(true, news, "не новостей на странице");
     }
 
     @Test

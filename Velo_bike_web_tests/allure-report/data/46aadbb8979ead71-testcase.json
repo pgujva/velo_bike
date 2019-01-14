@@ -1,0 +1,35 @@
+{
+  "uid" : "46aadbb8979ead71",
+  "name" : "TestStationsMapPage",
+  "title" : "Test stations map page",
+  "time" : {
+    "start" : 1547490956620,
+    "stop" : 1547490960155,
+    "duration" : 3535
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "aaf4d83ed72a4d52",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}

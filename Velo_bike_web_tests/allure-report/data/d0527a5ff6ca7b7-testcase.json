@@ -1,0 +1,35 @@
+{
+  "uid" : "d0527a5ff6ca7b7",
+  "name" : "TestAboutPage",
+  "title" : "Test about page",
+  "time" : {
+    "start" : 1547471583730,
+    "stop" : 1547471585805,
+    "duration" : 2075
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "dfcce3bc04cf3cfd",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}

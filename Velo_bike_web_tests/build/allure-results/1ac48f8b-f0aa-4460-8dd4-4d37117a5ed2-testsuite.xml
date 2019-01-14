@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1547465518508" stop="1547465563490">
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1547492809543" stop="1547492886070">
     <name>Default Suite</name>
     <test-cases>
-        <test-case start="1547465522619" stop="1547465524028" status="passed">
+        <test-case start="1547492815887" stop="1547492817401" status="passed">
             <name>TestAboutPage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547465524102" stop="1547465525415" status="passed">
+        <test-case start="1547492817516" stop="1547492819105" status="passed">
             <name>TestContactsPage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547465525418" stop="1547465527389" status="passed">
+        <test-case start="1547492819108" stop="1547492822018" status="passed">
             <name>TestElectroVelobikePage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547465527391" stop="1547465538738" status="passed">
+        <test-case start="1547492822020" stop="1547492833725" status="passed">
             <name>TestFacebookPage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547465538740" stop="1547465541188" status="failed">
+        <test-case start="1547492833728" stop="1547492836546" status="failed">
             <name>TestGoToHowToUseRentalPage</name>
             <failure>
                 <message>AssertionError: неверный заголовок страницы expected [Как пользоваться прокато] but found [Как пользоваться прокатом]</message>
@@ -67,43 +67,43 @@
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547465541192" stop="1547465542823" status="passed">
+        <test-case start="1547492836547" stop="1547492839028" status="passed">
             <name>TestGoToPricePage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547465542825" stop="1547465546472" status="passed">
+        <test-case start="1547492839030" stop="1547492844380" status="passed">
             <name>TestInstagramPage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547465546474" stop="1547465548024" status="passed">
+        <test-case start="1547492844382" stop="1547492846055" status="passed">
             <name>TestNewsPage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547465548026" stop="1547465549569" status="passed">
+        <test-case start="1547492846057" stop="1547492847844" status="passed">
             <name>TestQaPage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547465549570" stop="1547465551314" status="passed">
+        <test-case start="1547492847846" stop="1547492850911" status="passed">
             <name>TestStationsMapPage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547465551316" stop="1547465555069" status="passed">
+        <test-case start="1547492850913" stop="1547492876708" status="passed">
             <name>TestTelegramPage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547465555071" stop="1547465563486" status="passed">
+        <test-case start="1547492876711" stop="1547492886054" status="passed">
             <name>TestVKontactePage</name>
             <steps/>
             <attachments/>

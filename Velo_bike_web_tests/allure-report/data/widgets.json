@@ -11,16 +11,16 @@
         "broken" : 0
       },
       "time" : {
-        "start" : 1547465522619,
-        "stop" : 1547465563486,
-        "duration" : 40867
+        "start" : 1547490924326,
+        "stop" : 1547490992120,
+        "duration" : 67794
       }
     },
     "defects" : {
       "totalCount" : 1,
       "items" : [ {
         "count" : 1,
-        "uid" : "55e137b27d7d83a1",
+        "uid" : "3001f476d1d4ab76",
         "message" : "AssertionError: неверный заголовок страницы expected [Как пользоваться прокато] but found [Как пользоваться прокатом]",
         "status" : "FAILED"
       } ]
@@ -28,7 +28,7 @@
     "xunit" : {
       "totalCount" : 1,
       "items" : [ {
-        "uid" : "5781d78257a13304",
+        "uid" : "aaf4d83ed72a4d52",
         "title" : "Default suite",
         "statistic" : {
           "total" : 12,
