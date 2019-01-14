@@ -1,0 +1,35 @@
+{
+  "uid" : "2a17f48ec533aa12",
+  "name" : "TestInstagramPage",
+  "title" : "Test instagram page",
+  "time" : {
+    "start" : 1547453553718,
+    "stop" : 1547453558095,
+    "duration" : 4377
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "c58245cd7cffa9d1",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}

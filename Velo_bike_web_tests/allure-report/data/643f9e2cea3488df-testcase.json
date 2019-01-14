@@ -1,0 +1,35 @@
+{
+  "uid" : "643f9e2cea3488df",
+  "name" : "Test2",
+  "title" : "Test 2",
+  "time" : {
+    "start" : 1547214812449,
+    "stop" : 1547214812926,
+    "duration" : 477
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "c58245cd7cffa9d1",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}

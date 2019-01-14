@@ -1,11 +1,11 @@
 {
-  "uid" : "309b86b93dba4448",
-  "name" : "Test2",
-  "title" : "Test 2",
+  "uid" : "a36afdf18afe4a6e",
+  "name" : "TestContactsPage",
+  "title" : "Test contacts page",
   "time" : {
-    "start" : 1547214812449,
-    "stop" : 1547214812926,
-    "duration" : 477
+    "start" : 1547453538432,
+    "stop" : 1547453539722,
+    "duration" : 1290
   },
   "summary" : {
     "attachments" : 0,
@@ -16,7 +16,7 @@
   "severity" : "NORMAL",
   "status" : "PASSED",
   "suite" : {
-    "uid" : "2ac447b61e19ba2b",
+    "uid" : "c58245cd7cffa9d1",
     "name" : "Default Suite",
     "title" : "Default suite"
   },

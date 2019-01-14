@@ -1,11 +1,11 @@
 {
-  "uid" : "458e098d32de62f0",
-  "name" : "Test1",
-  "title" : "Test 1",
+  "uid" : "292b915c4afdb3cd",
+  "name" : "TestQaPage",
+  "title" : "Test qa page",
   "time" : {
-    "start" : 1547214809871,
-    "stop" : 1547214810984,
-    "duration" : 1113
+    "start" : 1547453559642,
+    "stop" : 1547453561038,
+    "duration" : 1396
   },
   "summary" : {
     "attachments" : 0,
@@ -16,7 +16,7 @@
   "severity" : "NORMAL",
   "status" : "PASSED",
   "suite" : {
-    "uid" : "2ac447b61e19ba2b",
+    "uid" : "c58245cd7cffa9d1",
     "name" : "Default Suite",
     "title" : "Default suite"
   },

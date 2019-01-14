@@ -1,8 +1,6 @@
 package ru.usetech.pft.velobike.appManager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -91,5 +89,8 @@ public class ApplicationManager {
     return mainPageHelper;
   }
 
+  public byte[] takeScreenshot() {
+      return ((TakesScreenshot)wd).getScreenshotAs(OutputType.BYTES);
+  }
 }
 

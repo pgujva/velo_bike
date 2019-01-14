@@ -2,26 +2,169 @@
   "features" : [ {
     "title" : "Without feature",
     "statistic" : {
-      "total" : 3,
-      "passed" : 2,
+      "total" : 42,
+      "passed" : 14,
       "pending" : 0,
-      "canceled" : 0,
+      "canceled" : 24,
       "failed" : 0,
-      "broken" : 1
+      "broken" : 4
     },
     "stories" : [ {
-      "uid" : "44080b1ad7acc1a7",
+      "uid" : "732ba886dbcf9a2e",
       "title" : "Without story",
       "statistic" : {
-        "total" : 3,
-        "passed" : 2,
+        "total" : 42,
+        "passed" : 14,
         "pending" : 0,
-        "canceled" : 0,
+        "canceled" : 24,
         "failed" : 0,
-        "broken" : 1
+        "broken" : 4
       },
       "testCases" : [ {
-        "uid" : "458e098d32de62f0",
+        "uid" : "3fe8b956de3e55e7",
+        "name" : "TestGoToPersonalAccountByPhoto",
+        "title" : "Test go to personal account by photo",
+        "time" : {
+          "start" : 1547453497522,
+          "stop" : 1547453507827,
+          "duration" : 10305
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "92d36682c244af56",
+        "name" : "TestAboutPage",
+        "title" : "Test about page",
+        "time" : {
+          "start" : 1547453507832,
+          "stop" : 1547453507833,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "84789a342088900e",
+        "name" : "TestContactsPage",
+        "title" : "Test contacts page",
+        "time" : {
+          "start" : 1547453507834,
+          "stop" : 1547453507834,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "1105557c36a7bebb",
+        "name" : "TestElectroVelobikePage",
+        "title" : "Test electro velobike page",
+        "time" : {
+          "start" : 1547453507835,
+          "stop" : 1547453507835,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "1dbf7841e7809c17",
+        "name" : "TestFacebookPage",
+        "title" : "Test facebook page",
+        "time" : {
+          "start" : 1547453507836,
+          "stop" : 1547453507836,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "9922b00209575e3c",
+        "name" : "TestGoToHowToUseRentalPage",
+        "title" : "Test go to how to use rental page",
+        "time" : {
+          "start" : 1547453507836,
+          "stop" : 1547453507836,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "a7966061c1563d92",
+        "name" : "TestGoToPricePage",
+        "title" : "Test go to price page",
+        "time" : {
+          "start" : 1547453507837,
+          "stop" : 1547453507837,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "c9940d6827b9a4eb",
+        "name" : "TestInstagramPage",
+        "title" : "Test instagram page",
+        "time" : {
+          "start" : 1547453507838,
+          "stop" : 1547453507839,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "a51c2c7fb602dad7",
+        "name" : "TestNewsPage",
+        "title" : "Test news page",
+        "time" : {
+          "start" : 1547453507839,
+          "stop" : 1547453507839,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "4fa70a63f2832f2",
+        "name" : "TestQaPage",
+        "title" : "Test qa page",
+        "time" : {
+          "start" : 1547453507840,
+          "stop" : 1547453507840,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "a1020fdd87d25862",
+        "name" : "TestStationsMapPage",
+        "title" : "Test stations map page",
+        "time" : {
+          "start" : 1547453507841,
+          "stop" : 1547453507841,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "64e7d9c0bd125e1c",
+        "name" : "TestTelegramPage",
+        "title" : "Test telegram page",
+        "time" : {
+          "start" : 1547453507842,
+          "stop" : 1547453507842,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "f4102da3d9324a7f",
+        "name" : "TestVKontactePage",
+        "title" : "Test V kontacte page",
+        "time" : {
+          "start" : 1547453507843,
+          "stop" : 1547453507843,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "ecf993b1ad5b8c79",
         "name" : "Test1",
         "title" : "Test 1",
         "time" : {
@@ -32,7 +175,7 @@
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "309b86b93dba4448",
+        "uid" : "643f9e2cea3488df",
         "name" : "Test2",
         "title" : "Test 2",
         "time" : {
@@ -43,7 +186,7 @@
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "9049cbc8ea348c4c",
+        "uid" : "b5e63c6d073e3a8d",
         "name" : "Test3",
         "title" : "Test 3",
         "time" : {
@@ -53,6 +196,292 @@
         },
         "severity" : "NORMAL",
         "status" : "BROKEN"
+      }, {
+        "uid" : "905e6a16a23a6149",
+        "name" : "TestGoToPersonalAccountByPhoto",
+        "title" : "Test go to personal account by photo",
+        "time" : {
+          "start" : 1547454892075,
+          "stop" : 1547454913034,
+          "duration" : 20959
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "fbdc0a8ec76374ab",
+        "name" : "TestAboutPage",
+        "title" : "Test about page",
+        "time" : {
+          "start" : 1547454913037,
+          "stop" : 1547454913037,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "d57ab48c5be5e894",
+        "name" : "TestContactsPage",
+        "title" : "Test contacts page",
+        "time" : {
+          "start" : 1547454913038,
+          "stop" : 1547454913038,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "1a95108f3046595",
+        "name" : "TestElectroVelobikePage",
+        "title" : "Test electro velobike page",
+        "time" : {
+          "start" : 1547454913038,
+          "stop" : 1547454913038,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "24244d06f5167f23",
+        "name" : "TestFacebookPage",
+        "title" : "Test facebook page",
+        "time" : {
+          "start" : 1547454913038,
+          "stop" : 1547454913039,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "e4929d0455e32922",
+        "name" : "TestGoToHowToUseRentalPage",
+        "title" : "Test go to how to use rental page",
+        "time" : {
+          "start" : 1547454913039,
+          "stop" : 1547454913039,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "4ad8fffb2069c21b",
+        "name" : "TestGoToPricePage",
+        "title" : "Test go to price page",
+        "time" : {
+          "start" : 1547454913039,
+          "stop" : 1547454913039,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "9badb18e0c407c16",
+        "name" : "TestInstagramPage",
+        "title" : "Test instagram page",
+        "time" : {
+          "start" : 1547454913040,
+          "stop" : 1547454913040,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "8eadf857d97054c7",
+        "name" : "TestNewsPage",
+        "title" : "Test news page",
+        "time" : {
+          "start" : 1547454913040,
+          "stop" : 1547454913040,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "61a196dc1ab52367",
+        "name" : "TestQaPage",
+        "title" : "Test qa page",
+        "time" : {
+          "start" : 1547454913040,
+          "stop" : 1547454913040,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "42beca9c4f4d665c",
+        "name" : "TestStationsMapPage",
+        "title" : "Test stations map page",
+        "time" : {
+          "start" : 1547454913041,
+          "stop" : 1547454913041,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "4df16a6c870af448",
+        "name" : "TestTelegramPage",
+        "title" : "Test telegram page",
+        "time" : {
+          "start" : 1547454913041,
+          "stop" : 1547454913041,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "e64bfe956534856",
+        "name" : "TestVKontactePage",
+        "title" : "Test V kontacte page",
+        "time" : {
+          "start" : 1547454913042,
+          "stop" : 1547454913042,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "96ae832ffb921ef4",
+        "name" : "TestsSideMenu",
+        "title" : "Tests side menu",
+        "time" : {
+          "start" : 1547454913043,
+          "stop" : 1547454913909,
+          "duration" : 866
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "3ded74cedfe16130",
+        "name" : "TestAboutPage",
+        "title" : "Test about page",
+        "time" : {
+          "start" : 1547453536994,
+          "stop" : 1547453538360,
+          "duration" : 1366
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "a36afdf18afe4a6e",
+        "name" : "TestContactsPage",
+        "title" : "Test contacts page",
+        "time" : {
+          "start" : 1547453538432,
+          "stop" : 1547453539722,
+          "duration" : 1290
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "a984c127963aa9d1",
+        "name" : "TestElectroVelobikePage",
+        "title" : "Test electro velobike page",
+        "time" : {
+          "start" : 1547453539724,
+          "stop" : 1547453542734,
+          "duration" : 3010
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "1ea6488b96a65a94",
+        "name" : "TestFacebookPage",
+        "title" : "Test facebook page",
+        "time" : {
+          "start" : 1547453542735,
+          "stop" : 1547453550553,
+          "duration" : 7818
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "311ff76162449a91",
+        "name" : "TestGoToHowToUseRentalPage",
+        "title" : "Test go to how to use rental page",
+        "time" : {
+          "start" : 1547453550555,
+          "stop" : 1547453552109,
+          "duration" : 1554
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "9c308f69ef3e1b5c",
+        "name" : "TestGoToPricePage",
+        "title" : "Test go to price page",
+        "time" : {
+          "start" : 1547453552110,
+          "stop" : 1547453553717,
+          "duration" : 1607
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "2a17f48ec533aa12",
+        "name" : "TestInstagramPage",
+        "title" : "Test instagram page",
+        "time" : {
+          "start" : 1547453553718,
+          "stop" : 1547453558095,
+          "duration" : 4377
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "1a7168932e3122e",
+        "name" : "TestNewsPage",
+        "title" : "Test news page",
+        "time" : {
+          "start" : 1547453558096,
+          "stop" : 1547453559641,
+          "duration" : 1545
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "292b915c4afdb3cd",
+        "name" : "TestQaPage",
+        "title" : "Test qa page",
+        "time" : {
+          "start" : 1547453559642,
+          "stop" : 1547453561038,
+          "duration" : 1396
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "7aac4d063322c552",
+        "name" : "TestStationsMapPage",
+        "title" : "Test stations map page",
+        "time" : {
+          "start" : 1547453561039,
+          "stop" : 1547453562700,
+          "duration" : 1661
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "f8e7e1fd25248722",
+        "name" : "TestTelegramPage",
+        "title" : "Test telegram page",
+        "time" : {
+          "start" : 1547453562702,
+          "stop" : 1547453564760,
+          "duration" : 2058
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "6c841293dab8b893",
+        "name" : "TestVKontactePage",
+        "title" : "Test V kontacte page",
+        "time" : {
+          "start" : 1547453564762,
+          "stop" : 1547453569347,
+          "duration" : 4585
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
       } ]
     } ]
   } ]

@@ -1,5 +1,5 @@
 {
-  "uid" : "9049cbc8ea348c4c",
+  "uid" : "b5e63c6d073e3a8d",
   "name" : "Test3",
   "title" : "Test 3",
   "time" : {
@@ -19,7 +19,7 @@
   "severity" : "NORMAL",
   "status" : "BROKEN",
   "suite" : {
-    "uid" : "2ac447b61e19ba2b",
+    "uid" : "c58245cd7cffa9d1",
     "name" : "Default Suite",
     "title" : "Default suite"
   },
