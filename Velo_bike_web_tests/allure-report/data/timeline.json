@@ -1,0 +1,42 @@
+{
+  "hosts" : [ {
+    "title" : "default",
+    "threads" : [ {
+      "title" : "default",
+      "testCases" : [ {
+        "uid" : "458e098d32de62f0",
+        "name" : "Test1",
+        "title" : "Test 1",
+        "time" : {
+          "start" : 1547214809871,
+          "stop" : 1547214810984,
+          "duration" : 1113
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "309b86b93dba4448",
+        "name" : "Test2",
+        "title" : "Test 2",
+        "time" : {
+          "start" : 1547214812449,
+          "stop" : 1547214812926,
+          "duration" : 477
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "9049cbc8ea348c4c",
+        "name" : "Test3",
+        "title" : "Test 3",
+        "time" : {
+          "start" : 1547214814009,
+          "stop" : 1547214835853,
+          "duration" : 21844
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      } ]
+    } ]
+  } ]
+}
