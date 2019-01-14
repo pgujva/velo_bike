@@ -1,0 +1,35 @@
+{
+  "uid" : "d165010a4f39a1f9",
+  "name" : "TestQaPage",
+  "title" : "Test qa page",
+  "time" : {
+    "start" : 1547465548026,
+    "stop" : 1547465549569,
+    "duration" : 1543
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "5781d78257a13304",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}
