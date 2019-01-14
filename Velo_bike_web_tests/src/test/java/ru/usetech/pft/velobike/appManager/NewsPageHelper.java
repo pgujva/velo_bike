@@ -1,6 +1,7 @@
 package ru.usetech.pft.velobike.appManager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,11 +13,11 @@ import java.util.List;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfAllElements;
 
-public class NewsPageHelper {
-    private ChromeDriver wd;
+public class NewsPageHelper extends ApplicationManager{
+    private WebDriver wd;
     private WebDriverWait wait;
 
-    public NewsPageHelper(ChromeDriver wd, WebDriverWait wait) {
+    public NewsPageHelper(WebDriver wd, WebDriverWait wait) {
         this.wd = wd;
         this.wait = wait;
     }
@@ -75,7 +76,7 @@ public class NewsPageHelper {
         List<WebElement> textList = wd.findElements(By.cssSelector("div.news-content"));
         List<WebElement> Datalist = wd.findElements(By.cssSelector("span.news-list__date"));
         String date = Datalist.get(index).getText();
-        String title = wd.findElementByTagName("h3").getText();
+        String title = wd.findElement(By.tagName("h3")).getText();
         String url = wd.getCurrentUrl();
         String text = textList.get(index).findElement(By.cssSelector("p.MsoNormal")).getAttribute("textContent");
         NewsPageData newsPageData = new NewsPageData(title, date, text, url);

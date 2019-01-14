@@ -2,11 +2,18 @@ package ru.usetech.pft.velobike.Tests.SideMenuTests;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.ITestContext;
+import org.testng.annotations.*;
+import ru.usetech.pft.velobike.Tests.MyTestListener;
 import ru.usetech.pft.velobike.Tests.Testbase;
+import ru.yandex.qatools.allure.annotations.Attachment;
+
+
+
 
 public class SideMenuNavigationTests extends Testbase {
+
+
 
     @BeforeClass
     public void ensurePreconditions() {
@@ -32,7 +39,7 @@ public class SideMenuNavigationTests extends Testbase {
         String pageUrl = app.getHelperBase().getCurrentPageURL();
         String pageName = app.getHelperBase().getPageName(By.tagName("h1"));
         Assert.assertEquals(pageUrl, "https://velobike.ru/prices/", "неверный URL");
-        Assert.assertEquals(pageName, "Сколько это стоит", "неверный заголовок страницы");
+        Assert.assertEquals(pageName, "Сколько это стои", "неверный заголовок страницы");
     }
 
     @Test

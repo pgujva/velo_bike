@@ -1,156 +1,156 @@
 {
   "time" : {
-    "start" : 1547490924326,
-    "stop" : 1547490992120,
-    "duration" : 67794
+    "start" : 1547499015644,
+    "stop" : 1547499087570,
+    "duration" : 71926
   },
   "testSuites" : [ {
-    "uid" : "aaf4d83ed72a4d52",
+    "uid" : "5de3e80f1c3705c4",
     "name" : "Default Suite",
     "title" : "Default suite",
     "time" : {
-      "start" : 1547490924326,
-      "stop" : 1547490992120,
-      "duration" : 67794
+      "start" : 1547499015644,
+      "stop" : 1547499087570,
+      "duration" : 71926
     },
     "statistic" : {
       "total" : 12,
-      "passed" : 11,
+      "passed" : 10,
       "pending" : 0,
       "canceled" : 0,
-      "failed" : 1,
+      "failed" : 2,
       "broken" : 0
     },
     "description" : null,
     "testCases" : [ {
-      "uid" : "e32a9ab4cc1629ff",
+      "uid" : "117a0e7134a99713",
       "name" : "TestAboutPage",
       "title" : "Test about page",
       "time" : {
-        "start" : 1547490924326,
-        "stop" : 1547490925968,
-        "duration" : 1642
+        "start" : 1547499015644,
+        "stop" : 1547499017867,
+        "duration" : 2223
       },
       "severity" : "NORMAL",
       "status" : "PASSED"
     }, {
-      "uid" : "48bf38742696f963",
+      "uid" : "9711aaffeebd777b",
       "name" : "TestContactsPage",
       "title" : "Test contacts page",
       "time" : {
-        "start" : 1547490926195,
-        "stop" : 1547490927677,
-        "duration" : 1482
+        "start" : 1547499018016,
+        "stop" : 1547499019871,
+        "duration" : 1855
       },
       "severity" : "NORMAL",
       "status" : "PASSED"
     }, {
-      "uid" : "a8e0b6d19a82db93",
+      "uid" : "5b163293a24c2d5d",
       "name" : "TestElectroVelobikePage",
       "title" : "Test electro velobike page",
       "time" : {
-        "start" : 1547490927681,
-        "stop" : 1547490930574,
-        "duration" : 2893
+        "start" : 1547499019874,
+        "stop" : 1547499026883,
+        "duration" : 7009
       },
       "severity" : "NORMAL",
       "status" : "PASSED"
     }, {
-      "uid" : "b04066c2b13db055",
+      "uid" : "eea1c193748ba913",
       "name" : "TestFacebookPage",
       "title" : "Test facebook page",
       "time" : {
-        "start" : 1547490930577,
-        "stop" : 1547490942551,
-        "duration" : 11974
+        "start" : 1547499026887,
+        "stop" : 1547499040053,
+        "duration" : 13166
       },
       "severity" : "NORMAL",
       "status" : "PASSED"
     }, {
-      "uid" : "7d7b6436c9bf6b23",
+      "uid" : "dc7b177c349a2196",
       "name" : "TestGoToHowToUseRentalPage",
       "title" : "Test go to how to use rental page",
       "time" : {
-        "start" : 1547490942553,
-        "stop" : 1547490945376,
-        "duration" : 2823
+        "start" : 1547499040055,
+        "stop" : 1547499043212,
+        "duration" : 3157
       },
       "severity" : "NORMAL",
       "status" : "FAILED"
     }, {
-      "uid" : "dc5433b28e76719b",
+      "uid" : "4433334758b2362c",
       "name" : "TestGoToPricePage",
       "title" : "Test go to price page",
       "time" : {
-        "start" : 1547490945376,
-        "stop" : 1547490947452,
-        "duration" : 2076
+        "start" : 1547499043212,
+        "stop" : 1547499046432,
+        "duration" : 3220
       },
       "severity" : "NORMAL",
-      "status" : "PASSED"
+      "status" : "FAILED"
     }, {
-      "uid" : "19df52daee79ee18",
+      "uid" : "4345c0b15cd7daa",
       "name" : "TestInstagramPage",
       "title" : "Test instagram page",
       "time" : {
-        "start" : 1547490947453,
-        "stop" : 1547490952171,
-        "duration" : 4718
+        "start" : 1547499046433,
+        "stop" : 1547499051794,
+        "duration" : 5361
       },
       "severity" : "NORMAL",
       "status" : "PASSED"
     }, {
-      "uid" : "b97862ba561ea4e",
+      "uid" : "f79bade6dc628f1d",
       "name" : "TestNewsPage",
       "title" : "Test news page",
       "time" : {
-        "start" : 1547490952174,
-        "stop" : 1547490954270,
-        "duration" : 2096
+        "start" : 1547499051797,
+        "stop" : 1547499053588,
+        "duration" : 1791
       },
       "severity" : "NORMAL",
       "status" : "PASSED"
     }, {
-      "uid" : "a020915d722cc37d",
+      "uid" : "11efc1496217f56b",
       "name" : "TestQaPage",
       "title" : "Test qa page",
       "time" : {
-        "start" : 1547490954272,
-        "stop" : 1547490956618,
-        "duration" : 2346
+        "start" : 1547499053590,
+        "stop" : 1547499055426,
+        "duration" : 1836
       },
       "severity" : "NORMAL",
       "status" : "PASSED"
     }, {
-      "uid" : "46aadbb8979ead71",
+      "uid" : "414fc0d60d36b35a",
       "name" : "TestStationsMapPage",
       "title" : "Test stations map page",
       "time" : {
-        "start" : 1547490956620,
-        "stop" : 1547490960155,
-        "duration" : 3535
+        "start" : 1547499055428,
+        "stop" : 1547499059008,
+        "duration" : 3580
       },
       "severity" : "NORMAL",
       "status" : "PASSED"
     }, {
-      "uid" : "b2bd40a2a07c6c38",
+      "uid" : "ce94cc210ae79ece",
       "name" : "TestTelegramPage",
       "title" : "Test telegram page",
       "time" : {
-        "start" : 1547490960157,
-        "stop" : 1547490985433,
-        "duration" : 25276
+        "start" : 1547499059010,
+        "stop" : 1547499082473,
+        "duration" : 23463
       },
       "severity" : "NORMAL",
       "status" : "PASSED"
     }, {
-      "uid" : "ba84a3bbb5561779",
+      "uid" : "96ca384a97933935",
       "name" : "TestVKontactePage",
       "title" : "Test V kontacte page",
       "time" : {
-        "start" : 1547490985436,
-        "stop" : 1547490992120,
-        "duration" : 6684
+        "start" : 1547499082476,
+        "stop" : 1547499087570,
+        "duration" : 5094
       },
       "severity" : "NORMAL",
       "status" : "PASSED"

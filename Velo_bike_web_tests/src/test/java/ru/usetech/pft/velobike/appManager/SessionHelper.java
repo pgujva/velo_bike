@@ -17,10 +17,10 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class SessionHelper {
-    private ChromeDriver wd;
+    private WebDriver wd;
     private WebDriverWait wait;
 
-    public SessionHelper(ChromeDriver wd, WebDriverWait wait) {
+    public SessionHelper(WebDriver wd, WebDriverWait wait) {
         this.wd = wd;
         this.wait = wait;
     }

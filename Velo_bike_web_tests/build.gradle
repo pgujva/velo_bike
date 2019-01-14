@@ -24,13 +24,12 @@ dependencies {
     //compile 'json-simple-1.1.1.jar'
 }
 
-//test.doFirst {
-   // jvmArgs "-javaagent:${configurations.agent.singleFile}"
-//}
+test.doFirst {
+    jvmArgs "-javaagent:${configurations.agent.singleFile}"
+}
 
 test {
     useTestNG()
-    doFirst {
-        jvmArgs "-javaagent:${configurations.agent.singleFile}"
+   // doFirst {
+     //   jvmArgs "-javaagent:${configurations.agent.singleFile}"
     }
-}

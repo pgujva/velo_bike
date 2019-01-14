@@ -3,13 +3,17 @@ package ru.usetech.pft.velobike.appManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.openqa.selenium.remote.BrowserType.IEXPLORE;
+
 public class ApplicationManager {
 
-ChromeDriver wd;
+WebDriver wd;
 
   private NavigationHelper navigationHelper;
   private SessionHelper sessionHelper;
@@ -24,7 +28,15 @@ ChromeDriver wd;
   private WebDriverWait wait;
 
   public void init() {
-    wd = new ChromeDriver();
+    String browser = BrowserType.CHROME;
+    if(browser == BrowserType.CHROME) {
+      wd = new ChromeDriver();
+    } else if (browser == BrowserType.FIREFOX) {
+      wd= new FirefoxDriver();
+    } else  if (browser == BrowserType.IE) {
+      wd= new InternetExplorerDriver();
+    }
+
     wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     wait = new WebDriverWait(wd, 20);
     wd.manage().window().fullscreen();
@@ -92,7 +104,7 @@ ChromeDriver wd;
   }
 
   public byte[] takeScreenshot() {
-    return ((TakesScreenshot) wd).getScreenshotAs(OutputType.BYTES);
+    return ((TakesScreenshot)wd).getScreenshotAs(OutputType.BYTES);
   }
 }
 

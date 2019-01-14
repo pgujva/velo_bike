@@ -1,10 +1,16 @@
 package ru.usetech.pft.velobike.Tests;
 
+import org.openqa.selenium.OutputType;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import ru.usetech.pft.velobike.appManager.ApplicationManager;
 import ru.yandex.qatools.allure.annotations.Attachment;
+
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 
 public class MyTestListener implements ITestListener {
     @Override
@@ -24,9 +30,14 @@ public class MyTestListener implements ITestListener {
     }
 
     @Attachment(value = "Page screenshot", type = "image/png")
+
     public byte[] saveScreenshot(byte[] screenShot) {
         return screenShot;
     }
+
+
+
+
 
     @Override
     public void onTestSkipped(ITestResult result) {

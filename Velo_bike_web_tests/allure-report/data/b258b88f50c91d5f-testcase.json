@@ -1,0 +1,35 @@
+{
+  "uid" : "b258b88f50c91d5f",
+  "name" : "TestFacebookPage",
+  "title" : "Test facebook page",
+  "time" : {
+    "start" : 1547498604867,
+    "stop" : 1547498617320,
+    "duration" : 12453
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "33d82dbca376fd75",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}

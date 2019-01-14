@@ -12,10 +12,10 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfAllE
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class HelperBase {
-    private ChromeDriver wd;
+    private WebDriver wd;
     private WebDriverWait wait;
 
-    public HelperBase(ChromeDriver wd, WebDriverWait wait) {
+    public HelperBase(WebDriver wd, WebDriverWait wait) {
 
         this.wd = wd;
         this.wait = wait;

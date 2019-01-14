@@ -4,38 +4,43 @@
     "total" : {
       "statistic" : {
         "total" : 12,
-        "passed" : 11,
+        "passed" : 10,
         "pending" : 0,
         "canceled" : 0,
-        "failed" : 1,
+        "failed" : 2,
         "broken" : 0
       },
       "time" : {
-        "start" : 1547490924326,
-        "stop" : 1547490992120,
-        "duration" : 67794
+        "start" : 1547499015644,
+        "stop" : 1547499087570,
+        "duration" : 71926
       }
     },
     "defects" : {
-      "totalCount" : 1,
+      "totalCount" : 2,
       "items" : [ {
         "count" : 1,
-        "uid" : "3001f476d1d4ab76",
+        "uid" : "1f74066f01a7a5ac",
         "message" : "AssertionError: неверный заголовок страницы expected [Как пользоваться прокато] but found [Как пользоваться прокатом]",
+        "status" : "FAILED"
+      }, {
+        "count" : 1,
+        "uid" : "12996c4a32b1bb47",
+        "message" : "AssertionError: неверный заголовок страницы expected [Сколько это стои] but found [Сколько это стоит]",
         "status" : "FAILED"
       } ]
     },
     "xunit" : {
       "totalCount" : 1,
       "items" : [ {
-        "uid" : "aaf4d83ed72a4d52",
+        "uid" : "5de3e80f1c3705c4",
         "title" : "Default suite",
         "statistic" : {
           "total" : 12,
-          "passed" : 11,
+          "passed" : 10,
           "pending" : 0,
           "canceled" : 0,
-          "failed" : 1,
+          "failed" : 2,
           "broken" : 0
         }
       } ]
@@ -46,10 +51,10 @@
         "title" : "Without feature",
         "statistic" : {
           "total" : 12,
-          "passed" : 11,
+          "passed" : 10,
           "pending" : 0,
           "canceled" : 0,
-          "failed" : 1,
+          "failed" : 2,
           "broken" : 0
         }
       } ]

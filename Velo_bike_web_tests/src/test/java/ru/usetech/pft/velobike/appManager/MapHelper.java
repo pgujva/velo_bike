@@ -4,16 +4,17 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.usetech.pft.velobike.Model.StationsData;
 
 public class MapHelper {
 
-  private ChromeDriver wd;
+  private WebDriver wd;
   private WebDriverWait wait;
 
-  public MapHelper(ChromeDriver wd, WebDriverWait wait) {
+  public MapHelper(WebDriver wd, WebDriverWait wait) {
     this.wd = wd;
     this.wait = wait;
   }
@@ -75,7 +76,7 @@ public class MapHelper {
   }
 
   public StationsData CreateStationData(String stationNumber) {
-    int id = Integer.parseInt("0" + wd.findElementById(stationNumber).getAttribute("id"));
+    int id = Integer.parseInt("0" + wd.findElement(By.id(stationNumber)).getAttribute("id"));
     int freeElectricPlaces = Integer.parseInt(
             wd.findElement(By.cssSelector("div.map-popup__status-cols-wrap div.map-popup__status-col:nth-child(1) span.map-popup__number")).getAttribute("innerText"));
     int freeOrdinaryPlaces = Integer.parseInt(

@@ -1,0 +1,35 @@
+{
+  "uid" : "9dc7fa6b7ecbc953",
+  "name" : "TestContactsPage",
+  "title" : "Test contacts page",
+  "time" : {
+    "start" : 1547498600403,
+    "stop" : 1547498601867,
+    "duration" : 1464
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "33d82dbca376fd75",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}

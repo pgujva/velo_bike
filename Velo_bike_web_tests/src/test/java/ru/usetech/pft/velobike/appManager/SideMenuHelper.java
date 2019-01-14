@@ -1,6 +1,7 @@
 package ru.usetech.pft.velobike.appManager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,10 +15,10 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClick
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfAllElements;
 
 public class SideMenuHelper extends ApplicationManager {
-    private ChromeDriver wd;
+    private WebDriver wd;
     private WebDriverWait wait;
 
-    public SideMenuHelper(ChromeDriver wd, WebDriverWait wait) {
+    public SideMenuHelper(WebDriver wd, WebDriverWait wait) {
         this.wd = wd;
         this.wait = wait;
     }
