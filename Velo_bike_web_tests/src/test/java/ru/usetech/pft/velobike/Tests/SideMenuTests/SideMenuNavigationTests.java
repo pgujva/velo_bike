@@ -42,7 +42,7 @@ public class SideMenuNavigationTests extends Testbase {
         Assert.assertEquals(pageName, "Сколько это стои", "неверный заголовок страницы");
     }
 
-    @Test
+    @Test(enabled=false)
     public void TestStationsMapPage() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goStationsMapPage();
@@ -52,7 +52,7 @@ public class SideMenuNavigationTests extends Testbase {
         Assert.assertEquals(pageName, "Карта станций\nвелопроката", "неверный заголовок страницы");
     }
 
-    @Test
+    @Test(enabled=false)
     public void TestContactsPage() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goContactsPage();
@@ -63,7 +63,7 @@ public class SideMenuNavigationTests extends Testbase {
     }
 
 
-    @Test
+    @Test(enabled=false)
     public void TestQaPage() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goQaPage();
@@ -83,7 +83,7 @@ public class SideMenuNavigationTests extends Testbase {
         Assert.assertEquals(pageName, "Велопрокат\nБудущего", "неверный заголовок страницы");
     }
 
-    @Test
+    @Test(enabled=false)
     public void TestNewsPage() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goNewsPage();
@@ -94,7 +94,7 @@ public class SideMenuNavigationTests extends Testbase {
     }
 
 
-    @Test
+    @Test(enabled=false)
     public void TestAboutPage() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goAboutPage();
@@ -105,7 +105,7 @@ public class SideMenuNavigationTests extends Testbase {
     }
 
 
-    @Test
+    @Test(enabled=false)
     public void TestVKontactePage() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goToVKontactePage();
@@ -114,7 +114,7 @@ public class SideMenuNavigationTests extends Testbase {
         app.getNavigationHelper().goToPreviousPage();
     }
 
-    @Test
+    @Test(enabled=false)
     public void TestFacebookPage() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goToFacebookPage();
@@ -123,7 +123,7 @@ public class SideMenuNavigationTests extends Testbase {
         app.getNavigationHelper().goToPreviousPage();
     }
 
-    @Test
+    @Test(enabled=false)
     public void TestInstagramPage() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goToInstgramPage();
@@ -132,7 +132,7 @@ public class SideMenuNavigationTests extends Testbase {
         app.getNavigationHelper().goToPreviousPage();
     }
 
-    @Test
+    @Test(enabled=false)
     public void TestTelegramPage() {
         app.getNavigationHelper().goToSideMenu();
         app.getNavigationHelper().goTelegramPage();

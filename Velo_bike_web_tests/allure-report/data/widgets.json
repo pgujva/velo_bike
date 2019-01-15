@@ -3,29 +3,29 @@
   "plugins" : {
     "total" : {
       "statistic" : {
-        "total" : 12,
-        "passed" : 10,
+        "total" : 3,
+        "passed" : 1,
         "pending" : 0,
         "canceled" : 0,
         "failed" : 2,
         "broken" : 0
       },
       "time" : {
-        "start" : 1547499015644,
-        "stop" : 1547499087570,
-        "duration" : 71926
+        "start" : 1547583459740,
+        "stop" : 1547583534205,
+        "duration" : 74465
       }
     },
     "defects" : {
       "totalCount" : 2,
       "items" : [ {
         "count" : 1,
-        "uid" : "1f74066f01a7a5ac",
+        "uid" : "8e299b5fa6a25ec4",
         "message" : "AssertionError: неверный заголовок страницы expected [Как пользоваться прокато] but found [Как пользоваться прокатом]",
         "status" : "FAILED"
       }, {
         "count" : 1,
-        "uid" : "12996c4a32b1bb47",
+        "uid" : "a6a6db7b87545f59",
         "message" : "AssertionError: неверный заголовок страницы expected [Сколько это стои] but found [Сколько это стоит]",
         "status" : "FAILED"
       } ]
@@ -33,11 +33,11 @@
     "xunit" : {
       "totalCount" : 1,
       "items" : [ {
-        "uid" : "5de3e80f1c3705c4",
+        "uid" : "de18353de3d8451e",
         "title" : "Default suite",
         "statistic" : {
-          "total" : 12,
-          "passed" : 10,
+          "total" : 3,
+          "passed" : 1,
           "pending" : 0,
           "canceled" : 0,
           "failed" : 2,
@@ -50,8 +50,8 @@
       "items" : [ {
         "title" : "Without feature",
         "statistic" : {
-          "total" : 12,
-          "passed" : 10,
+          "total" : 3,
+          "passed" : 1,
           "pending" : 0,
           "canceled" : 0,
           "failed" : 2,

@@ -1,11 +1,11 @@
 {
-  "uid" : "9711aaffeebd777b",
-  "name" : "TestContactsPage",
-  "title" : "Test contacts page",
+  "uid" : "cc53173dea89f8d9",
+  "name" : "TestStationsMapPage",
+  "title" : "Test stations map page",
   "time" : {
-    "start" : 1547499018016,
-    "stop" : 1547499019871,
-    "duration" : 1855
+    "start" : 1547582514232,
+    "stop" : 1547582518550,
+    "duration" : 4318
   },
   "summary" : {
     "attachments" : 0,
@@ -16,7 +16,7 @@
   "severity" : "NORMAL",
   "status" : "PASSED",
   "suite" : {
-    "uid" : "5de3e80f1c3705c4",
+    "uid" : "d6414c7f27418adf",
     "name" : "Default Suite",
     "title" : "Default suite"
   },

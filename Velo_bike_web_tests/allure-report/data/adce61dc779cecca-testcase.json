@@ -1,11 +1,11 @@
 {
-  "uid" : "37c297c06dd1555e",
-  "name" : "TestQaPage",
-  "title" : "Test qa page",
+  "uid" : "adce61dc779cecca",
+  "name" : "TestElectroVelobikePage",
+  "title" : "Test electro velobike page",
   "time" : {
-    "start" : 1547498628910,
-    "stop" : 1547498630530,
-    "duration" : 1620
+    "start" : 1547583459740,
+    "stop" : 1547583462441,
+    "duration" : 2701
   },
   "summary" : {
     "attachments" : 0,
@@ -16,7 +16,7 @@
   "severity" : "NORMAL",
   "status" : "PASSED",
   "suite" : {
-    "uid" : "33d82dbca376fd75",
+    "uid" : "de18353de3d8451e",
     "name" : "Default Suite",
     "title" : "Default suite"
   },

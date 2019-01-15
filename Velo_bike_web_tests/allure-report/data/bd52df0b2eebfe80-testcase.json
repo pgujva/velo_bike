@@ -1,11 +1,11 @@
 {
-  "uid" : "ba771aa88bd94a24",
-  "name" : "TestInstagramPage",
-  "title" : "Test instagram page",
+  "uid" : "bd52df0b2eebfe80",
+  "name" : "TestTelegramPage",
+  "title" : "Test telegram page",
   "time" : {
-    "start" : 1547498622258,
-    "stop" : 1547498627220,
-    "duration" : 4962
+    "start" : 1547582518553,
+    "stop" : 1547582542921,
+    "duration" : 24368
   },
   "summary" : {
     "attachments" : 0,
@@ -16,7 +16,7 @@
   "severity" : "NORMAL",
   "status" : "PASSED",
   "suite" : {
-    "uid" : "33d82dbca376fd75",
+    "uid" : "d6414c7f27418adf",
     "name" : "Default Suite",
     "title" : "Default suite"
   },

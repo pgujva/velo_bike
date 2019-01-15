@@ -1,11 +1,11 @@
 {
-  "uid" : "da48692d6a0ceee",
-  "name" : "TestVKontactePage",
-  "title" : "Test V kontacte page",
+  "uid" : "e38ba2d0f3f30fe",
+  "name" : "TestAboutPage",
+  "title" : "Test about page",
   "time" : {
-    "start" : 1547498659795,
-    "stop" : 1547498665088,
-    "duration" : 5293
+    "start" : 1547582484439,
+    "stop" : 1547582486169,
+    "duration" : 1730
   },
   "summary" : {
     "attachments" : 0,
@@ -16,7 +16,7 @@
   "severity" : "NORMAL",
   "status" : "PASSED",
   "suite" : {
-    "uid" : "33d82dbca376fd75",
+    "uid" : "d6414c7f27418adf",
     "name" : "Default Suite",
     "title" : "Default suite"
   },

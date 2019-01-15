@@ -7,9 +7,14 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.io.File;
+import org.apache.commons.io.FileUtils;
+
+import javax.swing.*;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import static org.openqa.selenium.remote.BrowserType.IEXPLORE;
 
 public class ApplicationManager {
 
@@ -103,8 +108,26 @@ WebDriver wd;
     return mainPageHelper;
   }
 
-  public byte[] takeScreenshot() {
-    return ((TakesScreenshot)wd).getScreenshotAs(OutputType.BYTES);
-  }
+//  public byte[] ttakeScreenshot() {
+//    return((TakesScreenshot)wd).getScreenshotAs(OutputType.BYTES);
+  //}
+
+  public File takeScreenshot() throws IOException {
+    String nameFile = "ff";
+    //Image img = new ImageIcon("G:\\img.png").getImage();
+   String PATHSCREENSHOT="C:\\images\\im";
+
+String path = PATHSCREENSHOT + String.format("%s_%s.png", nameFile, System.currentTimeMillis());
+
+    File screenShot_tmp = null;
+    File screenShot = new File(path);
+     screenShot_tmp = ((TakesScreenshot) wd).getScreenshotAs(OutputType.FILE);
+     FileUtils.copyFile(screenShot_tmp, screenShot);
+     return screenShot;
+ }
+
+
+
+
 }
 

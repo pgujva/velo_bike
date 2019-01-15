@@ -1,11 +1,11 @@
 {
-  "uid" : "117a0e7134a99713",
-  "name" : "TestAboutPage",
-  "title" : "Test about page",
+  "uid" : "286e008df2d379ef",
+  "name" : "TestNewsPage",
+  "title" : "Test news page",
   "time" : {
-    "start" : 1547499015644,
-    "stop" : 1547499017867,
-    "duration" : 2223
+    "start" : 1547582510771,
+    "stop" : 1547582512565,
+    "duration" : 1794
   },
   "summary" : {
     "attachments" : 0,
@@ -16,7 +16,7 @@
   "severity" : "NORMAL",
   "status" : "PASSED",
   "suite" : {
-    "uid" : "5de3e80f1c3705c4",
+    "uid" : "d6414c7f27418adf",
     "name" : "Default Suite",
     "title" : "Default suite"
   },

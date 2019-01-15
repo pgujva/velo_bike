@@ -1,15 +1,12 @@
 package ru.usetech.pft.velobike.Tests;
 
-import org.openqa.selenium.OutputType;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import ru.usetech.pft.velobike.appManager.ApplicationManager;
 import ru.yandex.qatools.allure.annotations.Attachment;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 
 public class MyTestListener implements ITestListener {
@@ -26,12 +23,18 @@ public class MyTestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         ApplicationManager app = (ApplicationManager) result.getTestContext().getAttribute("app");
-        saveScreenshot(app.takeScreenshot());
+        try {
+            saveScreenshot(app.takeScreenshot());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     @Attachment(value = "Page screenshot", type = "image/png")
 
-    public byte[] saveScreenshot(byte[] screenShot) {
+    public File saveScreenshot(File screenShot) {
         return screenShot;
     }
 

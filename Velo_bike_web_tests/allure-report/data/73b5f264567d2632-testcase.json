@@ -1,11 +1,11 @@
 {
-  "uid" : "eea1c193748ba913",
-  "name" : "TestFacebookPage",
-  "title" : "Test facebook page",
+  "uid" : "73b5f264567d2632",
+  "name" : "TestQaPage",
+  "title" : "Test qa page",
   "time" : {
-    "start" : 1547499026887,
-    "stop" : 1547499040053,
-    "duration" : 13166
+    "start" : 1547582512567,
+    "stop" : 1547582514231,
+    "duration" : 1664
   },
   "summary" : {
     "attachments" : 0,
@@ -16,7 +16,7 @@
   "severity" : "NORMAL",
   "status" : "PASSED",
   "suite" : {
-    "uid" : "5de3e80f1c3705c4",
+    "uid" : "d6414c7f27418adf",
     "name" : "Default Suite",
     "title" : "Default suite"
   },

@@ -1,11 +1,11 @@
 {
-  "uid" : "4433a09dd52e9ebb",
-  "name" : "TestTelegramPage",
-  "title" : "Test telegram page",
+  "uid" : "e4f4abb48b4a1fbe",
+  "name" : "TestContactsPage",
+  "title" : "Test contacts page",
   "time" : {
-    "start" : 1547498635055,
-    "stop" : 1547498659793,
-    "duration" : 24738
+    "start" : 1547582486304,
+    "stop" : 1547582487808,
+    "duration" : 1504
   },
   "summary" : {
     "attachments" : 0,
@@ -16,7 +16,7 @@
   "severity" : "NORMAL",
   "status" : "PASSED",
   "suite" : {
-    "uid" : "33d82dbca376fd75",
+    "uid" : "d6414c7f27418adf",
     "name" : "Default Suite",
     "title" : "Default suite"
   },

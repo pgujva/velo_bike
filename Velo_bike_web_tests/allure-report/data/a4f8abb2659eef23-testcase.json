@@ -1,11 +1,11 @@
 {
-  "uid" : "414fc0d60d36b35a",
-  "name" : "TestStationsMapPage",
-  "title" : "Test stations map page",
+  "uid" : "a4f8abb2659eef23",
+  "name" : "TestInstagramPage",
+  "title" : "Test instagram page",
   "time" : {
-    "start" : 1547499055428,
-    "stop" : 1547499059008,
-    "duration" : 3580
+    "start" : 1547582506417,
+    "stop" : 1547582510769,
+    "duration" : 4352
   },
   "summary" : {
     "attachments" : 0,
@@ -16,7 +16,7 @@
   "severity" : "NORMAL",
   "status" : "PASSED",
   "suite" : {
-    "uid" : "5de3e80f1c3705c4",
+    "uid" : "d6414c7f27418adf",
     "name" : "Default Suite",
     "title" : "Default suite"
   },
