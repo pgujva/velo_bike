@@ -9,15 +9,15 @@ import ru.usetech.pft.velobike.appManager.ApplicationManager;
 
 public class Testbase {
 
-    protected final ApplicationManager app = new ApplicationManager();
+    protected static final ApplicationManager app = new ApplicationManager();
 
-    @BeforeSuite
+    @BeforeClass
     public void setUp(ITestContext context) throws Exception {
         app.init();
         context.setAttribute("app",app);
     }
 
-    @AfterSuite
+    @AfterClass( alwaysRun = true)
     public void tearDown() {
         app.stop();
     }

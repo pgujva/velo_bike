@@ -11,7 +11,7 @@ import java.util.List;
 public class SideMenuTestsNotUse extends Testbase {
 
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void TestsSideMenu() {
         app.getSessionHelper().loginInSideMenu("4001776", "3875");
         app.getNavigationHelper().goToPersonalAccountPage();

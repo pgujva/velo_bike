@@ -7,7 +7,7 @@ import ru.usetech.pft.velobike.Tests.Testbase;
 
 public class GoToPersonalAccountBySideMenuTest extends Testbase {
 
-    @Test
+    @Test(enabled = false)
     public void TestGoToPersonalAccountByPhoto() throws Exception {
 
         app.getNavigationHelper().goToPersonalAccountPage();

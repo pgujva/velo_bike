@@ -1,35 +1,90 @@
 {
   "time" : {
-    "start" : 1547638169321,
-    "stop" : 1547638172460,
-    "duration" : 3139
+    "start" : 1547648347244,
+    "stop" : 1547648427389,
+    "duration" : 80145
   },
   "testSuites" : [ {
-    "uid" : "34edf550eab54d55",
+    "uid" : "2af346c3933df296",
     "name" : "Default Suite",
     "title" : "Default suite",
     "time" : {
-      "start" : 1547638169321,
-      "stop" : 1547638172460,
-      "duration" : 3139
+      "start" : 1547648347244,
+      "stop" : 1547648427389,
+      "duration" : 80145
     },
     "statistic" : {
-      "total" : 1,
-      "passed" : 0,
+      "total" : 6,
+      "passed" : 2,
       "pending" : 0,
       "canceled" : 0,
-      "failed" : 1,
+      "failed" : 4,
       "broken" : 0
     },
     "description" : null,
     "testCases" : [ {
-      "uid" : "c5496a17999b3d1b",
-      "name" : "Tesff",
-      "title" : "Tesff",
+      "uid" : "f93cc31a062a9290",
+      "name" : "TestElectroVelobikePage",
+      "title" : "Test electro velobike page",
       "time" : {
-        "start" : 1547638169321,
-        "stop" : 1547638172460,
-        "duration" : 3139
+        "start" : 1547648347244,
+        "stop" : 1547648350126,
+        "duration" : 2882
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "fe992cb9ae3b5824",
+      "name" : "TestGoToHowToUseRentalPage",
+      "title" : "Test go to how to use rental page",
+      "time" : {
+        "start" : 1547648350243,
+        "stop" : 1547648352863,
+        "duration" : 2620
+      },
+      "severity" : "NORMAL",
+      "status" : "FAILED"
+    }, {
+      "uid" : "82872f5dbc32c9fc",
+      "name" : "TestGoToPricePage",
+      "title" : "Test go to price page",
+      "time" : {
+        "start" : 1547648352866,
+        "stop" : 1547648355841,
+        "duration" : 2975
+      },
+      "severity" : "NORMAL",
+      "status" : "FAILED"
+    }, {
+      "uid" : "2aea4cf1f5e15c1d",
+      "name" : "TestElectroVelobikePage",
+      "title" : "Test electro velobike page",
+      "time" : {
+        "start" : 1547648418937,
+        "stop" : 1547648421838,
+        "duration" : 2901
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "9d77d55010606d3c",
+      "name" : "TestGoToHowToUseRentalPage",
+      "title" : "Test go to how to use rental page",
+      "time" : {
+        "start" : 1547648421979,
+        "stop" : 1547648424654,
+        "duration" : 2675
+      },
+      "severity" : "NORMAL",
+      "status" : "FAILED"
+    }, {
+      "uid" : "b6a344f50365722d",
+      "name" : "TestGoToPricePage",
+      "title" : "Test go to price page",
+      "time" : {
+        "start" : 1547648424655,
+        "stop" : 1547648427389,
+        "duration" : 2734
       },
       "severity" : "NORMAL",
       "status" : "FAILED"
