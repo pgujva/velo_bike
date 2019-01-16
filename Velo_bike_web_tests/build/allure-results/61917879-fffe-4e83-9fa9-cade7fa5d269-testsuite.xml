@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1547583454206" stop="1547583534217">
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1547631009432" stop="1547631024081">
     <name>Default Suite</name>
     <test-cases>
-        <test-case start="1547583459740" stop="1547583462441" status="passed">
+        <test-case start="1547631015668" stop="1547631018675" status="passed">
             <name>TestElectroVelobikePage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547583462880" stop="1547583489693" status="failed">
+        <test-case start="1547631018827" stop="1547631021473" status="failed">
             <name>TestGoToHowToUseRentalPage</name>
             <failure>
                 <message>AssertionError: неверный заголовок страницы expected [Как пользоваться прокато] but found [Как пользоваться прокатом]</message>
@@ -49,7 +49,7 @@
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547583489693" stop="1547583534205" status="failed">
+        <test-case start="1547631021474" stop="1547631024078" status="failed">
             <name>TestGoToPricePage</name>
             <failure>
                 <message>AssertionError: неверный заголовок страницы expected [Сколько это стои] but found [Сколько это стоит]</message>

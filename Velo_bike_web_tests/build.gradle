@@ -31,6 +31,7 @@ test.doFirst {
 
 test {
     useTestNG()
-   // doFirst {
-     //   jvmArgs "-javaagent:${configurations.agent.singleFile}"
-    }
+}
+
+
+

@@ -11,21 +11,21 @@
         "broken" : 0
       },
       "time" : {
-        "start" : 1547583459740,
-        "stop" : 1547583534205,
-        "duration" : 74465
+        "start" : 1547631015668,
+        "stop" : 1547631024078,
+        "duration" : 8410
       }
     },
     "defects" : {
       "totalCount" : 2,
       "items" : [ {
         "count" : 1,
-        "uid" : "8e299b5fa6a25ec4",
+        "uid" : "23318d6f3c757f8",
         "message" : "AssertionError: неверный заголовок страницы expected [Как пользоваться прокато] but found [Как пользоваться прокатом]",
         "status" : "FAILED"
       }, {
         "count" : 1,
-        "uid" : "a6a6db7b87545f59",
+        "uid" : "70ab5ba0e31570a9",
         "message" : "AssertionError: неверный заголовок страницы expected [Сколько это стои] but found [Сколько это стоит]",
         "status" : "FAILED"
       } ]
@@ -33,7 +33,7 @@
     "xunit" : {
       "totalCount" : 1,
       "items" : [ {
-        "uid" : "de18353de3d8451e",
+        "uid" : "541c1d65e2bf9881",
         "title" : "Default suite",
         "statistic" : {
           "total" : 3,
