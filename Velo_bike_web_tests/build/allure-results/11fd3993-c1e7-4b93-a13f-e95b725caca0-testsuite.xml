@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1547631009432" stop="1547631024081">
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1547631406194" stop="1547631414682">
     <name>Default Suite</name>
     <test-cases>
-        <test-case start="1547631015668" stop="1547631018675" status="passed">
+        <test-case start="1547631406231" stop="1547631408669" status="passed">
             <name>TestElectroVelobikePage</name>
             <steps/>
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547631018827" stop="1547631021473" status="failed">
+        <test-case start="1547631408802" stop="1547631410966" status="failed">
             <name>TestGoToHowToUseRentalPage</name>
             <failure>
                 <message>AssertionError: неверный заголовок страницы expected [Как пользоваться прокато] but found [Как пользоваться прокатом]</message>
@@ -18,7 +18,7 @@
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
-	at ru.usetech.pft.velobike.Tests.SideMenuTests.SideMenuNavigationTests.TestGoToHowToUseRentalPage(SideMenuNavigationTests.java:31)
+	at ru.usetech.pft.velobike.Tests.SideMenuTests.SideMenuNavigationTests.TestGoToHowToUseRentalPage(SideMenuNavigationTests.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -49,7 +49,7 @@
             <attachments/>
             <labels/>
         </test-case>
-        <test-case start="1547631021474" stop="1547631024078" status="failed">
+        <test-case start="1547631410967" stop="1547631413483" status="failed">
             <name>TestGoToPricePage</name>
             <failure>
                 <message>AssertionError: неверный заголовок страницы expected [Сколько это стои] but found [Сколько это стоит]</message>
@@ -59,7 +59,7 @@
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
-	at ru.usetech.pft.velobike.Tests.SideMenuTests.SideMenuNavigationTests.TestGoToPricePage(SideMenuNavigationTests.java:42)
+	at ru.usetech.pft.velobike.Tests.SideMenuTests.SideMenuNavigationTests.TestGoToPricePage(SideMenuNavigationTests.java:48)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

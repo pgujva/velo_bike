@@ -4,35 +4,35 @@
     "threads" : [ {
       "title" : "default",
       "testCases" : [ {
-        "uid" : "c2faa5bf7f0ec8c",
+        "uid" : "cabe31ef8a2b7567",
         "name" : "TestElectroVelobikePage",
         "title" : "Test electro velobike page",
         "time" : {
-          "start" : 1547631015668,
-          "stop" : 1547631018675,
-          "duration" : 3007
+          "start" : 1547631406231,
+          "stop" : 1547631408669,
+          "duration" : 2438
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "8fda8a189f57de56",
+        "uid" : "d708798f2b62b54b",
         "name" : "TestGoToHowToUseRentalPage",
         "title" : "Test go to how to use rental page",
         "time" : {
-          "start" : 1547631018827,
-          "stop" : 1547631021473,
-          "duration" : 2646
+          "start" : 1547631408802,
+          "stop" : 1547631410966,
+          "duration" : 2164
         },
         "severity" : "NORMAL",
         "status" : "FAILED"
       }, {
-        "uid" : "2f73800d554f7c94",
+        "uid" : "30a03b0b9c99d3a8",
         "name" : "TestGoToPricePage",
         "title" : "Test go to price page",
         "time" : {
-          "start" : 1547631021474,
-          "stop" : 1547631024078,
-          "duration" : 2604
+          "start" : 1547631410967,
+          "stop" : 1547631413483,
+          "duration" : 2516
         },
         "severity" : "NORMAL",
         "status" : "FAILED"
