@@ -1,17 +1,17 @@
 {
   "time" : {
-    "start" : 1547631406231,
-    "stop" : 1547631413483,
-    "duration" : 7252
+    "start" : 1547635506967,
+    "stop" : 1547635516720,
+    "duration" : 9753
   },
   "testSuites" : [ {
-    "uid" : "e93e67fe032aa10",
+    "uid" : "23b85f4a4280459f",
     "name" : "Default Suite",
     "title" : "Default suite",
     "time" : {
-      "start" : 1547631406231,
-      "stop" : 1547631413483,
-      "duration" : 7252
+      "start" : 1547635506967,
+      "stop" : 1547635516720,
+      "duration" : 9753
     },
     "statistic" : {
       "total" : 3,
@@ -23,35 +23,35 @@
     },
     "description" : null,
     "testCases" : [ {
-      "uid" : "cabe31ef8a2b7567",
+      "uid" : "b96370b43ff776c9",
       "name" : "TestElectroVelobikePage",
       "title" : "Test electro velobike page",
       "time" : {
-        "start" : 1547631406231,
-        "stop" : 1547631408669,
-        "duration" : 2438
+        "start" : 1547635506967,
+        "stop" : 1547635510562,
+        "duration" : 3595
       },
       "severity" : "NORMAL",
       "status" : "PASSED"
     }, {
-      "uid" : "d708798f2b62b54b",
+      "uid" : "3bbf2bfb519fc6fc",
       "name" : "TestGoToHowToUseRentalPage",
       "title" : "Test go to how to use rental page",
       "time" : {
-        "start" : 1547631408802,
-        "stop" : 1547631410966,
-        "duration" : 2164
+        "start" : 1547635510730,
+        "stop" : 1547635514236,
+        "duration" : 3506
       },
       "severity" : "NORMAL",
       "status" : "FAILED"
     }, {
-      "uid" : "30a03b0b9c99d3a8",
+      "uid" : "e95d218689d48f3",
       "name" : "TestGoToPricePage",
       "title" : "Test go to price page",
       "time" : {
-        "start" : 1547631410967,
-        "stop" : 1547631413483,
-        "duration" : 2516
+        "start" : 1547635514237,
+        "stop" : 1547635516720,
+        "duration" : 2483
       },
       "severity" : "NORMAL",
       "status" : "FAILED"

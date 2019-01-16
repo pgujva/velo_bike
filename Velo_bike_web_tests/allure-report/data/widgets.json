@@ -1,7 +1,38 @@
 {
-  "hash" : "e7105c43ada45c9f6e0006854ef1a1d95249231d",
-  "plugins" : {
-    "total" : {
+  "hash" : "9ae4a52f46fbba0c959575303f697deb73e72d63",
+  "data" : [ {
+    "statistic" : {
+      "total" : 3,
+      "passed" : 1,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 2,
+      "broken" : 0
+    },
+    "time" : {
+      "start" : 1547635506967,
+      "stop" : 1547635516720,
+      "duration" : 9753
+    },
+    "name" : "total",
+    "type" : "TOTAL"
+  }, {
+    "name" : "defects",
+    "type" : "DEFECTS",
+    "data" : [ {
+      "count" : 1,
+      "message" : "AssertionError: неверный заголовок страницы expected [Как пользоваться прокато] but found [Как пользоваться прокатом]",
+      "status" : "FAILED"
+    }, {
+      "count" : 1,
+      "message" : "AssertionError: неверный заголовок страницы expected [Сколько это стои] but found [Сколько это стоит]",
+      "status" : "FAILED"
+    } ]
+  }, {
+    "name" : "xunit",
+    "type" : "TITLE_STATISTICS",
+    "data" : [ {
+      "title" : "Default suite",
       "statistic" : {
         "total" : 3,
         "passed" : 1,
@@ -9,56 +40,25 @@
         "canceled" : 0,
         "failed" : 2,
         "broken" : 0
-      },
-      "time" : {
-        "start" : 1547631406231,
-        "stop" : 1547631413483,
-        "duration" : 7252
       }
-    },
-    "defects" : {
-      "totalCount" : 2,
-      "items" : [ {
-        "count" : 1,
-        "uid" : "bf4cec47d61c60de",
-        "message" : "AssertionError: неверный заголовок страницы expected [Как пользоваться прокато] but found [Как пользоваться прокатом]",
-        "status" : "FAILED"
-      }, {
-        "count" : 1,
-        "uid" : "5bb10a7ca170e6f5",
-        "message" : "AssertionError: неверный заголовок страницы expected [Сколько это стои] but found [Сколько это стоит]",
-        "status" : "FAILED"
-      } ]
-    },
-    "xunit" : {
-      "totalCount" : 1,
-      "items" : [ {
-        "uid" : "e93e67fe032aa10",
-        "title" : "Default suite",
-        "statistic" : {
-          "total" : 3,
-          "passed" : 1,
-          "pending" : 0,
-          "canceled" : 0,
-          "failed" : 2,
-          "broken" : 0
-        }
-      } ]
-    },
-    "behaviors" : {
-      "totalCount" : 1,
-      "items" : [ {
-        "title" : "Without feature",
-        "statistic" : {
-          "total" : 3,
-          "passed" : 1,
-          "pending" : 0,
-          "canceled" : 0,
-          "failed" : 2,
-          "broken" : 0
-        }
-      } ]
-    },
-    "environment" : [ ]
-  }
+    } ]
+  }, {
+    "name" : "behaviors",
+    "type" : "TITLE_STATISTICS",
+    "data" : [ {
+      "title" : "Without feature",
+      "statistic" : {
+        "total" : 3,
+        "passed" : 1,
+        "pending" : 0,
+        "canceled" : 0,
+        "failed" : 2,
+        "broken" : 0
+      }
+    } ]
+  }, {
+    "name" : "environment",
+    "type" : "KEY_VALUE",
+    "data" : [ ]
+  } ]
 }
