@@ -108,11 +108,11 @@ WebDriver wd;
     return mainPageHelper;
   }
 
-//  public byte[] ttakeScreenshot() {
-//    return((TakesScreenshot)wd).getScreenshotAs(OutputType.BYTES);
-  //}
+public byte[] takeScreenshot() {
+return((TakesScreenshot)wd).getScreenshotAs(OutputType.BYTES);
+ }
 
-  public File takeScreenshot() throws IOException {
+/*  public File takeScreenshot() throws IOException {
     String nameFile = "ff";
     //Image img = new ImageIcon("G:\\img.png").getImage();
    String PATHSCREENSHOT="C:\\images\\im";
@@ -125,7 +125,7 @@ String path = PATHSCREENSHOT + String.format("%s_%s.png", nameFile, System.curre
      FileUtils.copyFile(screenShot_tmp, screenShot);
      return screenShot;
  }
-
+*/
 
 
 

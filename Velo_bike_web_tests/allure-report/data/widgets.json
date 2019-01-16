@@ -2,17 +2,17 @@
   "hash" : "9ae4a52f46fbba0c959575303f697deb73e72d63",
   "data" : [ {
     "statistic" : {
-      "total" : 3,
-      "passed" : 1,
+      "total" : 1,
+      "passed" : 0,
       "pending" : 0,
       "canceled" : 0,
-      "failed" : 2,
+      "failed" : 1,
       "broken" : 0
     },
     "time" : {
-      "start" : 1547635506967,
-      "stop" : 1547635516720,
-      "duration" : 9753
+      "start" : 1547638169321,
+      "stop" : 1547638172460,
+      "duration" : 3139
     },
     "name" : "total",
     "type" : "TOTAL"
@@ -21,11 +21,7 @@
     "type" : "DEFECTS",
     "data" : [ {
       "count" : 1,
-      "message" : "AssertionError: неверный заголовок страницы expected [Как пользоваться прокато] but found [Как пользоваться прокатом]",
-      "status" : "FAILED"
-    }, {
-      "count" : 1,
-      "message" : "AssertionError: неверный заголовок страницы expected [Сколько это стои] but found [Сколько это стоит]",
+      "message" : "AssertionError: expected [333] but found [Двухколесный городской транспорт]",
       "status" : "FAILED"
     } ]
   }, {
@@ -34,11 +30,11 @@
     "data" : [ {
       "title" : "Default suite",
       "statistic" : {
-        "total" : 3,
-        "passed" : 1,
+        "total" : 1,
+        "passed" : 0,
         "pending" : 0,
         "canceled" : 0,
-        "failed" : 2,
+        "failed" : 1,
         "broken" : 0
       }
     } ]
@@ -48,11 +44,11 @@
     "data" : [ {
       "title" : "Without feature",
       "statistic" : {
-        "total" : 3,
-        "passed" : 1,
+        "total" : 1,
+        "passed" : 0,
         "pending" : 0,
         "canceled" : 0,
-        "failed" : 2,
+        "failed" : 1,
         "broken" : 0
       }
     } ]

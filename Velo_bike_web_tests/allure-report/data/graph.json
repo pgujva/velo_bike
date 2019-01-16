@@ -1,34 +1,12 @@
 {
   "testCases" : [ {
-    "uid" : "b96370b43ff776c9",
-    "name" : "TestElectroVelobikePage",
-    "title" : "Test electro velobike page",
+    "uid" : "c5496a17999b3d1b",
+    "name" : "Tesff",
+    "title" : "Tesff",
     "time" : {
-      "start" : 1547635506967,
-      "stop" : 1547635510562,
-      "duration" : 3595
-    },
-    "severity" : "NORMAL",
-    "status" : "PASSED"
-  }, {
-    "uid" : "3bbf2bfb519fc6fc",
-    "name" : "TestGoToHowToUseRentalPage",
-    "title" : "Test go to how to use rental page",
-    "time" : {
-      "start" : 1547635510730,
-      "stop" : 1547635514236,
-      "duration" : 3506
-    },
-    "severity" : "NORMAL",
-    "status" : "FAILED"
-  }, {
-    "uid" : "e95d218689d48f3",
-    "name" : "TestGoToPricePage",
-    "title" : "Test go to price page",
-    "time" : {
-      "start" : 1547635514237,
-      "stop" : 1547635516720,
-      "duration" : 2483
+      "start" : 1547638169321,
+      "stop" : 1547638172460,
+      "duration" : 3139
     },
     "severity" : "NORMAL",
     "status" : "FAILED"

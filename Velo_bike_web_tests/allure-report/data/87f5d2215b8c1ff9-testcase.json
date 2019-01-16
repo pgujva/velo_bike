@@ -1,0 +1,35 @@
+{
+  "uid" : "87f5d2215b8c1ff9",
+  "name" : "TestElectroVelobikePage",
+  "title" : "Test electro velobike page",
+  "time" : {
+    "start" : 1547636374246,
+    "stop" : 1547636377124,
+    "duration" : 2878
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "e32f1aacdbcf2da9",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}
