@@ -1,0 +1,35 @@
+{
+  "uid" : "d847977685f13361",
+  "name" : "TestLoginToSystemFromHeder",
+  "title" : "Test login to system from heder",
+  "time" : {
+    "start" : 1547745511299,
+    "stop" : 1547745514427,
+    "duration" : 3128
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "951c06590be7d4ff",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}

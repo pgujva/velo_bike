@@ -1,0 +1,35 @@
+{
+  "uid" : "58f939d0c26920c6",
+  "name" : "TestLogoutFromSystem",
+  "title" : "Test logout from system",
+  "time" : {
+    "start" : 1547745532159,
+    "stop" : 1547745537720,
+    "duration" : 5561
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "951c06590be7d4ff",
+    "name" : "Default Suite",
+    "title" : "Default suite"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}

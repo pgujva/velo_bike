@@ -30,7 +30,7 @@ public class testAllure extends Testbase{
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
   }
 
-  @Test
+  @Test(enabled = false)
   public void Tesff() {
     wd.get("https://velobike.ru/");
     WebElement element = wd.findElement(By.tagName("h2"));

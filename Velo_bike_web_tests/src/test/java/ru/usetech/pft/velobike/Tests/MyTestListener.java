@@ -6,9 +6,6 @@ import org.testng.ITestResult;
 import ru.usetech.pft.velobike.appManager.ApplicationManager;
 import ru.yandex.qatools.allure.annotations.Attachment;
 
-import java.io.File;
-import java.io.IOException;
-
 public class MyTestListener implements ITestListener {
   @Override
   public void onTestStart(ITestResult result) {
@@ -23,7 +20,9 @@ public class MyTestListener implements ITestListener {
   @Override
   public void onTestFailure(ITestResult result) {
     ApplicationManager app = (ApplicationManager) result.getTestContext().getAttribute("app");
-    saveScreenshot(app.takeScreenshot());
+
+      saveScreenshot(app.takeScreenshot());
+
   }
 
   @Attachment(value = "Page screenshot", type = "image/png")

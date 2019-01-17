@@ -2,57 +2,123 @@
   "features" : [ {
     "title" : "Without feature",
     "statistic" : {
-      "total" : 3,
-      "passed" : 1,
+      "total" : 9,
+      "passed" : 5,
       "pending" : 0,
       "canceled" : 0,
-      "failed" : 1,
-      "broken" : 1
+      "failed" : 2,
+      "broken" : 2
     },
     "stories" : [ {
-      "uid" : "3a6403b78219eb23",
+      "uid" : "8de79da4db78ed28",
       "title" : "Without story",
       "statistic" : {
-        "total" : 3,
-        "passed" : 1,
+        "total" : 9,
+        "passed" : 5,
         "pending" : 0,
         "canceled" : 0,
-        "failed" : 1,
-        "broken" : 1
+        "failed" : 2,
+        "broken" : 2
       },
       "testCases" : [ {
-        "uid" : "407e1d5d5e6fc649",
-        "name" : "TestElectroVelobikePage",
-        "title" : "Test electro velobike page",
+        "uid" : "16ae7a8310a7961",
+        "name" : "Test1",
+        "title" : "Test 1",
         "time" : {
-          "start" : 1547743478689,
-          "stop" : 1547743482217,
-          "duration" : 3528
+          "start" : 1547745731437,
+          "stop" : 1547745732418,
+          "duration" : 981
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "67bcefdf6de4f371",
-        "name" : "TestGoToHowToUseRentalPage",
-        "title" : "Test go to how to use rental page",
+        "uid" : "f7c989d4fae9460a",
+        "name" : "Test2",
+        "title" : "Test 2",
         "time" : {
-          "start" : 1547743507901,
-          "stop" : 1547743536094,
-          "duration" : 28193
+          "start" : 1547745734338,
+          "stop" : 1547745735211,
+          "duration" : 873
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "f82d2a017d59a593",
+        "name" : "Test3",
+        "title" : "Test 3",
+        "time" : {
+          "start" : 1547745736605,
+          "stop" : 1547745759317,
+          "duration" : 22712
         },
         "severity" : "NORMAL",
         "status" : "BROKEN"
       }, {
-        "uid" : "c225d0b614a2df46",
-        "name" : "TestGoToPricePage",
-        "title" : "Test go to price page",
+        "uid" : "5466d0e0c854c622",
+        "name" : "TestLoginToSystemFromHeder",
+        "title" : "Test login to system from heder",
         "time" : {
-          "start" : 1547743552893,
-          "stop" : 1547743556303,
-          "duration" : 3410
+          "start" : 1547745759319,
+          "stop" : 1547745760560,
+          "duration" : 1241
         },
         "severity" : "NORMAL",
         "status" : "FAILED"
+      }, {
+        "uid" : "740e78e366527d88",
+        "name" : "TestElectroVelobikePage",
+        "title" : "Test electro velobike page",
+        "time" : {
+          "start" : 1547745769374,
+          "stop" : 1547745773113,
+          "duration" : 3739
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "3434f82aa06849ae",
+        "name" : "TestGoToHowToUseRentalPage",
+        "title" : "Test go to how to use rental page",
+        "time" : {
+          "start" : 1547745780237,
+          "stop" : 1547745805662,
+          "duration" : 25425
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "5a307168bc0347b8",
+        "name" : "TestGoToPricePage",
+        "title" : "Test go to price page",
+        "time" : {
+          "start" : 1547745812567,
+          "stop" : 1547745814880,
+          "duration" : 2313
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "96493af81f4e9ff",
+        "name" : "TestPricePagde",
+        "title" : "Test price pagde",
+        "time" : {
+          "start" : 1547745815795,
+          "stop" : 1547745815795,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "51037b35c7858eb",
+        "name" : "TestLoginToSystemFromMenu",
+        "title" : "Test login to system from menu",
+        "time" : {
+          "start" : 1547745815798,
+          "stop" : 0,
+          "duration" : -1547745815798
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
       } ]
     } ]
   } ]

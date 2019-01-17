@@ -110,24 +110,24 @@ WebDriver wd;
 
 
 
-  public byte[] takeScreenshot() {
-    return ((TakesScreenshot) wd).getScreenshotAs(OutputType.BYTES);
-  }
+public byte[] takeScreenshot() {
+return ((TakesScreenshot) wd).getScreenshotAs(OutputType.BYTES);
+}
 
- /*public File takeScreenshot() throws IOException {
-    String nameFile = "ff";
+//public File takeScreenshot() throws IOException {
+ //   String nameFile = "ff";
     //Image img = new ImageIcon("G:\\img.png").getImage();
-   String PATHSCREENSHOT="C:\\images\\im";
+//   String PATHSCREENSHOT="C:\\Devel\\velo_bike\\Velo_bike_web_tests\\build\\allure-results\\";
 
-String path = PATHSCREENSHOT + String.format("%s_%s.png", nameFile, System.currentTimeMillis());
+//String path = PATHSCREENSHOT + String.format("%s_%s.png", nameFile, System.currentTimeMillis());
 
-    File screenShot_tmp = null;
-    File screenShot = new File(path);
-     screenShot_tmp = ((TakesScreenshot) wd).getScreenshotAs(OutputType.FILE);
-     FileUtils.copyFile(screenShot_tmp, screenShot);
-     return screenShot;
- }
-*/
+ //   File screenShot_tmp = null;
+ //   File screenShot = new File(path);
+ //    screenShot_tmp = ((TakesScreenshot) wd).getScreenshotAs(OutputType.FILE);
+//     FileUtils.copyFile(screenShot_tmp, screenShot);
+ //    return screenShot;
+// }
+//
 
 
 

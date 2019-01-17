@@ -24,7 +24,7 @@ public class usetest {
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
   }
 
-  @Test
+  @Test(enabled = false)
   public void Tesff() {
     wd.get("https://usetechonline.sharepoint.com/sites/portal_test/Pages/Main.aspx");
     wd.findElement(By.id("i0116")).click();
