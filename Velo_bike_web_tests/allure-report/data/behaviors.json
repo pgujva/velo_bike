@@ -2,90 +2,57 @@
   "features" : [ {
     "title" : "Without feature",
     "statistic" : {
-      "total" : 6,
-      "passed" : 2,
+      "total" : 3,
+      "passed" : 0,
       "pending" : 0,
-      "canceled" : 0,
-      "failed" : 4,
+      "canceled" : 3,
+      "failed" : 0,
       "broken" : 0
     },
     "stories" : [ {
-      "uid" : "169b276b1f1cd85f",
+      "uid" : "99f480974d67e819",
       "title" : "Without story",
       "statistic" : {
-        "total" : 6,
-        "passed" : 2,
+        "total" : 3,
+        "passed" : 0,
         "pending" : 0,
-        "canceled" : 0,
-        "failed" : 4,
+        "canceled" : 3,
+        "failed" : 0,
         "broken" : 0
       },
       "testCases" : [ {
-        "uid" : "f93cc31a062a9290",
+        "uid" : "dffda11f4f8a83aa",
         "name" : "TestElectroVelobikePage",
         "title" : "Test electro velobike page",
         "time" : {
-          "start" : 1547648347244,
-          "stop" : 1547648350126,
-          "duration" : 2882
+          "start" : 1547649256779,
+          "stop" : 1547649256785,
+          "duration" : 6
         },
         "severity" : "NORMAL",
-        "status" : "PASSED"
+        "status" : "CANCELED"
       }, {
-        "uid" : "fe992cb9ae3b5824",
+        "uid" : "faf4a8a6929f49a8",
         "name" : "TestGoToHowToUseRentalPage",
         "title" : "Test go to how to use rental page",
         "time" : {
-          "start" : 1547648350243,
-          "stop" : 1547648352863,
-          "duration" : 2620
+          "start" : 1547649267988,
+          "stop" : 1547649267988,
+          "duration" : 0
         },
         "severity" : "NORMAL",
-        "status" : "FAILED"
+        "status" : "CANCELED"
       }, {
-        "uid" : "82872f5dbc32c9fc",
+        "uid" : "10bce759dd7434c",
         "name" : "TestGoToPricePage",
         "title" : "Test go to price page",
         "time" : {
-          "start" : 1547648352866,
-          "stop" : 1547648355841,
-          "duration" : 2975
+          "start" : 1547649279825,
+          "stop" : 1547649279825,
+          "duration" : 0
         },
         "severity" : "NORMAL",
-        "status" : "FAILED"
-      }, {
-        "uid" : "2aea4cf1f5e15c1d",
-        "name" : "TestElectroVelobikePage",
-        "title" : "Test electro velobike page",
-        "time" : {
-          "start" : 1547648418937,
-          "stop" : 1547648421838,
-          "duration" : 2901
-        },
-        "severity" : "NORMAL",
-        "status" : "PASSED"
-      }, {
-        "uid" : "9d77d55010606d3c",
-        "name" : "TestGoToHowToUseRentalPage",
-        "title" : "Test go to how to use rental page",
-        "time" : {
-          "start" : 1547648421979,
-          "stop" : 1547648424654,
-          "duration" : 2675
-        },
-        "severity" : "NORMAL",
-        "status" : "FAILED"
-      }, {
-        "uid" : "b6a344f50365722d",
-        "name" : "TestGoToPricePage",
-        "title" : "Test go to price page",
-        "time" : {
-          "start" : 1547648424655,
-          "stop" : 1547648427389,
-          "duration" : 2734
-        },
-        "severity" : "NORMAL",
-        "status" : "FAILED"
+        "status" : "CANCELED"
       } ]
     } ]
   } ]

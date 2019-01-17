@@ -2,17 +2,17 @@
   "hash" : "9ae4a52f46fbba0c959575303f697deb73e72d63",
   "data" : [ {
     "statistic" : {
-      "total" : 6,
-      "passed" : 2,
+      "total" : 3,
+      "passed" : 0,
       "pending" : 0,
-      "canceled" : 0,
-      "failed" : 4,
+      "canceled" : 3,
+      "failed" : 0,
       "broken" : 0
     },
     "time" : {
-      "start" : 1547648347244,
-      "stop" : 1547648427389,
-      "duration" : 80145
+      "start" : 1547649256779,
+      "stop" : 1547649279825,
+      "duration" : 23046
     },
     "name" : "total",
     "type" : "TOTAL"
@@ -20,13 +20,9 @@
     "name" : "defects",
     "type" : "DEFECTS",
     "data" : [ {
-      "count" : 2,
-      "message" : "AssertionError: неверный заголовок страницы expected [Как пользоваться прокато] but found [Как пользоваться прокатом]",
-      "status" : "FAILED"
-    }, {
-      "count" : 2,
-      "message" : "AssertionError: неверный заголовок страницы expected [Сколько это стои] but found [Сколько это стоит]",
-      "status" : "FAILED"
+      "count" : 0,
+      "message" : "There are no defects!",
+      "status" : "PASSED"
     } ]
   }, {
     "name" : "xunit",
@@ -34,11 +30,11 @@
     "data" : [ {
       "title" : "Default suite",
       "statistic" : {
-        "total" : 6,
-        "passed" : 2,
+        "total" : 3,
+        "passed" : 0,
         "pending" : 0,
-        "canceled" : 0,
-        "failed" : 4,
+        "canceled" : 3,
+        "failed" : 0,
         "broken" : 0
       }
     } ]
@@ -48,11 +44,11 @@
     "data" : [ {
       "title" : "Without feature",
       "statistic" : {
-        "total" : 6,
-        "passed" : 2,
+        "total" : 3,
+        "passed" : 0,
         "pending" : 0,
-        "canceled" : 0,
-        "failed" : 4,
+        "canceled" : 3,
+        "failed" : 0,
         "broken" : 0
       }
     } ]

@@ -10,16 +10,18 @@ import ru.yandex.qatools.allure.annotations.Attachment;
 
 
 public class SideMenuNavigationTests extends Testbase {
-
-
-  @BeforeClass
-  public void ensurePreconditions() {
-    app.getSessionHelper().loginInSideMenu("4001776", "3875");
-    app.getNavigationHelper().goToPersonalAccountPage();
+  @BeforeMethod(alwaysRun = true)
+  public void setUp(ITestContext context) throws Exception {
+    app.init();
+    context.setAttribute("app",app);
   }
+
+
 
   @Test
   public void TestGoToHowToUseRentalPage() {
+    app.getSessionHelper().loginInSideMenu("4001776", "3875");
+    app.getNavigationHelper().goToPersonalAccountPage();
     app.getNavigationHelper().goToSideMenu();
     app.getNavigationHelper().goHowToUseRentalPage();
     String pageUrl = app.getHelperBase().getCurrentPageURL();

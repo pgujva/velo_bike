@@ -4,9 +4,7 @@ apply plugin: 'application'
 repositories {
     mavenCentral()
 }
-configurations.all {
-    exclude module: 'slf4j-log4j12'
-}
+
 
 configurations {
     agent
