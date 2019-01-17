@@ -11,13 +11,13 @@ public class Testbase {
 
  protected static final ApplicationManager app = new ApplicationManager();
 
-    @BeforeSuite(alwaysRun = true)
+    @BeforeSuite
     public void setUp(ITestContext context) throws Exception {
     app.init();
        context.setAttribute("app",app);
     }
 
-    @AfterSuite(alwaysRun = true)
+    @AfterSuite
     public void tearDown() {
         app.stop();
     }

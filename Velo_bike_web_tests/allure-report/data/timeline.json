@@ -4,104 +4,159 @@
     "threads" : [ {
       "title" : "default",
       "testCases" : [ {
-        "uid" : "16ae7a8310a7961",
-        "name" : "Test1",
-        "title" : "Test 1",
-        "time" : {
-          "start" : 1547745731437,
-          "stop" : 1547745732418,
-          "duration" : 981
-        },
-        "severity" : "NORMAL",
-        "status" : "PASSED"
-      }, {
-        "uid" : "f7c989d4fae9460a",
-        "name" : "Test2",
-        "title" : "Test 2",
-        "time" : {
-          "start" : 1547745734338,
-          "stop" : 1547745735211,
-          "duration" : 873
-        },
-        "severity" : "NORMAL",
-        "status" : "PASSED"
-      }, {
-        "uid" : "f82d2a017d59a593",
-        "name" : "Test3",
-        "title" : "Test 3",
-        "time" : {
-          "start" : 1547745736605,
-          "stop" : 1547745759317,
-          "duration" : 22712
-        },
-        "severity" : "NORMAL",
-        "status" : "BROKEN"
-      }, {
-        "uid" : "5466d0e0c854c622",
+        "uid" : "defe4af7dea0d428",
         "name" : "TestLoginToSystemFromHeder",
         "title" : "Test login to system from heder",
         "time" : {
-          "start" : 1547745759319,
-          "stop" : 1547745760560,
-          "duration" : 1241
-        },
-        "severity" : "NORMAL",
-        "status" : "FAILED"
-      }, {
-        "uid" : "740e78e366527d88",
-        "name" : "TestElectroVelobikePage",
-        "title" : "Test electro velobike page",
-        "time" : {
-          "start" : 1547745769374,
-          "stop" : 1547745773113,
-          "duration" : 3739
-        },
-        "severity" : "NORMAL",
-        "status" : "PASSED"
-      }, {
-        "uid" : "3434f82aa06849ae",
-        "name" : "TestGoToHowToUseRentalPage",
-        "title" : "Test go to how to use rental page",
-        "time" : {
-          "start" : 1547745780237,
-          "stop" : 1547745805662,
-          "duration" : 25425
+          "start" : 1547757358931,
+          "stop" : 1547757381381,
+          "duration" : 22450
         },
         "severity" : "NORMAL",
         "status" : "BROKEN"
       }, {
-        "uid" : "5a307168bc0347b8",
-        "name" : "TestGoToPricePage",
-        "title" : "Test go to price page",
+        "uid" : "57b7a549a7646c09",
+        "name" : "TestElectroVelobikePage",
+        "title" : "Test electro velobike page",
         "time" : {
-          "start" : 1547745812567,
-          "stop" : 1547745814880,
-          "duration" : 2313
+          "start" : 1547757381383,
+          "stop" : 1547757384530,
+          "duration" : 3147
         },
         "severity" : "NORMAL",
         "status" : "FAILED"
       }, {
-        "uid" : "96493af81f4e9ff",
+        "uid" : "af4dd9ba75d75217",
+        "name" : "TestGoToPricePage",
+        "title" : "Test go to price page",
+        "time" : {
+          "start" : 1547757384531,
+          "stop" : 1547757405301,
+          "duration" : 20770
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "1c71bd34f760ce25",
         "name" : "TestPricePagde",
         "title" : "Test price pagde",
         "time" : {
-          "start" : 1547745815795,
-          "stop" : 1547745815795,
-          "duration" : 0
+          "start" : 1547757405302,
+          "stop" : 1547757405304,
+          "duration" : 2
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "51037b35c7858eb",
+        "uid" : "c83f28a7e7baa48d",
         "name" : "TestLoginToSystemFromMenu",
         "title" : "Test login to system from menu",
         "time" : {
-          "start" : 1547745815798,
-          "stop" : 0,
-          "duration" : -1547745815798
+          "start" : 1547757405327,
+          "stop" : 1547757406158,
+          "duration" : 831
         },
         "severity" : "NORMAL",
-        "status" : "PASSED"
+        "status" : "BROKEN"
+      }, {
+        "uid" : "d5807262be5820c5",
+        "name" : "TestLogoutFromSystem",
+        "title" : "Test logout from system",
+        "time" : {
+          "start" : 1547757406159,
+          "stop" : 1547757426739,
+          "duration" : 20580
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "c04bbbb2053ee1c1",
+        "name" : "Test1",
+        "title" : "Test 1",
+        "time" : {
+          "start" : 1547757426885,
+          "stop" : 1547757426887,
+          "duration" : 2
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "cfe73fff5909bc37",
+        "name" : "Test2",
+        "title" : "Test 2",
+        "time" : {
+          "start" : 1547757426888,
+          "stop" : 1547757426889,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "8ab785fedc994297",
+        "name" : "Test3",
+        "title" : "Test 3",
+        "time" : {
+          "start" : 1547757426890,
+          "stop" : 1547757426891,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "4e9d16566297c130",
+        "name" : "Test3GoToParkingsPageTest",
+        "title" : "Test 3 go to parkings page test",
+        "time" : {
+          "start" : 1547757426973,
+          "stop" : 1547757426974,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "3f348c3a35a66827",
+        "name" : "Test1IsNewsOnPage",
+        "title" : "Test 1 is news on page",
+        "time" : {
+          "start" : 1547757427176,
+          "stop" : 1547757427177,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "1cbff8a3997b461f",
+        "name" : "Test2NewsObject",
+        "title" : "Test 2 news object",
+        "time" : {
+          "start" : 1547757427178,
+          "stop" : 1547757427179,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "bf8f68436b0f7fde",
+        "name" : "Test3GoToVKPage",
+        "title" : "Test 3 go to VK page",
+        "time" : {
+          "start" : 1547757427180,
+          "stop" : 1547757427181,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "fb77a38c1194c32e",
+        "name" : "Test4GoToFacebookPage",
+        "title" : "Test 4 go to facebook page",
+        "time" : {
+          "start" : 1547757427185,
+          "stop" : 1547757427186,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
       } ]
     } ]
   } ]

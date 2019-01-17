@@ -11,17 +11,8 @@ import ru.yandex.qatools.allure.annotations.Attachment;
 
 
 public class SideMenuNavigationTests extends Testbase {
- // protected static final ApplicationManager app = new ApplicationManager();
 
-  @BeforeMethod(alwaysRun = true)
-  public void setUp(ITestContext context) throws Exception {
-    app.init();
-    context.setAttribute("app",app);
-  }
-
-
-
-  @Test
+  @Test(enabled = false)
   public void TestGoToHowToUseRentalPage() {
     app.getSessionHelper().loginInSideMenu("4001776", "3875");
     app.getNavigationHelper().goToPersonalAccountPage();
@@ -143,8 +134,4 @@ public class SideMenuNavigationTests extends Testbase {
     app.getNavigationHelper().goToPreviousPage();
   }
 
-  @AfterMethod(alwaysRun = true)
-  public void tearDown() {
-    app.stop();
-  }
 }

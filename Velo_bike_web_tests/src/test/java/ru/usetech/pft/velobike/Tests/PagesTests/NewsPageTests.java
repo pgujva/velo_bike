@@ -11,8 +11,8 @@ public class NewsPageTests extends Testbase {
 
     @BeforeClass
     public void ensurePreconditions() {
-      //  app.getSessionHelper().loginInSideMenu("4001776", "3875");
-      //  app.getNavigationHelper().goToPersonalAccountPage();
+        app.getSessionHelper().loginInSideMenu("4001776", "3875");
+        app.getNavigationHelper().goToPersonalAccountPage();
         app.getNavigationHelper().goToSideMenu();
     }
 
