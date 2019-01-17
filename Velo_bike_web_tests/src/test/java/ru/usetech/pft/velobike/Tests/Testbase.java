@@ -9,17 +9,17 @@ import ru.usetech.pft.velobike.appManager.ApplicationManager;
 
 public class Testbase {
 
-    protected static final ApplicationManager app = new ApplicationManager();
+ protected static final ApplicationManager app = new ApplicationManager();
 
-    @BeforeMethod(alwaysRun = true)
-    public void setUp(ITestContext context) throws Exception {
-        app.init();
-        context.setAttribute("app",app);
-    }
+    //@BeforeMethod(alwaysRun = true)
+    //public void setUp(ITestContext context) throws Exception {
+      //  app.init();
+        //context.setAttribute("app",app);
+    //}
 
-    @AfterMethod(alwaysRun = true)
-    public void tearDown() {
-        app.stop();
-    }
+    //@AfterMethod(alwaysRun = true)
+    //public void tearDown() {
+   //     app.stop();
+    //}
 
 }

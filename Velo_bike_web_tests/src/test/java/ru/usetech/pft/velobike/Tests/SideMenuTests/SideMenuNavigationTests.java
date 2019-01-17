@@ -6,10 +6,13 @@ import org.testng.ITestContext;
 import org.testng.annotations.*;
 import ru.usetech.pft.velobike.Tests.MyTestListener;
 import ru.usetech.pft.velobike.Tests.Testbase;
+import ru.usetech.pft.velobike.appManager.ApplicationManager;
 import ru.yandex.qatools.allure.annotations.Attachment;
 
 
 public class SideMenuNavigationTests extends Testbase {
+ // protected static final ApplicationManager app = new ApplicationManager();
+
   @BeforeMethod(alwaysRun = true)
   public void setUp(ITestContext context) throws Exception {
     app.init();
@@ -138,5 +141,10 @@ public class SideMenuNavigationTests extends Testbase {
     String pageUrl = app.getHelperBase().getCurrentPageURL();
     Assert.assertEquals(pageUrl, "https://t.me/velobikeru_bot", "неверный URL");
     app.getNavigationHelper().goToPreviousPage();
+  }
+
+  @AfterMethod(alwaysRun = true)
+  public void tearDown() {
+    app.stop();
   }
 }

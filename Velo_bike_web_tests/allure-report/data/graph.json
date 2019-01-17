@@ -1,36 +1,36 @@
 {
   "testCases" : [ {
-    "uid" : "dffda11f4f8a83aa",
+    "uid" : "407e1d5d5e6fc649",
     "name" : "TestElectroVelobikePage",
     "title" : "Test electro velobike page",
     "time" : {
-      "start" : 1547649256779,
-      "stop" : 1547649256785,
-      "duration" : 6
+      "start" : 1547743478689,
+      "stop" : 1547743482217,
+      "duration" : 3528
     },
     "severity" : "NORMAL",
-    "status" : "CANCELED"
+    "status" : "PASSED"
   }, {
-    "uid" : "faf4a8a6929f49a8",
+    "uid" : "67bcefdf6de4f371",
     "name" : "TestGoToHowToUseRentalPage",
     "title" : "Test go to how to use rental page",
     "time" : {
-      "start" : 1547649267988,
-      "stop" : 1547649267988,
-      "duration" : 0
+      "start" : 1547743507901,
+      "stop" : 1547743536094,
+      "duration" : 28193
     },
     "severity" : "NORMAL",
-    "status" : "CANCELED"
+    "status" : "BROKEN"
   }, {
-    "uid" : "10bce759dd7434c",
+    "uid" : "c225d0b614a2df46",
     "name" : "TestGoToPricePage",
     "title" : "Test go to price page",
     "time" : {
-      "start" : 1547649279825,
-      "stop" : 1547649279825,
-      "duration" : 0
+      "start" : 1547743552893,
+      "stop" : 1547743556303,
+      "duration" : 3410
     },
     "severity" : "NORMAL",
-    "status" : "CANCELED"
+    "status" : "FAILED"
   } ]
 }

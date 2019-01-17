@@ -3,16 +3,16 @@
   "data" : [ {
     "statistic" : {
       "total" : 3,
-      "passed" : 0,
+      "passed" : 1,
       "pending" : 0,
-      "canceled" : 3,
-      "failed" : 0,
-      "broken" : 0
+      "canceled" : 0,
+      "failed" : 1,
+      "broken" : 1
     },
     "time" : {
-      "start" : 1547649256779,
-      "stop" : 1547649279825,
-      "duration" : 23046
+      "start" : 1547743478689,
+      "stop" : 1547743556303,
+      "duration" : 77614
     },
     "name" : "total",
     "type" : "TOTAL"
@@ -20,9 +20,13 @@
     "name" : "defects",
     "type" : "DEFECTS",
     "data" : [ {
-      "count" : 0,
-      "message" : "There are no defects!",
-      "status" : "PASSED"
+      "count" : 1,
+      "message" : "AssertionError: неверный заголовок страницы expected [Сколько это стои] but found [Сколько это стоит]",
+      "status" : "FAILED"
+    }, {
+      "count" : 1,
+      "message" : "TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: a[href='https://velobike.ru/rules/'] (tried for 20 second(s) with 500 MILLISECONDS interval)",
+      "status" : "BROKEN"
     } ]
   }, {
     "name" : "xunit",
@@ -31,11 +35,11 @@
       "title" : "Default suite",
       "statistic" : {
         "total" : 3,
-        "passed" : 0,
+        "passed" : 1,
         "pending" : 0,
-        "canceled" : 3,
-        "failed" : 0,
-        "broken" : 0
+        "canceled" : 0,
+        "failed" : 1,
+        "broken" : 1
       }
     } ]
   }, {
@@ -45,11 +49,11 @@
       "title" : "Without feature",
       "statistic" : {
         "total" : 3,
-        "passed" : 0,
+        "passed" : 1,
         "pending" : 0,
-        "canceled" : 3,
-        "failed" : 0,
-        "broken" : 0
+        "canceled" : 0,
+        "failed" : 1,
+        "broken" : 1
       }
     } ]
   }, {
