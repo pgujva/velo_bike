@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.usetech.pft.velobike.Tests.TEST" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-01-17T20:44:01" hostname="DESKTOP-F9751PS" time="0.0">
+<testsuite name="ru.usetech.pft.velobike.Tests.TEST" tests="1" skipped="1" failures="0" errors="0" timestamp="2019-01-18T14:24:12" hostname="GUITARHERO" time="0.0">
   <properties/>
-  <testcase name="TestPricePagde" classname="ru.usetech.pft.velobike.Tests.TEST" time="0.0"/>
+  <testcase name="TestPricePagde" classname="ru.usetech.pft.velobike.Tests.TEST" time="0.0">
+    <skipped/>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
