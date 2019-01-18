@@ -7,9 +7,5 @@
         </classes>
     </test>
 
-    <test name="Pages">
-        <classes>
-            <class name="ru.usetech.pft.velobike.Tests.PagesTests.NewsPageTests"/>
-        </classes>
-    </test>
+
 </suite>
